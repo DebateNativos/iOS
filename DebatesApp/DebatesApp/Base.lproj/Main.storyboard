@@ -16,14 +16,15 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loggin" translatesAutoresizingMaskIntoConstraints="NO" id="dXP-E5-Uts"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG7-bV-9of">
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.49803921568627452" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Ycv-M7-Egj"/>
+                                    <constraint firstAttribute="height" constant="35" id="DlG-PB-PW3"/>
+                                    <constraint firstAttribute="width" constant="185" id="v3g-cW-SQZ"/>
                                 </constraints>
                                 <state key="normal" title="Ingresar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,30 +34,6 @@
                                     <segue destination="p86-Cb-QHt" kind="show" id="mkd-ge-YAM"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ckz-KP-G5r">
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-Tg-pcX">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="IAb-6w-DUB"/>
-                                            <constraint firstAttribute="width" constant="275" id="udB-gd-vyn"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Edw-pO-u4D">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="275" id="RBd-Gl-K8V"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="ffb-1f-hin"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k0q-iR-evG">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ld-V5-CV2">
@@ -89,28 +66,52 @@
                                     <constraint firstAttribute="width" constant="177" id="kU8-hr-9yM"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-jF-ewW">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-jF-ewW">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="gL6-69-ZNY"/>
-                                    <constraint firstAttribute="width" constant="300" id="qx6-hL-3It"/>
+                                    <constraint firstAttribute="height" constant="50" id="7HO-dM-QvL"/>
+                                    <constraint firstAttribute="width" constant="190" id="zJj-Yc-ScV"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="LogFB"/>
+                                <state key="normal" title="FBLogin" image="LogFB"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ckz-KP-G5r">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-Tg-pcX">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IAb-6w-DUB"/>
+                                            <constraint firstAttribute="width" constant="275" id="udB-gd-vyn"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Edw-pO-u4D">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="275" id="RBd-Gl-K8V"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="ffb-1f-hin"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dXP-E5-Uts" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0dQ-v0-ewK"/>
-                            <constraint firstItem="m5U-jF-ewW" firstAttribute="top" secondItem="Ckz-KP-G5r" secondAttribute="bottom" constant="60" id="55c-oO-cjO"/>
                             <constraint firstItem="dXP-E5-Uts" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5tC-rB-Iu8"/>
-                            <constraint firstItem="dG7-bV-9of" firstAttribute="centerX" secondItem="Ckz-KP-G5r" secondAttribute="centerX" id="Dv9-Fk-bIQ"/>
-                            <constraint firstItem="dG7-bV-9of" firstAttribute="top" secondItem="m5U-jF-ewW" secondAttribute="bottom" constant="45" id="IXx-l1-lok"/>
+                            <constraint firstItem="dG7-bV-9of" firstAttribute="centerX" secondItem="Ckz-KP-G5r" secondAttribute="centerX" id="Ciw-Xf-1RZ"/>
+                            <constraint firstItem="m5U-jF-ewW" firstAttribute="centerX" secondItem="dG7-bV-9of" secondAttribute="centerX" id="Fis-1D-qvy"/>
+                            <constraint firstItem="k0q-iR-evG" firstAttribute="top" secondItem="m5U-jF-ewW" secondAttribute="bottom" constant="30" id="KCV-Eo-IXW"/>
                             <constraint firstAttribute="trailing" secondItem="dXP-E5-Uts" secondAttribute="trailing" id="KCf-KB-IBZ"/>
                             <constraint firstItem="Ckz-KP-G5r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mrv-or-8l6"/>
-                            <constraint firstItem="k0q-iR-evG" firstAttribute="centerX" secondItem="dG7-bV-9of" secondAttribute="centerX" id="RI5-M3-BTj"/>
+                            <constraint firstItem="m5U-jF-ewW" firstAttribute="top" secondItem="dG7-bV-9of" secondAttribute="bottom" constant="40" id="P15-m5-bvD"/>
+                            <constraint firstItem="k0q-iR-evG" firstAttribute="centerX" secondItem="m5U-jF-ewW" secondAttribute="centerX" id="PCm-oS-BM9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k0q-iR-evG" secondAttribute="bottom" constant="20" id="US5-JZ-BNG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dXP-E5-Uts" secondAttribute="bottom" id="qlC-ZO-6Zn"/>
-                            <constraint firstItem="m5U-jF-ewW" firstAttribute="centerX" secondItem="Ckz-KP-G5r" secondAttribute="centerX" id="uO3-LF-Dft"/>
-                            <constraint firstItem="k0q-iR-evG" firstAttribute="top" secondItem="dG7-bV-9of" secondAttribute="bottom" constant="60" id="vRX-Vc-Ell"/>
+                            <constraint firstItem="dG7-bV-9of" firstAttribute="top" secondItem="Ckz-KP-G5r" secondAttribute="bottom" constant="97" id="soi-jA-77C"/>
                         </constraints>
                     </view>
                     <connections>
@@ -131,7 +132,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xy3-QD-ABG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iUr-Mj-NNj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PassLost " translatesAutoresizingMaskIntoConstraints="NO" id="qlJ-sA-6R2"/>
@@ -214,7 +215,7 @@
                         <viewControllerLayoutGuide type="bottom" id="PVa-wC-jg3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jaI-64-Zp9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewUser " translatesAutoresizingMaskIntoConstraints="NO" id="AsV-aS-VIQ"/>
@@ -236,7 +237,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Mp4-ag-Mbu"/>
                                     <constraint firstAttribute="width" constant="35" id="U9S-Wl-lZP"/>
                                 </constraints>
-                                <state key="normal" title="Atras" image="btnBack"/>
+                                <state key="normal" title="Atras" image="btnBackWhite"/>
                                 <connections>
                                     <action selector="BackBtnPressed:" destination="MTb-Vb-Nau" eventType="touchUpInside" id="fn2-hk-EUp"/>
                                 </connections>
@@ -337,7 +338,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mp0-DB-OlV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iep-Di-HbP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu @1x" translatesAutoresizingMaskIntoConstraints="NO" id="C8r-ie-100"/>
@@ -358,10 +359,10 @@
     </scenes>
     <resources>
         <image name="LogFB" width="416" height="101"/>
-        <image name="Loggin" width="367" height="635"/>
+        <image name="Loggin" width="359" height="619"/>
         <image name="Menu @1x" width="750" height="1334"/>
-        <image name="NewUser " width="365" height="622"/>
-        <image name="PassLost " width="365" height="622"/>
-        <image name="btnBack" width="200" height="200"/>
+        <image name="NewUser " width="359" height="615"/>
+        <image name="PassLost " width="373" height="637"/>
+        <image name="btnBackWhite" width="200" height="200"/>
     </resources>
 </document>
