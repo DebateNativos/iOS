@@ -16,15 +16,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loggin" translatesAutoresizingMaskIntoConstraints="NO" id="dXP-E5-Uts">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="568" id="Rcc-Lw-PjQ"/>
-                                    <constraint firstAttribute="width" constant="320" id="bmm-UQ-1yk"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loggin" translatesAutoresizingMaskIntoConstraints="NO" id="dXP-E5-Uts"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG7-bV-9of">
                                 <color key="backgroundColor" red="0.058823529411764705" green="0.49803921568627452" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -94,19 +89,28 @@
                                     <constraint firstAttribute="width" constant="177" id="kU8-hr-9yM"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5U-jF-ewW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gL6-69-ZNY"/>
+                                    <constraint firstAttribute="width" constant="300" id="qx6-hL-3It"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="LogFB"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dG7-bV-9of" firstAttribute="top" secondItem="Ckz-KP-G5r" secondAttribute="bottom" constant="100" id="53P-iL-BHT"/>
+                            <constraint firstItem="dXP-E5-Uts" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0dQ-v0-ewK"/>
+                            <constraint firstItem="m5U-jF-ewW" firstAttribute="top" secondItem="Ckz-KP-G5r" secondAttribute="bottom" constant="60" id="55c-oO-cjO"/>
+                            <constraint firstItem="dXP-E5-Uts" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5tC-rB-Iu8"/>
                             <constraint firstItem="dG7-bV-9of" firstAttribute="centerX" secondItem="Ckz-KP-G5r" secondAttribute="centerX" id="Dv9-Fk-bIQ"/>
+                            <constraint firstItem="dG7-bV-9of" firstAttribute="top" secondItem="m5U-jF-ewW" secondAttribute="bottom" constant="45" id="IXx-l1-lok"/>
+                            <constraint firstAttribute="trailing" secondItem="dXP-E5-Uts" secondAttribute="trailing" id="KCf-KB-IBZ"/>
                             <constraint firstItem="Ckz-KP-G5r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mrv-or-8l6"/>
                             <constraint firstItem="k0q-iR-evG" firstAttribute="centerX" secondItem="dG7-bV-9of" secondAttribute="centerX" id="RI5-M3-BTj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k0q-iR-evG" secondAttribute="bottom" constant="20" id="US5-JZ-BNG"/>
-                            <constraint firstItem="dXP-E5-Uts" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cah-IA-xlc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dXP-E5-Uts" secondAttribute="bottom" id="hrz-kl-FdQ"/>
-                            <constraint firstAttribute="trailing" secondItem="dXP-E5-Uts" secondAttribute="trailing" id="tXZ-Me-G7Q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dXP-E5-Uts" secondAttribute="bottom" id="qlC-ZO-6Zn"/>
+                            <constraint firstItem="m5U-jF-ewW" firstAttribute="centerX" secondItem="Ckz-KP-G5r" secondAttribute="centerX" id="uO3-LF-Dft"/>
                             <constraint firstItem="k0q-iR-evG" firstAttribute="top" secondItem="dG7-bV-9of" secondAttribute="bottom" constant="60" id="vRX-Vc-Ell"/>
-                            <constraint firstItem="dXP-E5-Uts" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vWA-9n-hMn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -116,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="115"/>
+            <point key="canvasLocation" x="144.92753623188406" y="114.94565217391305"/>
         </scene>
         <!--Password LostVC-->
         <scene sceneID="qXO-Xa-12k">
@@ -127,7 +131,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xy3-QD-ABG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iUr-Mj-NNj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PassLost " translatesAutoresizingMaskIntoConstraints="NO" id="qlJ-sA-6R2"/>
@@ -210,16 +214,29 @@
                         <viewControllerLayoutGuide type="bottom" id="PVa-wC-jg3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jaI-64-Zp9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewUser " translatesAutoresizingMaskIntoConstraints="NO" id="AsV-aS-VIQ"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp8-Vd-hHm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h0-Jz-4em">
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.49803921569999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="bm5-Vm-byw"/>
-                                    <constraint firstAttribute="height" constant="30" id="e5g-l8-rvT"/>
+                                    <constraint firstAttribute="width" constant="150" id="2YI-AY-tJv"/>
+                                    <constraint firstAttribute="height" constant="30" id="MfC-7I-bGD"/>
                                 </constraints>
-                                <state key="normal" title="Atras"/>
+                                <state key="normal" title="Crear Perfil">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CreateAccountPressed:" destination="MTb-Vb-Nau" eventType="touchUpInside" id="KJg-lG-dlf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fp8-Vd-hHm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Mp4-ag-Mbu"/>
+                                    <constraint firstAttribute="width" constant="35" id="U9S-Wl-lZP"/>
+                                </constraints>
+                                <state key="normal" title="Atras" image="btnBack"/>
                                 <connections>
                                     <action selector="BackBtnPressed:" destination="MTb-Vb-Nau" eventType="touchUpInside" id="fn2-hk-EUp"/>
                                 </connections>
@@ -282,32 +299,19 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h0-Jz-4em">
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.49803921569999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="2YI-AY-tJv"/>
-                                    <constraint firstAttribute="height" constant="30" id="MfC-7I-bGD"/>
-                                </constraints>
-                                <state key="normal" title="Crear Perfil">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="CreateAccountPressed:" destination="MTb-Vb-Nau" eventType="touchUpInside" id="KJg-lG-dlf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="AsV-aS-VIQ" secondAttribute="trailing" id="0Gd-52-ltW"/>
-                            <constraint firstItem="3h0-Jz-4em" firstAttribute="top" secondItem="sAM-hQ-IzJ" secondAttribute="bottom" constant="50" id="6hO-h4-hPX"/>
+                            <constraint firstItem="fp8-Vd-hHm" firstAttribute="leading" secondItem="jaI-64-Zp9" secondAttribute="leading" constant="10" id="9F8-2d-IFm"/>
                             <constraint firstItem="sAM-hQ-IzJ" firstAttribute="centerX" secondItem="jaI-64-Zp9" secondAttribute="centerX" id="9O1-k8-K1O"/>
                             <constraint firstItem="PVa-wC-jg3" firstAttribute="top" secondItem="3h0-Jz-4em" secondAttribute="bottom" constant="20" id="EkB-1S-UZh"/>
-                            <constraint firstItem="fp8-Vd-hHm" firstAttribute="top" secondItem="R9e-h3-Ubh" secondAttribute="bottom" id="Ig1-mg-8pW"/>
                             <constraint firstItem="PVa-wC-jg3" firstAttribute="top" secondItem="AsV-aS-VIQ" secondAttribute="bottom" id="SvI-ch-vjG"/>
                             <constraint firstItem="AsV-aS-VIQ" firstAttribute="top" secondItem="jaI-64-Zp9" secondAttribute="top" id="gWm-37-v81"/>
                             <constraint firstItem="AsV-aS-VIQ" firstAttribute="leading" secondItem="jaI-64-Zp9" secondAttribute="leading" id="khq-Cy-6NL"/>
+                            <constraint firstItem="3h0-Jz-4em" firstAttribute="top" secondItem="sAM-hQ-IzJ" secondAttribute="bottom" constant="45" id="n8H-Ca-h0t"/>
                             <constraint firstItem="3h0-Jz-4em" firstAttribute="centerX" secondItem="sAM-hQ-IzJ" secondAttribute="centerX" id="q3Q-Z1-1AJ"/>
-                            <constraint firstItem="fp8-Vd-hHm" firstAttribute="leading" secondItem="jaI-64-Zp9" secondAttribute="leadingMargin" constant="5" id="wy9-vd-lyQ"/>
+                            <constraint firstItem="fp8-Vd-hHm" firstAttribute="top" secondItem="jaI-64-Zp9" secondAttribute="top" constant="20" id="rhG-s3-s6C"/>
                         </constraints>
                     </view>
                     <connections>
@@ -333,7 +337,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mp0-DB-OlV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iep-Di-HbP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu @1x" translatesAutoresizingMaskIntoConstraints="NO" id="C8r-ie-100"/>
@@ -353,9 +357,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Loggin" width="359" height="619"/>
+        <image name="LogFB" width="416" height="101"/>
+        <image name="Loggin" width="367" height="635"/>
         <image name="Menu @1x" width="750" height="1334"/>
-        <image name="NewUser " width="360" height="616"/>
-        <image name="PassLost " width="373" height="637"/>
+        <image name="NewUser " width="365" height="622"/>
+        <image name="PassLost " width="365" height="622"/>
+        <image name="btnBack" width="200" height="200"/>
     </resources>
 </document>
