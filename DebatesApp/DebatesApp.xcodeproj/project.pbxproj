@@ -14,6 +14,8 @@
 		2A3B643A1DA59679001C0612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B64391DA59679001C0612 /* Assets.xcassets */; };
 		2A3B643D1DA59679001C0612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3B643B1DA59679001C0612 /* LaunchScreen.storyboard */; };
 		2A3B64451DA601DD001C0612 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B64441DA601DD001C0612 /* NewUserVC.swift */; };
+		2A45E4FC1DB3D5B90097F502 /* LoginConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45E4FB1DB3D5B90097F502 /* LoginConst.swift */; };
+		2A45E4FE1DB3D6330097F502 /* NewUserConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45E4FD1DB3D6330097F502 /* NewUserConst.swift */; };
 		2A80B0CA1DAABF2900CEC252 /* PasswordLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80B0C91DAABF2900CEC252 /* PasswordLostVC.swift */; };
 		EC5E017C1DAD9C3D0098E112 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5E017B1DAD9C3D0098E112 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		2A3B643C1DA59679001C0612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A3B643E1DA59679001C0612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A3B64441DA601DD001C0612 /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewUserVC.swift; path = ../NewUserVC.swift; sourceTree = "<group>"; };
+		2A45E4FB1DB3D5B90097F502 /* LoginConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConst.swift; sourceTree = "<group>"; };
+		2A45E4FD1DB3D6330097F502 /* NewUserConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserConst.swift; sourceTree = "<group>"; };
 		2A80B0C91DAABF2900CEC252 /* PasswordLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLostVC.swift; sourceTree = "<group>"; };
 		EC5E017B1DAD9C3D0098E112 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				EC5E017B1DAD9C3D0098E112 /* Constants.swift */,
+				2A45E4FB1DB3D5B90097F502 /* LoginConst.swift */,
+				2A45E4FD1DB3D6330097F502 /* NewUserConst.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A3B64351DA59679001C0612 /* LoginVC.swift in Sources */,
+				2A45E4FC1DB3D5B90097F502 /* LoginConst.swift in Sources */,
 				2A80B0CA1DAABF2900CEC252 /* PasswordLostVC.swift in Sources */,
 				2A3B64451DA601DD001C0612 /* NewUserVC.swift in Sources */,
 				2A3B64331DA59679001C0612 /* AppDelegate.swift in Sources */,
+				2A45E4FE1DB3D6330097F502 /* NewUserConst.swift in Sources */,
 				2A1AE8831DABE74D00D0D836 /* MenuVC.swift in Sources */,
 				EC5E017C1DAD9C3D0098E112 /* Constants.swift in Sources */,
 			);

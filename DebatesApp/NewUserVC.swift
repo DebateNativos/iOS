@@ -17,6 +17,7 @@ class NewUserVC: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfVPassword: UITextField!
     @IBOutlet weak var tfCode: UITextField!
+    var newUserConst = NewUserConst()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +33,11 @@ class NewUserVC: UIViewController {
     
     @IBAction func CreateAccountPressed(_ sender: AnyObject) {
         
-        let name = tfName.text
-        let lastName = tfLastName.text
-        let email = tfEmail.text
-        let password = tfPassword.text
-        let code = tfCode.text
+        tfName.text = newUserConst.Name
+        tfLastName.text = newUserConst.LastName
+        tfEmail.text = newUserConst.Email
+        tfPassword.text = newUserConst.Password
+       // tfCode.text = newUserConst.Code
         
         
         //METODO

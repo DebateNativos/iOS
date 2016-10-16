@@ -9,21 +9,23 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
-   
+    var loginConst = LoginConst()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-    }
-
-    @IBAction func EnterPressed(_ sender: AnyObject) {
-   
-        let email = tfEmail.text
-        let password = tfPassword.text
         
+    }
     
+    @IBAction func EnterPressed(_ sender: AnyObject) {
+        
+        tfEmail.text = loginConst.Email
+        tfPassword.text = loginConst._password
+        
+        
     }
     
 }
