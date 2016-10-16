@@ -18,6 +18,7 @@
 		2A45E4FE1DB3D6330097F502 /* NewUserConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45E4FD1DB3D6330097F502 /* NewUserConst.swift */; };
 		2A80B0CA1DAABF2900CEC252 /* PasswordLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80B0C91DAABF2900CEC252 /* PasswordLostVC.swift */; };
 		EC5E017C1DAD9C3D0098E112 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5E017B1DAD9C3D0098E112 /* Constants.swift */; };
+		EEB523ADE4BE04DB4CBF18B6 /* Pods_DebatesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344AD05D897BC2B2902D868D /* Pods_DebatesApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,9 @@
 		2A45E4FB1DB3D5B90097F502 /* LoginConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConst.swift; sourceTree = "<group>"; };
 		2A45E4FD1DB3D6330097F502 /* NewUserConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserConst.swift; sourceTree = "<group>"; };
 		2A80B0C91DAABF2900CEC252 /* PasswordLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLostVC.swift; sourceTree = "<group>"; };
+		344AD05D897BC2B2902D868D /* Pods_DebatesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DebatesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70E7D4A5FAB2C921BB683C5 /* Pods-DebatesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebatesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DebatesApp/Pods-DebatesApp.release.xcconfig"; sourceTree = "<group>"; };
+		E5572B59344ABA03324D7BA4 /* Pods-DebatesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DebatesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DebatesApp/Pods-DebatesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EC5E017B1DAD9C3D0098E112 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB523ADE4BE04DB4CBF18B6 /* Pods_DebatesApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				2A3B64311DA59679001C0612 /* DebatesApp */,
 				2A3B64301DA59679001C0612 /* Products */,
+				3BDEF3DDFE5D100B913B783F /* Pods */,
+				BA11517CA4C70E05795FB208 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +113,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		3BDEF3DDFE5D100B913B783F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5572B59344ABA03324D7BA4 /* Pods-DebatesApp.debug.xcconfig */,
+				B70E7D4A5FAB2C921BB683C5 /* Pods-DebatesApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA11517CA4C70E05795FB208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				344AD05D897BC2B2902D868D /* Pods_DebatesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3B64411DA59679001C0612 /* Build configuration list for PBXNativeTarget "DebatesApp" */;
 			buildPhases = (
+				B9626942C691DF0AFBEDAF6B /* 📦 Check Pods Manifest.lock */,
 				2A3B642B1DA59678001C0612 /* Sources */,
 				2A3B642C1DA59678001C0612 /* Frameworks */,
 				2A3B642D1DA59678001C0612 /* Resources */,
+				15C163951C35139C99BC4BF8 /* 📦 Embed Pods Frameworks */,
+				6C06915EFFB351A77353D09C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,7 @@
 				TargetAttributes = {
 					2A3B642E1DA59678001C0612 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -172,6 +200,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15C163951C35139C99BC4BF8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DebatesApp/Pods-DebatesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C06915EFFB351A77353D09C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DebatesApp/Pods-DebatesApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9626942C691DF0AFBEDAF6B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A3B642B1DA59678001C0612 /* Sources */ = {
@@ -306,6 +382,7 @@
 		};
 		2A3B64421DA59679001C0612 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5572B59344ABA03324D7BA4 /* Pods-DebatesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DebatesApp/Info.plist;
@@ -318,6 +395,7 @@
 		};
 		2A3B64431DA59679001C0612 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70E7D4A5FAB2C921BB683C5 /* Pods-DebatesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DebatesApp/Info.plist;

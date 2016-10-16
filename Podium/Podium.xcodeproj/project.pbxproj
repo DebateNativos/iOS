@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F7CE034D3D2A64DFF073CDD /* Pods_PodiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */; };
+		D665A2C083EAA9F9310BB056 /* Pods_Podium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C486291DE40EE285960049 /* Pods_Podium.framework */; };
+		ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD969C71DB433A100325C4D /* AppDelegate.swift */; };
+		ECD969CA1DB433A100325C4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD969C91DB433A100325C4D /* ViewController.swift */; };
+		ECD969CD1DB433A100325C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD969CB1DB433A100325C4D /* Main.storyboard */; };
+		ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECD969CE1DB433A100325C4D /* Podium.xcdatamodeld */; };
+		ECD969D21DB433A100325C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD969D11DB433A100325C4D /* Assets.xcassets */; };
+		ECD969D51DB433A100325C4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD969D31DB433A100325C4D /* LaunchScreen.storyboard */; };
+		ECD969E01DB433A100325C4D /* PodiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD969DF1DB433A100325C4D /* PodiumTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECD969DC1DB433A100325C4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECD969BC1DB433A100325C4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECD969C31DB433A100325C4D;
+			remoteInfo = Podium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.release.xcconfig"; sourceTree = "<group>"; };
+		3273E3A0F12BD2610B7F5810 /* Pods-PodiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5640EAF61D3953E44EEBD901 /* Pods-Podium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.release.xcconfig"; sourceTree = "<group>"; };
+		98DDE7AE040E20097F26B20E /* Pods-Podium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.debug.xcconfig"; sourceTree = "<group>"; };
+		A8C486291DE40EE285960049 /* Pods_Podium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD969C41DB433A100325C4D /* Podium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD969C71DB433A100325C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECD969C91DB433A100325C4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECD969CC1DB433A100325C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECD969CF1DB433A100325C4D /* Podium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Podium.xcdatamodel; sourceTree = "<group>"; };
+		ECD969D11DB433A100325C4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECD969D41DB433A100325C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECD969D61DB433A100325C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD969DB1DB433A100325C4D /* PodiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD969DF1DB433A100325C4D /* PodiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodiumTests.swift; sourceTree = "<group>"; };
+		ECD969E11DB433A100325C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECD969C11DB433A100325C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D665A2C083EAA9F9310BB056 /* Pods_Podium.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD969D81DB433A100325C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7CE034D3D2A64DFF073CDD /* Pods_PodiumTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06A1C9527B7047267FFE4CA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8C486291DE40EE285960049 /* Pods_Podium.framework */,
+				436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3972869E7D67A4CD33863575 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98DDE7AE040E20097F26B20E /* Pods-Podium.debug.xcconfig */,
+				5640EAF61D3953E44EEBD901 /* Pods-Podium.release.xcconfig */,
+				3273E3A0F12BD2610B7F5810 /* Pods-PodiumTests.debug.xcconfig */,
+				124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ECD969BB1DB433A100325C4D = {
+			isa = PBXGroup;
+			children = (
+				ECD969C61DB433A100325C4D /* Podium */,
+				ECD969DE1DB433A100325C4D /* PodiumTests */,
+				ECD969C51DB433A100325C4D /* Products */,
+				3972869E7D67A4CD33863575 /* Pods */,
+				06A1C9527B7047267FFE4CA4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ECD969C51DB433A100325C4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECD969C41DB433A100325C4D /* Podium.app */,
+				ECD969DB1DB433A100325C4D /* PodiumTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECD969C61DB433A100325C4D /* Podium */ = {
+			isa = PBXGroup;
+			children = (
+				ECD969C71DB433A100325C4D /* AppDelegate.swift */,
+				ECD969C91DB433A100325C4D /* ViewController.swift */,
+				ECD969CB1DB433A100325C4D /* Main.storyboard */,
+				ECD969D11DB433A100325C4D /* Assets.xcassets */,
+				ECD969D31DB433A100325C4D /* LaunchScreen.storyboard */,
+				ECD969D61DB433A100325C4D /* Info.plist */,
+				ECD969CE1DB433A100325C4D /* Podium.xcdatamodeld */,
+			);
+			path = Podium;
+			sourceTree = "<group>";
+		};
+		ECD969DE1DB433A100325C4D /* PodiumTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECD969DF1DB433A100325C4D /* PodiumTests.swift */,
+				ECD969E11DB433A100325C4D /* Info.plist */,
+			);
+			path = PodiumTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECD969C31DB433A100325C4D /* Podium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECD969E41DB433A100325C4D /* Build configuration list for PBXNativeTarget "Podium" */;
+			buildPhases = (
+				21C05F1138102ECD88D99F7E /* 📦 Check Pods Manifest.lock */,
+				ECD969C01DB433A100325C4D /* Sources */,
+				ECD969C11DB433A100325C4D /* Frameworks */,
+				ECD969C21DB433A100325C4D /* Resources */,
+				6F744379C012F1137EDD1188 /* 📦 Embed Pods Frameworks */,
+				68A1054C097C3F8A85808463 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Podium;
+			productName = Podium;
+			productReference = ECD969C41DB433A100325C4D /* Podium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECD969DA1DB433A100325C4D /* PodiumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECD969E71DB433A100325C4D /* Build configuration list for PBXNativeTarget "PodiumTests" */;
+			buildPhases = (
+				46AC0571C2FCDAA42C7B340C /* 📦 Check Pods Manifest.lock */,
+				ECD969D71DB433A100325C4D /* Sources */,
+				ECD969D81DB433A100325C4D /* Frameworks */,
+				ECD969D91DB433A100325C4D /* Resources */,
+				0D075704C0223453B31080A0 /* 📦 Embed Pods Frameworks */,
+				58DD996B8BB98F97B152E26C /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECD969DD1DB433A100325C4D /* PBXTargetDependency */,
+			);
+			name = PodiumTests;
+			productName = PodiumTests;
+			productReference = ECD969DB1DB433A100325C4D /* PodiumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECD969BC1DB433A100325C4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jorge Soler";
+				TargetAttributes = {
+					ECD969C31DB433A100325C4D = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					ECD969DA1DB433A100325C4D = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ECD969C31DB433A100325C4D;
+					};
+				};
+			};
+			buildConfigurationList = ECD969BF1DB433A100325C4D /* Build configuration list for PBXProject "Podium" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECD969BB1DB433A100325C4D;
+			productRefGroup = ECD969C51DB433A100325C4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECD969C31DB433A100325C4D /* Podium */,
+				ECD969DA1DB433A100325C4D /* PodiumTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECD969C21DB433A100325C4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD969D51DB433A100325C4D /* LaunchScreen.storyboard in Resources */,
+				ECD969D21DB433A100325C4D /* Assets.xcassets in Resources */,
+				ECD969CD1DB433A100325C4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD969D91DB433A100325C4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D075704C0223453B31080A0 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21C05F1138102ECD88D99F7E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		46AC0571C2FCDAA42C7B340C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58DD996B8BB98F97B152E26C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68A1054C097C3F8A85808463 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podium/Pods-Podium-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F744379C012F1137EDD1188 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Podium/Pods-Podium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECD969C01DB433A100325C4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
+				ECD969CA1DB433A100325C4D /* ViewController.swift in Sources */,
+				ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD969D71DB433A100325C4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECD969E01DB433A100325C4D /* PodiumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECD969DD1DB433A100325C4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECD969C31DB433A100325C4D /* Podium */;
+			targetProxy = ECD969DC1DB433A100325C4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECD969CB1DB433A100325C4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECD969CC1DB433A100325C4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECD969D31DB433A100325C4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECD969D41DB433A100325C4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECD969E21DB433A100325C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECD969E31DB433A100325C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECD969E51DB433A100325C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98DDE7AE040E20097F26B20E /* Pods-Podium.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Podium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natives.Podium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ECD969E61DB433A100325C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5640EAF61D3953E44EEBD901 /* Pods-Podium.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Podium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natives.Podium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ECD969E81DB433A100325C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3273E3A0F12BD2610B7F5810 /* Pods-PodiumTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PodiumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natives.PodiumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Podium.app/Podium";
+			};
+			name = Debug;
+		};
+		ECD969E91DB433A100325C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PodiumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.natives.PodiumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Podium.app/Podium";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECD969BF1DB433A100325C4D /* Build configuration list for PBXProject "Podium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECD969E21DB433A100325C4D /* Debug */,
+				ECD969E31DB433A100325C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECD969E41DB433A100325C4D /* Build configuration list for PBXNativeTarget "Podium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECD969E51DB433A100325C4D /* Debug */,
+				ECD969E61DB433A100325C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECD969E71DB433A100325C4D /* Build configuration list for PBXNativeTarget "PodiumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECD969E81DB433A100325C4D /* Debug */,
+				ECD969E91DB433A100325C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ECD969CE1DB433A100325C4D /* Podium.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ECD969CF1DB433A100325C4D /* Podium.xcdatamodel */,
+			);
+			currentVersion = ECD969CF1DB433A100325C4D /* Podium.xcdatamodel */;
+			path = Podium.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ECD969BC1DB433A100325C4D /* Project object */;
+}
