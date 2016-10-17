@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2ABDB4541DB4376900824F9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4511DB4376900824F9B /* Constants.swift */; };
+		2ABDB4551DB4376900824F9B /* LoginConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4521DB4376900824F9B /* LoginConst.swift */; };
+		2ABDB4561DB4376900824F9B /* NewUserConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4531DB4376900824F9B /* NewUserConst.swift */; };
+		2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4571DB4377900824F9B /* LoginVC.swift */; };
+		2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4581DB4377900824F9B /* NewUserVC.swift */; };
+		2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */; };
+		2ABDB45E1DB4377900824F9B /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB45A1DB4377900824F9B /* MenuVC.swift */; };
 		3F7CE034D3D2A64DFF073CDD /* Pods_PodiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */; };
 		D665A2C083EAA9F9310BB056 /* Pods_Podium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C486291DE40EE285960049 /* Pods_Podium.framework */; };
 		ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD969C71DB433A100325C4D /* AppDelegate.swift */; };
@@ -30,6 +37,13 @@
 
 /* Begin PBXFileReference section */
 		124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.release.xcconfig"; sourceTree = "<group>"; };
+		2ABDB4511DB4376900824F9B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2ABDB4521DB4376900824F9B /* LoginConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConst.swift; sourceTree = "<group>"; };
+		2ABDB4531DB4376900824F9B /* NewUserConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserConst.swift; sourceTree = "<group>"; };
+		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2ABDB4581DB4377900824F9B /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
+		2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLostVC.swift; sourceTree = "<group>"; };
+		2ABDB45A1DB4377900824F9B /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		3273E3A0F12BD2610B7F5810 /* Pods-PodiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5640EAF61D3953E44EEBD901 /* Pods-Podium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +91,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2ABDB44E1DB4374300824F9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2ABDB4571DB4377900824F9B /* LoginVC.swift */,
+				2ABDB4581DB4377900824F9B /* NewUserVC.swift */,
+				2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */,
+				2ABDB45A1DB4377900824F9B /* MenuVC.swift */,
+			);
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2ABDB44F1DB4375100824F9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2ABDB4501DB4375900824F9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2ABDB4511DB4376900824F9B /* Constants.swift */,
+				2ABDB4521DB4376900824F9B /* LoginConst.swift */,
+				2ABDB4531DB4376900824F9B /* NewUserConst.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		3972869E7D67A4CD33863575 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +156,9 @@
 		ECD969C61DB433A100325C4D /* Podium */ = {
 			isa = PBXGroup;
 			children = (
+				2ABDB4501DB4375900824F9B /* Model */,
+				2ABDB44F1DB4375100824F9B /* View */,
+				2ABDB44E1DB4374300824F9B /* Controller */,
 				ECD969C71DB433A100325C4D /* AppDelegate.swift */,
 				ECD969C91DB433A100325C4D /* ViewController.swift */,
 				ECD969CB1DB433A100325C4D /* Main.storyboard */,
@@ -336,8 +384,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
+				2ABDB4561DB4376900824F9B /* NewUserConst.swift in Sources */,
+				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
+				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
 				ECD969CA1DB433A100325C4D /* ViewController.swift in Sources */,
+				2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */,
 				ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */,
+				2ABDB4541DB4376900824F9B /* Constants.swift in Sources */,
+				2ABDB4551DB4376900824F9B /* LoginConst.swift in Sources */,
+				2ABDB45E1DB4377900824F9B /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
