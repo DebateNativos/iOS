@@ -7,12 +7,11 @@
 //
 
 import Foundation
-
-class Constantes{
     
-    let BASE_URL = "http://debatesapp.azurewebsites.net/"
-    let LOGIN_URL = ""
+    let BASE_URL = "http://debatesapp.azurewebsites.net/testws-1.0/ws/clienteFormato/test"
+    let LOGIN = ""
     let USER_ID = ""
 
+    typealias DownloadComplete = () -> ()
     
-}
+    

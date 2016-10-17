@@ -11,11 +11,14 @@
 		2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4571DB4377900824F9B /* LoginVC.swift */; };
 		2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4581DB4377900824F9B /* NewUserVC.swift */; };
 		2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */; };
-		2ABDB45E1DB4377900824F9B /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB45A1DB4377900824F9B /* MenuVC.swift */; };
+		2ABDB45E1DB4377900824F9B /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB45A1DB4377900824F9B /* FeedVC.swift */; };
 		2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */; };
 		2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */; };
 		3F7CE034D3D2A64DFF073CDD /* Pods_PodiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */; };
 		D665A2C083EAA9F9310BB056 /* Pods_Podium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C486291DE40EE285960049 /* Pods_Podium.framework */; };
+		ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0AAC1DB48B2E00DF53CC /* User.swift */; };
+		ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0AAE1DB48B5700DF53CC /* Debate.swift */; };
+		ECBD0AB11DB48DD000DF53CC /* DebateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0AB01DB48DD000DF53CC /* DebateViewCell.swift */; };
 		ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD969C71DB433A100325C4D /* AppDelegate.swift */; };
 		ECD969CD1DB433A100325C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD969CB1DB433A100325C4D /* Main.storyboard */; };
 		ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECD969CE1DB433A100325C4D /* Podium.xcdatamodeld */; };
@@ -40,7 +43,7 @@
 		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2ABDB4581DB4377900824F9B /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
 		2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLostVC.swift; sourceTree = "<group>"; };
-		2ABDB45A1DB4377900824F9B /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		2ABDB45A1DB4377900824F9B /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldsUI.swift; sourceTree = "<group>"; };
 		3273E3A0F12BD2610B7F5810 /* Pods-PodiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +51,9 @@
 		5640EAF61D3953E44EEBD901 /* Pods-Podium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.release.xcconfig"; sourceTree = "<group>"; };
 		98DDE7AE040E20097F26B20E /* Pods-Podium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C486291DE40EE285960049 /* Pods_Podium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECBD0AAC1DB48B2E00DF53CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ECBD0AAE1DB48B5700DF53CC /* Debate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debate.swift; sourceTree = "<group>"; };
+		ECBD0AB01DB48DD000DF53CC /* DebateViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebateViewCell.swift; sourceTree = "<group>"; };
 		ECD969C41DB433A100325C4D /* Podium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD969C71DB433A100325C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD969CC1DB433A100325C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,7 +101,7 @@
 				2ABDB4571DB4377900824F9B /* LoginVC.swift */,
 				2ABDB4581DB4377900824F9B /* NewUserVC.swift */,
 				2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */,
-				2ABDB45A1DB4377900824F9B /* MenuVC.swift */,
+				2ABDB45A1DB4377900824F9B /* FeedVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -106,6 +112,7 @@
 			children = (
 				2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */,
 				2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */,
+				ECBD0AB01DB48DD000DF53CC /* DebateViewCell.swift */,
 			);
 			name = View;
 			path = ..;
@@ -115,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				2ABDB4511DB4376900824F9B /* Constants.swift */,
+				ECBD0AAC1DB48B2E00DF53CC /* User.swift */,
+				ECBD0AAE1DB48B5700DF53CC /* Debate.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -383,12 +392,15 @@
 				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
 				2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */,
 				2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */,
+				ECBD0AB11DB48DD000DF53CC /* DebateViewCell.swift in Sources */,
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
 				2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */,
 				ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */,
 				2ABDB4541DB4376900824F9B /* Constants.swift in Sources */,
-				2ABDB45E1DB4377900824F9B /* MenuVC.swift in Sources */,
+				ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */,
+				ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */,
+				2ABDB45E1DB4377900824F9B /* FeedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

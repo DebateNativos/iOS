@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuVC: UIViewController {
+class FeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
