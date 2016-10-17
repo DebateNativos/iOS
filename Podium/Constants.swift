@@ -15,5 +15,4 @@ class Constantes{
     let USER_ID = ""
 
     
-    
 }

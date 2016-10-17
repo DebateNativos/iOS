@@ -17,8 +17,7 @@ class PasswordLostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnSend.layer.cornerRadius = 3
-    }
+          }
     
     @IBAction func btnBackPressed(_ sender: AnyObject) {
         

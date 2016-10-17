@@ -17,12 +17,10 @@ class NewUserVC: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfVPassword:UITextField!
     @IBOutlet weak var btnCreate: UIButton!
-       @IBOutlet weak var tfCode: UITextField!
-    var newUserConst = NewUserConst()
+    @IBOutlet weak var tfCode: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnCreate.layer.cornerRadius = 3
     }
     
     @IBAction func BackBtnPressed(_ sender: AnyObject) {
@@ -33,13 +31,7 @@ class NewUserVC: UIViewController {
     }
     
     @IBAction func CreateAccountPressed(_ sender: AnyObject) {
-        
-        tfName.text = newUserConst.Name
-        tfLastName.text = newUserConst.LastName
-        tfEmail.text = newUserConst.Email
-        tfPassword.text = newUserConst.Password
-       // tfCode.text = newUserConst.Code
-        
+
         
         //METODO
         dismiss(animated: true, completion: nil)

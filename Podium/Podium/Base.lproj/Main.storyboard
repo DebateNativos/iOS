@@ -49,14 +49,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-pf-DF0">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-pf-DF0" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="BIj-mW-nx5"/>
                                     <constraint firstAttribute="height" constant="45" id="FoU-Kk-ndQ"/>
                                 </constraints>
                                 <state key="normal" title="FBLogin" image="LogFB"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeD-eT-p4g">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeD-eT-p4g" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.49803921569999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="HHd-DQ-z1J"/>
@@ -75,7 +75,7 @@
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Tx3-hZ-Q2w">
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbb-dC-RyB">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbb-dC-RyB" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="o2V-EI-3Xv"/>
                                             <constraint firstAttribute="width" constant="275" id="tEc-H1-WXH"/>
@@ -84,18 +84,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUc-9R-Oab">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUc-9R-Oab" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="275" id="CtR-Bb-x51"/>
+                                            <constraint firstAttribute="width" constant="275" id="8lO-TT-iED"/>
+                                            <constraint firstAttribute="height" constant="30" id="oSa-6T-QVl"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="JL9-xA-4Rx"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,9 +107,9 @@
                             <constraint firstItem="SRS-1Q-fmF" firstAttribute="top" secondItem="QRb-fk-BZG" secondAttribute="top" id="UHO-A2-fj3"/>
                             <constraint firstItem="Tx3-hZ-Q2w" firstAttribute="centerX" secondItem="QRb-fk-BZG" secondAttribute="centerX" id="YYf-8x-oqI"/>
                             <constraint firstItem="ThP-pf-DF0" firstAttribute="top" secondItem="TeD-eT-p4g" secondAttribute="bottom" constant="30" id="fze-mo-dnQ"/>
-                            <constraint firstItem="TeD-eT-p4g" firstAttribute="top" secondItem="Tx3-hZ-Q2w" secondAttribute="bottom" constant="60" id="hPS-iv-kzc"/>
                             <constraint firstItem="avL-7K-Jsq" firstAttribute="centerX" secondItem="ThP-pf-DF0" secondAttribute="centerX" id="iEA-MM-Ts6"/>
                             <constraint firstItem="TeD-eT-p4g" firstAttribute="centerX" secondItem="Tx3-hZ-Q2w" secondAttribute="centerX" id="l7S-Ic-J4P"/>
+                            <constraint firstItem="TeD-eT-p4g" firstAttribute="top" secondItem="Tx3-hZ-Q2w" secondAttribute="bottom" constant="50" id="yt0-ns-N0F"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -138,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FPassword " translatesAutoresizingMaskIntoConstraints="NO" id="HGu-ww-g7s"/>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-gD-bA5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-gD-bA5" customClass="FieldsUI" customModule="Podium">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="HxU-yd-Nl5"/>
                                     <constraint firstAttribute="height" constant="30" id="ue2-F1-RMa"/>
@@ -147,7 +145,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-4m-krb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfs-4m-krb" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.49803921569999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="01Q-q9-icM"/>
@@ -216,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewUser " translatesAutoresizingMaskIntoConstraints="NO" id="rHh-rl-Kl8"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-g4-gmM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-g4-gmM" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.49803921569999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LFY-a1-KeP"/>
@@ -241,7 +239,7 @@
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-h1-Q7W">
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJQ-cd-Ybv">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJQ-cd-Ybv" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="83X-5P-2hf"/>
                                             <constraint firstAttribute="width" constant="282" id="l0o-DJ-0a0"/>
@@ -250,7 +248,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1h-Q1-Y6L">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1h-Q1-Y6L" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="282" id="b6n-wR-Dlu"/>
                                             <constraint firstAttribute="height" constant="30" id="d50-tb-vwZ"/>
@@ -259,7 +257,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vW-yq-8nH">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vW-yq-8nH" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="282" id="27h-9E-Ht1"/>
                                             <constraint firstAttribute="height" constant="30" id="DaY-FJ-lsk"/>
@@ -268,7 +266,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-ZV-qte">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-ZV-qte" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="VvE-Se-mW7"/>
                                             <constraint firstAttribute="width" constant="282" id="gbq-v6-gju"/>
@@ -277,7 +275,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jia-Dj-eJP">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jia-Dj-eJP" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ucf-Zk-qGv"/>
                                             <constraint firstAttribute="width" constant="282" id="kp3-NS-3bd"/>
@@ -286,7 +284,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codigo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFp-jX-bl5">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codigo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFp-jX-bl5" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5yN-Te-d5A"/>
                                             <constraint firstAttribute="width" constant="282" id="ay6-we-8eO"/>
@@ -327,10 +325,10 @@
             </objects>
             <point key="canvasLocation" x="1466.25" y="952.81690140845069"/>
         </scene>
-        <!--View Controller-->
+        <!--MenuVC-->
         <scene sceneID="PkH-Lc-hJx">
             <objects>
-                <viewController id="edN-Ad-6mb" sceneMemberID="viewController">
+                <viewController id="edN-Ad-6mb" customClass="MenuVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hxq-X1-lFz"/>
                         <viewControllerLayoutGuide type="bottom" id="BG9-zM-DqH"/>
