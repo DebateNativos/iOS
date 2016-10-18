@@ -10,10 +10,38 @@ import UIKit
 
 class FeedVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    
+    //cuentas columnas?
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //Cuantas lineas vamos a tener
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    
+    //Cree igual a X columna y no haga muchas
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DebCell", for: indexPath)
+        
+        return cell
+        
+    }
+  
+    @IBAction func BackPressed(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

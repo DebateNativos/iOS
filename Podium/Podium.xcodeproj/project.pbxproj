@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0638531DB6897400370D55 /* ChronometerVC.swift */; };
 		2ABDB4541DB4376900824F9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4511DB4376900824F9B /* Constants.swift */; };
 		2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4571DB4377900824F9B /* LoginVC.swift */; };
 		2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4581DB4377900824F9B /* NewUserVC.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A0638531DB6897400370D55 /* ChronometerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronometerVC.swift; sourceTree = "<group>"; };
 		2ABDB4511DB4376900824F9B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2ABDB4581DB4377900824F9B /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				2ABDB4581DB4377900824F9B /* NewUserVC.swift */,
 				2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */,
 				2ABDB45A1DB4377900824F9B /* FeedVC.swift */,
+				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -392,6 +395,7 @@
 				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
 				2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */,
 				2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */,
+				2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */,
 				ECBD0AB11DB48DD000DF53CC /* DebateViewCell.swift in Sources */,
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
