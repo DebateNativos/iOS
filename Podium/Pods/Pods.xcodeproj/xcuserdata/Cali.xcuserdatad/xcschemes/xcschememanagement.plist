@@ -19,15 +19,30 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>SnapTimer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>241300041B8256517E7183EE597204E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4E7CB96CB573051797BC9217D12F1352</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88C64CE2C5D4C848CC29D62FB8AC7E9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

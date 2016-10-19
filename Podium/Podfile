@@ -16,5 +16,6 @@ target 'Podium' do
   
   pod 'Alamofire', '~> 4.0'
 
+  pod 'SnapTimer'
 
 end

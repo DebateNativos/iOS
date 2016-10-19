@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '88C64CE2C5D4C848CC29D62FB8AC7E9D'
-               BlueprintName = 'Pods-Podium'
+               BlueprintIdentifier = '241300041B8256517E7183EE597204E3'
+               BlueprintName = 'SnapTimer'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Podium.framework'>
+               BuildableName = 'SnapTimer.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

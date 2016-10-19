@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0638531DB6897400370D55 /* ChronometerVC.swift */; };
+		2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A984F991DB7E557008B49A3 /* LabelsUI.swift */; };
 		2ABDB4541DB4376900824F9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4511DB4376900824F9B /* Constants.swift */; };
 		2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4571DB4377900824F9B /* LoginVC.swift */; };
 		2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4581DB4377900824F9B /* NewUserVC.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A0638531DB6897400370D55 /* ChronometerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronometerVC.swift; sourceTree = "<group>"; };
+		2A984F991DB7E557008B49A3 /* LabelsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsUI.swift; sourceTree = "<group>"; };
 		2ABDB4511DB4376900824F9B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2ABDB4581DB4377900824F9B /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
@@ -97,6 +99,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2A984F9B1DB7E835008B49A3 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
 		2ABDB44E1DB4374300824F9B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +125,7 @@
 				2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */,
 				2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */,
 				ECBD0AB01DB48DD000DF53CC /* DebateViewCell.swift */,
+				2A984F991DB7E557008B49A3 /* LabelsUI.swift */,
 			);
 			name = View;
 			path = ..;
@@ -166,13 +176,14 @@
 		ECD969C61DB433A100325C4D /* Podium */ = {
 			isa = PBXGroup;
 			children = (
+				2A984F9B1DB7E835008B49A3 /* Files */,
 				2ABDB4501DB4375900824F9B /* Model */,
 				2ABDB44F1DB4375100824F9B /* View */,
 				2ABDB44E1DB4374300824F9B /* Controller */,
 				ECD969C71DB433A100325C4D /* AppDelegate.swift */,
 				ECD969CB1DB433A100325C4D /* Main.storyboard */,
-				ECD969D11DB433A100325C4D /* Assets.xcassets */,
 				ECD969D31DB433A100325C4D /* LaunchScreen.storyboard */,
+				ECD969D11DB433A100325C4D /* Assets.xcassets */,
 				ECD969D61DB433A100325C4D /* Info.plist */,
 				ECD969CE1DB433A100325C4D /* Podium.xcdatamodeld */,
 			);
@@ -404,6 +415,7 @@
 				2ABDB4541DB4376900824F9B /* Constants.swift in Sources */,
 				ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */,
 				ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */,
+				2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */,
 				2ABDB45E1DB4377900824F9B /* FeedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

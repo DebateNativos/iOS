@@ -1,12 +1,15 @@
 PODS:
-  - Alamofire (4.0.0)
+  - Alamofire (4.0.1)
+  - SnapTimer (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - SnapTimer
 
 SPEC CHECKSUMS:
-  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  SnapTimer: 6ed7ac161b75664ba955358c33677e7a548c5fe8
 
-PODFILE CHECKSUM: 163bcb6b683cdf1e8666bfc13ac9455625d93d75
+PODFILE CHECKSUM: 08a93564ccb3bb8d879d82cd9318051e720951a5
 
 COCOAPODS: 1.0.0
