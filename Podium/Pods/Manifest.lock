@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.0.1)
+  - SlideMenuControllerSwift (3.0.0)
   - SnapTimer (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - SlideMenuControllerSwift
   - SnapTimer
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
   SnapTimer: 6ed7ac161b75664ba955358c33677e7a548c5fe8
 
-PODFILE CHECKSUM: 08a93564ccb3bb8d879d82cd9318051e720951a5
+PODFILE CHECKSUM: 31ded5ba5c2e057c6c684d332f30d8c71fa79c53
 
 COCOAPODS: 1.0.0

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 class FeedVC: UIViewController {
     
@@ -43,5 +44,7 @@ class FeedVC: UIViewController {
     @IBAction func BackPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
 }
