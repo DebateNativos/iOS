@@ -35,40 +35,37 @@ class LoginVC: UIViewController {
     
 }
 
-//    @IBAction func EnterPressed(_ sender: AnyObject) {
+func EnterPressed(_ sender: AnyObject) {
+    
+    let loginInstance = Login.init(email : self.tfEmail.text!, password : self.tfPassword.text!)
+    
+}
+
+//func getUserDetails(_ completed: DownloadComplete){
+//    //De donde se bajan los datos.
+//    //Info.plist agregar app transport security settings -> Allow Arbitrary Loads = YES si no es HTTPS
 //
+//    Alamofire.request(BASE_URL).responseJSON {response in
+//        let result = response.result
+//        //DEBUG
+//        print(response, result, "--------URL: \(BASE_URL)")
 //
-//        if let email = tfEmail.text, let pwd = tfPassword.text {
+//        if let dict = result.value as? [Dictionary<String, AnyObject>]{
+//
+//            if let id = dict[1]["id"] as? Int{
+//                // self.label1.text = "\(id)"
+//                //print("ID \(self.user1.id) ++++ \(id)")
+//            }
+//
+//            if let name = dict[1]["nombre"] as? String{
+//                // self.label2.text = name.capitalized
+//                //print("NAMEEE \(self.user1.name) ++++ \(name)")
+//            }
 //
 //        }
-//
 //    }
+//    completed()
 
-func getUserDetails(_ completed: DownloadComplete){
-    //De donde se bajan los datos.
-    //Info.plist agregar app transport security settings -> Allow Arbitrary Loads = YES si no es HTTPS
-    
-    Alamofire.request(BASE_URL).responseJSON {response in
-        let result = response.result
-        //DEBUG
-        print(response, result, "--------URL: \(BASE_URL)")
-        
-        if let dict = result.value as? [Dictionary<String, AnyObject>]{
-            
-            if let id = dict[1]["id"] as? Int{
-                // self.label1.text = "\(id)"
-                //print("ID \(self.user1.id) ++++ \(id)")
-            }
-            
-            if let name = dict[1]["nombre"] as? String{
-                // self.label2.text = name.capitalized
-                //print("NAMEEE \(self.user1.name) ++++ \(name)")
-            }
-            
-        }
-    }
-    completed()
-}
 
 
 
