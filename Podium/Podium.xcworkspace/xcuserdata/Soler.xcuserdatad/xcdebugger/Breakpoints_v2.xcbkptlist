@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Constants.swift"
-            timestampString = "498378773.183487"
+            timestampString = "498696781.353048"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14">
+            startingLineNumber = "16"
+            endingLineNumber = "16">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,12 +24,26 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginVC.swift"
-            timestampString = "498383070.961111"
+            timestampString = "498707350.059592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "getUserDetails(_:)"
+            startingLineNumber = "117"
+            endingLineNumber = "117">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Login.swift"
+            timestampString = "498693047.760423"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(email:password:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -39,14 +53,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LoginVC.swift"
-            timestampString = "498383357.069026"
+            filePath = "User.swift"
+            timestampString = "498695245.105798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "updateUI()"
-            landmarkType = "7">
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "User"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "User.swift"
+            timestampString = "498705271.477156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "User"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -56,29 +86,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginVC.swift"
-            timestampString = "498383365.112824"
+            timestampString = "498707208.359279"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "getUserDetails(_:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getLogin(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LoginVC.swift"
-            timestampString = "498383366.398456"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "getUserDetails(_:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Podium.LoginVC.(getLogin (() -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Podium"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Soler/Documents/PodiumApp/iOS/Podium/LoginVC.swift"
+                  timestampString = "498704940.45466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "3269">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Podium.LoginVC.(getLogin (() -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Podium"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Soler/Documents/PodiumApp/iOS/Podium/LoginVC.swift"
+                  timestampString = "498704940.456959"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "3611">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

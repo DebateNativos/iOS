@@ -8,9 +8,11 @@
 
 import Foundation
     
-    let BASE_URL = "http://debatesapp.azurewebsites.net/testws-1.0/ws/clienteFormato/test"
-    let LOGIN = ""
-    let USER_ID = ""
+    let BASE_URL = "http://debatesapp.azurewebsites.net/podiumwebapp/ws"
+    let LOGIN_URL = "/user/login?"
+    let EMAIL_URL = "email="
+    let PASS_URL = "&password="
+
 
     typealias DownloadComplete = () -> ()
     

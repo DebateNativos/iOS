@@ -19,9 +19,24 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>SlideMenuControllerSwift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>SnapTimer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3FBC86B1D9D64A4EBB1CEC344F2B7B4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4E7CB96CB573051797BC9217D12F1352</key>
 		<dict>
 			<key>primary</key>
@@ -32,7 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A025EE3638213EB9954CD4171CEC8B47</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B2D512A6CFCCF69A8E4293C1E384AFFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDDDCD4D2A7EEF67A52F69341DA4F134</key>
 		<dict>
 			<key>primary</key>
 			<true/>
