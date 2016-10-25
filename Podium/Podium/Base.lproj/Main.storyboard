@@ -123,6 +123,7 @@
                         <outlet property="loginStatusLabel" destination="zPc-pG-nKg" id="nMs-e5-w07"/>
                         <outlet property="tfEmail" destination="Vbb-dC-RyB" id="aPo-G3-T7h"/>
                         <outlet property="tfPassword" destination="uUc-9R-Oab" id="sOR-zg-mfP"/>
+                        <segue destination="edN-Ad-6mb" kind="showDetail" identifier="DebatesFeedVC" id="HPh-vY-EkR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYZ-7F-ig5" sceneMemberID="firstResponder"/>
@@ -444,10 +445,10 @@
             </objects>
             <point key="canvasLocation" x="3561" y="-32"/>
         </scene>
-        <!--FeedVC-->
+        <!--DebastesFeedVC-->
         <scene sceneID="PkH-Lc-hJx">
             <objects>
-                <viewController id="edN-Ad-6mb" customClass="FeedVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="edN-Ad-6mb" userLabel="DebastesFeedVC" customClass="FeedVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hxq-X1-lFz"/>
                         <viewControllerLayoutGuide type="bottom" id="BG9-zM-DqH"/>
@@ -466,10 +467,10 @@
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="DebCell" rowHeight="70" id="Ied-Z8-fTx">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="70"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ied-Z8-fTx" id="rQ3-oW-cbL">
-                                            <frame key="frameInset" width="1000" height="70"/>
+                                            <frame key="frameInset" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="anV-pi-GQz">

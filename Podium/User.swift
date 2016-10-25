@@ -10,17 +10,17 @@ import Foundation
 
 public class User{
     
-    private var _idUsers: Int
-    private var _name: String
-    private var _lastName: String
-    private var _lastName2: String
-    private var _email: String
-    private var _address: String
-    private var _birthday = Date()
-    private var _idUniversity: Int
-    private var _password: String
-    private var _phone: String
-    private var _idToken: String
+    var _idUsers: Int
+    var _name: String
+    var _lastName: String
+    var _lastName2: String
+    var _email: String
+    var _address: String
+    var _birthday = Date()
+    var _idUniversity: Int
+    var _password: String
+    var _phone: String
+    var _idToken: String
     
     init(){
         _idUsers = 0
@@ -36,46 +36,6 @@ public class User{
         _idToken = ""
     }
     
-    func fillUserFromJson(userDict: Dictionary<String, AnyObject>) -> User{
-        
-        if let id = userDict["idUsers"] as? Int{
-            self._idUsers = id
-        }
-        if let name = userDict["name"] as? String{
-            self._name = name
-        }
-        if let lastName = userDict["lastName"] as? String{
-            self._lastName = lastName
-        }
-        if let lastName2 = userDict["lastName2"] as? String{
-            self._lastName2 = lastName2
-        }
-        if let email = userDict["email"] as? String{
-            self._email = email
-        }
-        if let address = userDict["address"] as? String{
-            self._address = address
-        }
-        if let birthday = userDict["birthday"] as? String{
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            let birthdayFormatted = dateFormatter.date(from: birthday)
-            self._birthday = birthdayFormatted!
-        }
-        if let idUniversity = userDict["idUniversity"] as? Int{
-            self._idUniversity = idUniversity
-        }
-        if let password = userDict["password"] as? String{
-            self._password = password
-        }
-        if let phone = userDict["phone"] as? String{
-            self._phone = phone
-        }
-        if let idToken = userDict["idToken"] as? String{
-            self._idToken = idToken
-        }
-        return self
-    }
     
     public var id: Int {
         set { _idUsers = id }
