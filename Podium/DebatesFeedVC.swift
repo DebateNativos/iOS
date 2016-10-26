@@ -47,7 +47,5 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func BackPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
+
 }

@@ -204,4 +204,13 @@ class LoginVC: UIViewController {
         
     }
     
+    func SignOut() {
+        
+        if userToEdit != nil {
+            context.delete(userToEdit!)
+            ad.saveContext()
+        }
+        
+    }
+    
 }
