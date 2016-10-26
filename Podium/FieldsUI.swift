@@ -13,7 +13,7 @@ class FieldsUI: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.borderWidth = 0.2
+        layer.borderWidth = 0.1
         layer.cornerRadius = 2.0
         layer.backgroundColor = UIColor( red: 255/255, green: 255/255, blue:255/255, alpha: 1.0 ).cgColor
     }
