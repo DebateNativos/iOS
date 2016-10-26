@@ -8,15 +8,16 @@
 
 import UIKit
 
-class LabelsUI: UILabel {
+class DebateCell: UITableViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        layer.borderWidth = 3.0
-        layer.cornerRadius = 8.0
-        layer.borderColor = UIColor( red: 15/255, green: 127/255, blue:65/255, alpha: 1.0 ).cgColor
-        
-        
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var lblSubject: UILabel!
+    
+    func configureCell(debate: Debate) {
+        lblSubject.text = "\(debate.Subject)"
+        lblDate.text = "\(debate.DateDeb)"
+        lblTime.text = "\(debate.Time)"
     }
+    
 }
