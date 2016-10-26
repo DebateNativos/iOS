@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>SCLAlertView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,6 +37,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0433FC7401915E16B90A6EE9FA1D579A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>241300041B8256517E7183EE597204E3</key>
 		<dict>
 			<key>primary</key>
@@ -43,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>4E7CB96CB573051797BC9217D12F1352</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70475EF0A472A70F1B917FA4ECB7413D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +78,16 @@
 			<true/>
 		</dict>
 		<key>B2D512A6CFCCF69A8E4293C1E384AFFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0EE907A1A871C4C0A9C96ABFDA49698</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBAF592ACE18BF80B25A0A1C119D6A53</key>
 		<dict>
 			<key>primary</key>
 			<true/>

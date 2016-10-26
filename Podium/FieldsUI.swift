@@ -15,6 +15,7 @@ class FieldsUI: UITextField {
         
         layer.borderWidth = 0.2
         layer.cornerRadius = 2.0
+        layer.backgroundColor = UIColor( red: 255/255, green: 255/255, blue:255/255, alpha: 1.0 ).cgColor
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {

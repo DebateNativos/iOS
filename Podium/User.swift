@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class User{
+public class User {
     
     var _idUsers: Int
     var _name: String
