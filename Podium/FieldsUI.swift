@@ -13,7 +13,7 @@ class FieldsUI: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // layer.borderWidth = 0.5
+        layer.borderWidth = 0.2
         layer.cornerRadius = 2.0
     }
     

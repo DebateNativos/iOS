@@ -9,7 +9,7 @@
 import UIKit
 import SlideMenuControllerSwift
 
-class FeedVC: UIViewController {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +17,8 @@ class FeedVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     
