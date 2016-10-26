@@ -63,6 +63,18 @@
                                     <action selector="loginBtnPressed:" destination="a9M-QO-smX" eventType="touchUpInside" id="qOM-UV-qyh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-pf-DF0" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="BIj-mW-nx5"/>
+                                    <constraint firstAttribute="height" constant="45" id="FoU-Kk-ndQ"/>
+                                </constraints>
+                                <state key="normal" title="FBLogin" image="LogFB"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-pG-nKg">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Tx3-hZ-Q2w">
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Correo electronico:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbb-dC-RyB" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
@@ -85,18 +97,6 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-pf-DF0" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="BIj-mW-nx5"/>
-                                    <constraint firstAttribute="height" constant="45" id="FoU-Kk-ndQ"/>
-                                </constraints>
-                                <state key="normal" title="FBLogin" image="LogFB"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-pG-nKg">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -469,34 +469,27 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="DebCell" rowHeight="70" id="Ied-Z8-fTx" customClass="DebateCell" customModule="Podium">
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Ied-Z8-fTx" id="rQ3-oW-cbL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ied-Z8-fTx" id="rQ3-oW-cbL">
                                             <frame key="frameInset" width="320" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="iCon" translatesAutoresizingMaskIntoConstraints="NO" id="anV-pi-GQz">
-                                                    <frame key="frameInset" minX="8" minY="8" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iCon" translatesAutoresizingMaskIntoConstraints="NO" id="anV-pi-GQz">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="GmK-QE-fJC"/>
                                                         <constraint firstAttribute="width" constant="50" id="d9D-58-ygp"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tema:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-cC-WZx">
-                                                    <frame key="frameInset" minX="66" minY="8" width="73" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-cC-WZx">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubm-Bv-8Ly">
-                                                    <frame key="frameInset" minX="66" minY="37" width="73" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubm-Bv-8Ly">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-d1-M6G">
-                                                    <frame key="frameInset" minX="239" minY="37" width="73" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-d1-M6G">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -504,8 +497,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="anV-pi-GQz" firstAttribute="top" secondItem="rQ3-oW-cbL" secondAttribute="top" constant="8" id="Dn9-dQ-tVU"/>
+                                                <constraint firstItem="Ubm-Bv-8Ly" firstAttribute="leading" secondItem="anV-pi-GQz" secondAttribute="trailing" constant="8" id="LGX-uM-e0u"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hOO-d1-M6G" secondAttribute="bottom" id="NtQ-zB-iU2"/>
                                                 <constraint firstItem="anV-pi-GQz" firstAttribute="leading" secondItem="rQ3-oW-cbL" secondAttribute="leading" constant="8" id="O3Y-Kd-cL5"/>
                                                 <constraint firstAttribute="bottom" secondItem="anV-pi-GQz" secondAttribute="bottom" constant="8" id="VMd-h2-3tL"/>
+                                                <constraint firstItem="hPz-cC-WZx" firstAttribute="leading" secondItem="anV-pi-GQz" secondAttribute="trailing" constant="8" id="acR-u3-JgK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="anV-pi-GQz" secondAttribute="bottom" id="c1R-T3-3o6"/>
+                                                <constraint firstItem="hPz-cC-WZx" firstAttribute="top" secondItem="rQ3-oW-cbL" secondAttribute="topMargin" id="fvP-vC-tuk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ubm-Bv-8Ly" secondAttribute="bottom" id="hDX-gf-fMj"/>
+                                                <constraint firstItem="hOO-d1-M6G" firstAttribute="trailing" secondItem="rQ3-oW-cbL" secondAttribute="trailingMargin" id="xhj-Pv-0cs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>

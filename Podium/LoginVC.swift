@@ -19,7 +19,7 @@ class LoginVC: UIViewController {
     var loginStatus: String = ""
     var loginUser: User!
     var reach: Reachability!
-    
+    var userToEdit: UserData?
     
     
     override func viewDidLoad() {
@@ -94,7 +94,7 @@ class LoginVC: UIViewController {
         }
         if let name = user["name"] as? String{
             self.loginUser._name = name
-            print("PRUEBA2 \(name)")            
+            print("PRUEBA2 \(name)")
         }
         if let lastName = user["lastName"] as? String{
             self.loginUser._lastName = lastName
@@ -126,6 +126,81 @@ class LoginVC: UIViewController {
         if let idToken = user["idToken"] as? String{
             self.loginUser._idToken = idToken
         }
+        
+    }
+    
+    func SaveUserInfo(){
+        
+        
+        var user: UserData!
+        
+        if userToEdit == nil {
+            
+            user = UserData(context: context)
+            
+        } else {
+            
+            user = userToEdit
+            
+        }
+        
+        
+        if  let nameOfUser: String = loginUser.name {
+            
+            user.name = nameOfUser
+            
+        }
+        
+        
+        if  let lastNameOfUser: String = loginUser.lastName {
+            
+            user.lastname = lastNameOfUser
+            
+        }
+        
+        if  let lastName2OfUser: String = loginUser.lastName2 {
+            
+            user.lastname2 = lastName2OfUser
+            
+        }
+        
+        
+        if  let email: String = loginUser.email {
+            
+            user.email = email
+            
+        }
+        
+        
+        if let address: String = loginUser.address {
+            
+            user.address = address
+            
+        }
+        
+        //
+        
+        
+        if let idUniversity: Int = loginUser.idUniversity{
+            
+            user.idUniversity = Int64(idUniversity)
+            
+        }
+        
+        
+        if let phone: String = loginUser.phone{
+            
+            user.phone = phone
+            
+        }
+        
+        if let idToken: String = loginUser.idToken{
+            
+            user.idToken = idToken
+            
+        }
+        
+        ad.saveContext()
         
     }
     

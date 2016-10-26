@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Podium
+//  DreamLister
 //
-//  Created by Jorge Soler on 10/16/16.
-//  Copyright © 2016 Jorge Soler. All rights reserved.
+//  Created by Jonny B on 8/16/16.
+//  Copyright © 2016 Jonny B. All rights reserved.
 //
 
 import UIKit
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "Podium")
+        let container = NSPersistentContainer(name: "DreamLister")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -89,17 +89,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    
-//    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        
-//        // create viewController code...
-//        
-//        let slideMenuController = SlideMenuController(mainViewController: mainViewController, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
-//        self.window?.rootViewController = slideMenuController
-//        self.window?.makeKeyAndVisible()
-//        
-//        return true
-//    }
-//    
 }
+
+let ad = UIApplication.shared.delegate as! AppDelegate
+let context = ad.persistentContainer.viewContext
+
+
+
+
+
+
+
+
+
+
+
+
+
 
