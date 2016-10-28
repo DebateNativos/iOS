@@ -10,39 +10,74 @@ import Foundation
 
 public class Debate {
     
-    var _idDebate: Int
-    var _subject: String
-    var _date = Date()
-    var _time: String
+    fileprivate var _idDebates: Int!
+    fileprivate var _name: String!
+    fileprivate var _debateTypeName: String!
+    fileprivate var _debateTypeDescription: String!
+    fileprivate var _startingDate: Date!
+
+    var idDebates : Int{
+        if _idDebates == nil!{
+            _idDebates = 0
+        }
+        return _idDebates
+    }
     
-    init(){
+    var name: String{
+        if _name == nil!{
+            _name = ""
+        }
+        return _name
+    }
+    
+    var debateTypeName: String{
+        if _debateTypeName == nil!{
+            _debateTypeName = ""
+        }
+        return _debateTypeName
+    }
+    
+    var startingDate: Date{
+        if _startingDate == nil!{
+            _startingDate = Date()
+        }
+        return _startingDate
+    }
+    
+    var debateTypeDescription: String{
+        if _debateTypeDescription == nil!{
+            _debateTypeDescription = ""
+        }
+        return _debateTypeDescription
+    }
+
+
+    
+    init(debate: Dictionary<String, AnyObject>){
         
-        _idDebate = 0
-        _subject = ""
-      _date = Date()
-        _time = ""
+        if let id = debate["idDebates"] as? Int{
+            self._idDebates = id
+        }
+        
+        if let name = debate["name"] as? String{
+            self._name = name
+        }
+        if let startingDebateDate = debate["startingDate"] as? String{
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let debateDateFormatted = dateFormatter.date(from: startingDebateDate)
+            self._startingDate = debateDateFormatted!
+        }
+        if let debateType = debate["debateType"] as? Dictionary<String, AnyObject>{
+            
+            if let debateType = debateType["name"] as? String{
+                self._debateTypeName = debateType
+            }
+            if let name = debateType["name"] as? String{
+                self._debateTypeDescription = name
+            }
+            
+        }
+
     }
-    
-    public var id: Int {
-        set { _idDebate = id }
-        get { return _idDebate }
-    }
-    
-    public var Subject: String {
-        set { _subject = Subject }
-        get { return _subject }
-    }
-    
-    
-    public var DateDeb: Date {
-        set { _date = DateDeb }
-        get { return _date }
-    }
-    
-    public var Time: String {
-        set { _time = Time }
-        get { return _time }
-    }
-    
-    
 }

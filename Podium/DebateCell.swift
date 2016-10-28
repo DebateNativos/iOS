@@ -15,9 +15,9 @@ class DebateCell: UITableViewCell {
     @IBOutlet weak var lblSubject: UILabel!
     
     func configureCell(debate: Debate) {
-        lblSubject.text = "\(debate.Subject)"
-        lblDate.text = "\(debate.DateDeb)"
-        lblTime.text = "\(debate.Time)"
+        lblSubject.text = "\(debate.name)"
+        lblDate.text = "\(debate.startingDate)"
+        lblTime.text = "\(debate.debateTypeName)"
     }
     
 }

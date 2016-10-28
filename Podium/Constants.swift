@@ -13,6 +13,7 @@ import SystemConfiguration
     let LOGIN_URL = "/user/login?"
     let EMAIL_URL = "email="
     let PASS_URL = "&password="
+    let DEBATES_URL = "/debate/activedebates"
 
 typealias DownloadComplete = () -> ()
 

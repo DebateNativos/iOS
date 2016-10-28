@@ -19,12 +19,11 @@ class LoginVC: UIViewController {
     var loginStatus: String = ""
     var loginUser: User!
     var reach: Reachability!
-    var userToEdit: UserData?
+    var userToEdit: UserCoreData?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginUser = User()
         reach = Reachability()
         
     }
@@ -36,7 +35,7 @@ class LoginVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if reach.isInternetAvailable(){
-            SCLAlertView().showInfo("Hola!!!", subTitle: "Si hay conexión a internet!")
+            SCLAlertView().showInfo("!!!", subTitle: "Si hay conexión a internet!")
             
         }else{
             
@@ -49,7 +48,7 @@ class LoginVC: UIViewController {
         
         self.getLogin{
             if self.loginStatus == "@validLogin"{
-                SCLAlertView().showSuccess("LOGIN", subTitle: "Hola \(self.loginUser._name)")
+                SCLAlertView().showSuccess("LOGIN", subTitle: "Hola \(self.loginUser._name!)")
                 self.performSegue(withIdentifier: "DebatesFeedVC", sender: self)
                 
             }else if self.loginStatus == "@invalidEmail"{
@@ -76,7 +75,8 @@ class LoginVC: UIViewController {
                 if let status = dict["status"] as? String{
                     if status == "@validLogin"{
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
-                            self.convertJSONtoUser(user: user)
+                            let userFound = User(user: user)
+                            self.loginUser = userFound
                         }
                         self.loginStatus = status
                     }else{
@@ -87,56 +87,16 @@ class LoginVC: UIViewController {
             completed()
         }
     }
-    func convertJSONtoUser(user: Dictionary<String, AnyObject>){
-        
-        if let id = user["idUsers"] as? Int{
-            self.loginUser._idUsers = id
-        }
-        if let name = user["name"] as? String{
-            self.loginUser._name = name
-            print("PRUEBA2 \(name)")
-        }
-        if let lastName = user["lastName"] as? String{
-            self.loginUser._lastName = lastName
-        }
-        if let lastName2 = user["lastName2"] as? String{
-            self.loginUser._lastName2 = lastName2
-        }
-        if let email = user["email"] as? String{
-            self.loginUser._email = email
-        }
-        if let address = user["address"] as? String{
-            self.loginUser._address = address
-        }
-        if let birthday = user["birthday"] as? String{
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            let birthdayFormatted = dateFormatter.date(from: birthday)
-            self.loginUser._birthday = birthdayFormatted!
-        }
-        if let idUniversity = user["idUniversity"] as? Int{
-            self.loginUser._idUniversity = idUniversity
-        }
-        if let password = user["password"] as? String{
-            self.loginUser._password = password
-        }
-        if let phone = user["phone"] as? String{
-            self.loginUser._phone = phone
-        }
-        if let idToken = user["idToken"] as? String{
-            self.loginUser._idToken = idToken
-        }
-        
-    }
+
     
     func SaveUserInfo(){
         
         
-        var user: UserData!
+        var user: UserCoreData!
         
         if userToEdit == nil {
             
-            user = UserData(context: context)
+            user = UserCoreData(context: context)
             
         } else {
             

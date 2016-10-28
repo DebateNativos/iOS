@@ -10,30 +10,59 @@ import Foundation
 
 public class User {
     
-    var _idUsers: Int
-    var _name: String
-    var _lastName: String
-    var _lastName2: String
-    var _email: String
-    var _address: String
-    var _birthday = Date()
-    var _idUniversity: Int
-    var _password: String
-    var _phone: String
-    var _idToken: String
+    var _idUsers: Int!
+    var _name: String!
+    var _lastName: String!
+    var _lastName2: String!
+    var _email: String!
+    var _address: String!
+    var _birthday: Date!
+    var _idUniversity: Int!
+    var _password: String!
+    var _phone: String!
+    var _idToken: String!
     
-    init(){
-        _idUsers = 0
-        _name = ""
-        _lastName = ""
-        _lastName2 = ""
-        _email = ""
-        _address = ""
-        _birthday = Date()
-        _idUniversity = 0
-        _password = ""
-        _phone = ""
-        _idToken = ""
+    
+    init(user: Dictionary<String, AnyObject>) {
+        
+        if let id = user["idUsers"] as? Int{
+        self._idUsers = id
+        }
+        if let name = user["name"] as? String{
+        self._name = name
+        print("PRUEBA2 \(name)")
+        }
+        if let lastName = user["lastName"] as? String{
+        self._lastName = lastName
+        }
+        if let lastName2 = user["lastName2"] as? String{
+        self._lastName2 = lastName2
+        }
+        if let email = user["email"] as? String{
+        self._email = email
+        }
+        if let address = user["address"] as? String{
+        self._address = address
+        }
+        if let birthday = user["birthday"] as? String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let birthdayFormatted = dateFormatter.date(from: birthday)
+        self._birthday = birthdayFormatted!
+        }
+        if let idUniversity = user["idUniversity"] as? Int{
+        self._idUniversity = idUniversity
+        }
+        if let password = user["password"] as? String{
+        self._password = password
+        }
+        if let phone = user["phone"] as? String{
+        self._phone = phone
+        }
+        if let idToken = user["idToken"] as? String{
+        self._idToken = idToken
+        }
+        
     }
     
     
