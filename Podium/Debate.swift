@@ -10,11 +10,11 @@ import Foundation
 
 public class Debate {
     
-     var _idDebates: Int!
-     var _name: String!
-     var _debateTypeName: String!
-     var _debateTypeDescription: String!
-     var _startingDate: Date!
+     fileprivate var _idDebates: Int!
+     fileprivate var _name: String!
+     fileprivate var _debateTypeName: String!
+     fileprivate var _debateTypeDescription: String!
+     fileprivate var _startingDate: Date!
 
     var idDebates : Int{
         if _idDebates == nil!{

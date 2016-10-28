@@ -21,6 +21,7 @@
 		2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */; };
 		3F7CE034D3D2A64DFF073CDD /* Pods_PodiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */; };
 		D665A2C083EAA9F9310BB056 /* Pods_Podium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C486291DE40EE285960049 /* Pods_Podium.framework */; };
+		EC3711731DC3BD560053D952 /* RegistrationToDebateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */; };
 		ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0AAC1DB48B2E00DF53CC /* User.swift */; };
 		ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD0AAE1DB48B5700DF53CC /* Debate.swift */; };
 		ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD969C71DB433A100325C4D /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 		5640EAF61D3953E44EEBD901 /* Pods-Podium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.release.xcconfig"; sourceTree = "<group>"; };
 		98DDE7AE040E20097F26B20E /* Pods-Podium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C486291DE40EE285960049 /* Pods_Podium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationToDebateModalViewController.swift; sourceTree = "<group>"; };
 		ECBD0AAC1DB48B2E00DF53CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECBD0AAE1DB48B5700DF53CC /* Debate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debate.swift; sourceTree = "<group>"; };
 		ECD969C41DB433A100325C4D /* Podium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podium.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */,
 				2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */,
 				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
+				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -422,6 +425,7 @@
 				2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */,
 				2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */,
 				2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */,
+				EC3711731DC3BD560053D952 /* RegistrationToDebateModalViewController.swift in Sources */,
 				2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */,
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,

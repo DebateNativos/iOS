@@ -443,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="try-sF-cfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2866" y="206"/>
+            <point key="canvasLocation" x="3574" y="320"/>
         </scene>
         <!--DebatesFeedVC-->
         <scene sceneID="PkH-Lc-hJx">
@@ -547,11 +547,166 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="ErU-nc-1Uz" id="k4j-JE-ZQk"/>
+                        <segue destination="eYv-7u-VhA" kind="presentation" identifier="registrationToDebate" id="bAS-GB-I80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPm-p6-S5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072.8000000000002" y="557.27136431784118"/>
+            <point key="canvasLocation" x="2044" y="558"/>
+        </scene>
+        <!--RegistrationToDebateModal-->
+        <scene sceneID="DeI-TA-UAp">
+            <objects>
+                <viewController id="eYv-7u-VhA" userLabel="RegistrationToDebateModal" customClass="RegistrationToDebateModalViewController" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QFb-if-ITR"/>
+                        <viewControllerLayoutGuide type="bottom" id="A4p-AX-A3n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pez-3a-LnS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNZ-Yj-Pxc">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ejemplo: YHTB7" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-L6-mEQ">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="151" id="EcY-Sm-MU6"/>
+                                            <constraint firstAttribute="height" constant="30" id="ldA-a7-kzX"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dg-bh-JTj" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="232" id="0eP-Ql-HHl"/>
+                                            <constraint firstAttribute="height" constant="59" id="Zmr-Y4-wzf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Como Estudiante">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="studentBtnPressed:" destination="eYv-7u-VhA" eventType="touchUpInside" id="T2p-Pf-aSo"/>
+                                            <segue destination="SUh-0z-fwM" kind="showDetail" id="vgh-gR-GdD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZ4-Tl-WbD" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.29150142766497467" green="0.28166121320213044" blue="0.1248665432580668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="232" id="3tI-lQ-oZd"/>
+                                            <constraint firstAttribute="height" constant="59" id="4Sr-Tb-6qi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Como Publico">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="publicBtnPressed:" destination="eYv-7u-VhA" eventType="touchUpInside" id="eDj-dB-vpS"/>
+                                            <segue destination="Szm-rn-bzc" kind="showDetail" id="hRU-jg-KkJ"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="NOMBRE DEL DEBATE" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HYr-t4-yZA">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="HbU-1l-4q5"/>
+                                            <constraint firstAttribute="height" constant="96" id="wd0-xX-DXo"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Si desea registrarse al debate como estudiante ingrese el codigo enviado a su correo." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ee4-iB-UFl">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="K8W-sj-sD0"/>
+                                            <constraint firstAttribute="height" constant="145" id="dtj-bK-oRs"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="De lo contrario puede ingresar como publico!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-U4-r7f">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="73" id="CQN-zL-B6C"/>
+                                            <constraint firstAttribute="width" constant="240" id="Uic-Cg-VSC"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PB-HJ-U8C">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aqw-Qa-hxV"/>
+                                            <constraint firstAttribute="width" constant="50" id="rZn-fQ-xrQ"/>
+                                        </constraints>
+                                        <state key="normal" image="Red"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="eYv-7u-VhA" eventType="touchUpInside" id="9bY-Mm-Rao"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Kbf-L6-mEQ" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="112" id="1Hf-t5-ctI"/>
+                                    <constraint firstItem="ee4-iB-UFl" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="67" id="4MV-ZK-Gqi"/>
+                                    <constraint firstAttribute="trailing" secondItem="ee4-iB-UFl" secondAttribute="trailing" constant="68" id="8m5-ew-i7A"/>
+                                    <constraint firstAttribute="trailing" secondItem="NZ4-Tl-WbD" secondAttribute="trailing" constant="72" id="9Zm-Ry-OkB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kbf-L6-mEQ" secondAttribute="trailing" constant="112" id="A3r-YS-VZe"/>
+                                    <constraint firstItem="NZ4-Tl-WbD" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="71" id="CgG-Yc-hoR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ha6-U4-r7f" secondAttribute="trailing" constant="68" id="Fga-De-IcK"/>
+                                    <constraint firstItem="HYr-t4-yZA" firstAttribute="top" secondItem="dNZ-Yj-Pxc" secondAttribute="top" constant="61" id="G8j-E9-XA0"/>
+                                    <constraint firstItem="NZ4-Tl-WbD" firstAttribute="top" secondItem="Ha6-U4-r7f" secondAttribute="bottom" constant="8" id="JDt-pN-LDc"/>
+                                    <constraint firstItem="Kbf-L6-mEQ" firstAttribute="top" secondItem="ee4-iB-UFl" secondAttribute="bottom" constant="8" id="SAo-am-Xb6"/>
+                                    <constraint firstItem="4Dg-bh-JTj" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="71" id="TYz-vO-CAh"/>
+                                    <constraint firstAttribute="bottom" secondItem="NZ4-Tl-WbD" secondAttribute="bottom" constant="33" id="XQy-yM-TBI"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Dg-bh-JTj" secondAttribute="trailing" constant="72" id="au7-if-nf0"/>
+                                    <constraint firstItem="ee4-iB-UFl" firstAttribute="top" secondItem="HYr-t4-yZA" secondAttribute="bottom" constant="8" id="gOw-lc-NrB"/>
+                                    <constraint firstItem="NZ4-Tl-WbD" firstAttribute="top" secondItem="Ha6-U4-r7f" secondAttribute="bottom" constant="8" id="h1O-vm-zVj"/>
+                                    <constraint firstItem="Ha6-U4-r7f" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="67" id="iVd-ra-eJs"/>
+                                    <constraint firstItem="8PB-HJ-U8C" firstAttribute="top" secondItem="dNZ-Yj-Pxc" secondAttribute="top" constant="25" id="qwB-r8-pgk"/>
+                                    <constraint firstAttribute="trailing" secondItem="8PB-HJ-U8C" secondAttribute="trailing" constant="8" id="v3i-4u-ZC5"/>
+                                    <constraint firstItem="HYr-t4-yZA" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="67" id="vdF-Vb-7lj"/>
+                                    <constraint firstItem="4Dg-bh-JTj" firstAttribute="top" secondItem="Kbf-L6-mEQ" secondAttribute="bottom" constant="17" id="y32-Op-Pif"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNZ-Yj-Pxc" firstAttribute="leading" secondItem="pez-3a-LnS" secondAttribute="leading" id="9Aj-7f-aD6"/>
+                            <constraint firstAttribute="trailing" secondItem="dNZ-Yj-Pxc" secondAttribute="trailing" id="IP6-a2-SiQ"/>
+                            <constraint firstItem="A4p-AX-A3n" firstAttribute="top" secondItem="dNZ-Yj-Pxc" secondAttribute="bottom" id="ZrZ-K3-Obz"/>
+                            <constraint firstItem="dNZ-Yj-Pxc" firstAttribute="top" secondItem="pez-3a-LnS" secondAttribute="top" id="fDT-Iy-eK7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="debateCodeTxtField" destination="Kbf-L6-mEQ" id="g1t-gL-glk"/>
+                        <outlet property="debateNameLbl" destination="HYr-t4-yZA" id="xvn-aB-XOI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0w-MF-fyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2764" y="560.86956521739137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xaj-yW-Kls">
+            <objects>
+                <viewController id="Szm-rn-bzc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D00-wx-6r5"/>
+                        <viewControllerLayoutGuide type="bottom" id="PiG-W6-SDR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Anq-gl-dvP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQe-KK-dUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3574" y="1002"/>
         </scene>
     </scenes>
     <resources>

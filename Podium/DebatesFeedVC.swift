@@ -32,7 +32,6 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getActiveDebates {
-            print("hola")
             self.tableView.reloadData()
         }
     }
@@ -57,6 +56,23 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let debate = debates[indexPath.row]
+        
+        performSegue(withIdentifier: "registrationToDebate", sender: debate)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let destination = segue.destination as? RegistrationToDebateModalViewController {
+            
+            if let debate = sender as? Debate{
+                destination.debate = debate
+            }
+            
+        }
+    }
+    
     func getActiveDebates(_ completed: DownloadComplete){
         
         let ACTIVEDEBATES_URL = "\(BASE_URL)\(DEBATES_URL)"
@@ -71,7 +87,6 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     
                     let activeDebate = Debate(debate: obj)
                     self.debates.append(activeDebate)
-                    print("DEBATE TESTER  \(activeDebate._name)")
                     self.tableView.reloadData()
                 }
             }
