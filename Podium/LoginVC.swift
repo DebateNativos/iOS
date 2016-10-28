@@ -22,11 +22,13 @@ class LoginVC: UIViewController {
     var userToEdit: UserCoreData?
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         reach = Reachability()
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

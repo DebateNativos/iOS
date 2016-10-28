@@ -146,7 +146,6 @@
 		2ABDB4501DB4375900824F9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC27D6EE1DC25D0700E0353B /* Data */,
 				2ABDB4511DB4376900824F9B /* Constants.swift */,
 				ECBD0AAC1DB48B2E00DF53CC /* User.swift */,
 				ECBD0AAE1DB48B5700DF53CC /* Debate.swift */,
@@ -166,13 +165,6 @@
 				124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		EC27D6EE1DC25D0700E0353B /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Data;
 			sourceTree = "<group>";
 		};
 		ECD969BB1DB433A100325C4D = {

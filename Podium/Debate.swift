@@ -10,11 +10,11 @@ import Foundation
 
 public class Debate {
     
-    fileprivate var _idDebates: Int!
-    fileprivate var _name: String!
-    fileprivate var _debateTypeName: String!
-    fileprivate var _debateTypeDescription: String!
-    fileprivate var _startingDate: Date!
+     var _idDebates: Int!
+     var _name: String!
+     var _debateTypeName: String!
+     var _debateTypeDescription: String!
+     var _startingDate: Date!
 
     var idDebates : Int{
         if _idDebates == nil!{
@@ -51,7 +51,15 @@ public class Debate {
         return _debateTypeDescription
     }
 
-
+    init(){
+    
+        _idDebates = 0
+        _name = ""
+        _debateTypeName = ""
+        _debateTypeDescription = ""
+        _startingDate = Date()
+        
+    }
     
     init(debate: Dictionary<String, AnyObject>){
         
@@ -60,6 +68,7 @@ public class Debate {
         }
         
         if let name = debate["name"] as? String{
+            print("DEBATE:  \(name)")
             self._name = name
         }
         if let startingDebateDate = debate["startingDate"] as? String{

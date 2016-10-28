@@ -21,5 +21,14 @@ target 'Podium' do
   pod 'SlideMenuControllerSwift'
   
   pod 'SCLAlertView'
+  
+  #Cellviews con botones
+  # pod 'EVSlidingTableViewCell', '~> 2.0'
+  
+  #Menu
+  #pod 'SideMenuController'
+  
+  #waitAnimation
+  #pod 'SwiftSpinner'
 
 end
