@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E8C8D5A7C47962DEDD70F5CD02E09F81'
-               BlueprintName = 'SnapTimer'
+               BlueprintIdentifier = '5AC666FE07DF18E99B57DF2ADBB31B56'
+               BlueprintName = 'SideMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SnapTimer.framework'>
+               BuildableName = 'SideMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

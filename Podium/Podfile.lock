@@ -1,21 +1,21 @@
 PODS:
   - Alamofire (4.0.1)
   - SCLAlertView (0.7.0)
-  - SlideMenuControllerSwift (3.0.0)
+  - SideMenu (2.0.5)
   - SnapTimer (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - SCLAlertView
-  - SlideMenuControllerSwift
+  - SideMenu
   - SnapTimer
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
-  SlideMenuControllerSwift: 9c0a84f9a3fba51681debd7be77617094562ebcc
+  SideMenu: 0ecfd407b24e7d36c57fc50ca7f5d7cedb7c8841
   SnapTimer: 6ed7ac161b75664ba955358c33677e7a548c5fe8
 
-PODFILE CHECKSUM: d9fcc3557a7d150b041b6312db8023acd28056f3
+PODFILE CHECKSUM: b9cb53b6ff59c21791d8c8c7a5ed6a6287de7744
 
 COCOAPODS: 1.0.0

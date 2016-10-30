@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SideMenu
 
 class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -21,7 +22,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+        menu()
         
     }
     
@@ -63,7 +64,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         if let destination = segue.destination as? RegistrationToDebateModalViewController {
             
             if let debate = sender as? Debate{
@@ -97,9 +98,20 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.tableView.reloadData()
     }
     
-    @IBAction func BackPressed(_ sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
+    func menu () {
+        
+        // Define the menus
+        let menuLeftNavigationController = UISideMenuNavigationController()
+        menuLeftNavigationController.leftSide = true
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
+        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
+        
+        let menuRightNavigationController = UISideMenuNavigationController()
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
+        SideMenuManager.menuRightNavigationController = menuRightNavigationController
+        
     }
+    
     
     
 }

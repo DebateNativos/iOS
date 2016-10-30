@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>SideMenu.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -47,12 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2B96AF23B0F49A2AF01E057EB0C54368</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3FBC86B1D9D64A4EBB1CEC344F2B7B4A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4E7CB96CB573051797BC9217D12F1352</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5AC666FE07DF18E99B57DF2ADBB31B56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,6 +87,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9F5C7DFF8AF18F1F22CDE96CFC00F213</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A025EE3638213EB9954CD4171CEC8B47</key>
 		<dict>
 			<key>primary</key>
@@ -83,6 +103,11 @@
 			<true/>
 		</dict>
 		<key>D0EE907A1A871C4C0A9C96ABFDA49698</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8C8D5A7C47962DEDD70F5CD02E09F81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
