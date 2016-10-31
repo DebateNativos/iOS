@@ -19,8 +19,7 @@ class LoginVC: UIViewController {
     var loginStatus: String = ""
     var loginUser: User!
     var reach: Reachability!
-    var userToEdit: UserCoreData?
-    
+    var saveData: SaveData!
     
     
     override func viewDidLoad() {
@@ -89,90 +88,17 @@ class LoginVC: UIViewController {
             completed()
         }
     }
-
     
-    func SaveUserInfo(){
-        
-        
-        var user: UserCoreData!
-        
-        if userToEdit == nil {
-            
-            user = UserCoreData(context: context)
-            
-        } else {
-            
-            user = userToEdit
-            
-        }
-        
-        
-        if  let nameOfUser: String = loginUser.name {
-            
-            user.name = nameOfUser
-            
-        }
-        
-        
-        if  let lastNameOfUser: String = loginUser.lastName {
-            
-            user.lastname = lastNameOfUser
-            
-        }
-        
-        if  let lastName2OfUser: String = loginUser.lastName2 {
-            
-            user.lastname2 = lastName2OfUser
-            
-        }
-        
-        
-        if  let email: String = loginUser.email {
-            
-            user.email = email
-            
-        }
-        
-        
-        if let address: String = loginUser.address {
-            
-            user.address = address
-            
-        }
-        
-        //
-        
-        
-        if let idUniversity: Int = loginUser.idUniversity{
-            
-            user.idUniversity = Int64(idUniversity)
-            
-        }
-        
-        
-        if let phone: String = loginUser.phone{
-            
-            user.phone = phone
-            
-        }
-        
-        if let idToken: String = loginUser.idToken{
-            
-            user.idToken = idToken
-            
-        }
-        
-        ad.saveContext()
-        
-    }
     
-    func SignOut() {
-        
-        if userToEdit != nil {
-            context.delete(userToEdit!)
-            ad.saveContext()
-        }
-        
-    }
+    
+    
+    //    func SignOut() {
+    //
+    //        if userToEdit != nil {
+    //            context.delete(userToEdit!)
+    //            ad.saveContext()
+    //        }
+    //
+    //    }
     
 }
