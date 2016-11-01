@@ -17,6 +17,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         textViewDidBeginEditing()
         textViewDidChange(textViewComment)
+        textViewComment.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
     
@@ -36,4 +37,9 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
         placeholderLabel.isHidden = !textView.text.isEmpty
     }
     
+    @IBAction func closePressed(_ sender: AnyObject) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0638531DB6897400370D55 /* ChronometerVC.swift */; };
 		2A0A09F11DC8372E0069AF49 /* NewCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */; };
+		2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F21DC842790069AF49 /* ObserverVC.swift */; };
 		2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB021DC064DD00A1CB7C /* DebateCell.swift */; };
 		2A58EB0E1DC06ADE00A1CB7C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */; };
 		2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */; };
@@ -48,6 +49,7 @@
 		124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A0638531DB6897400370D55 /* ChronometerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronometerVC.swift; sourceTree = "<group>"; };
 		2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentVC.swift; sourceTree = "<group>"; };
+		2A0A09F21DC842790069AF49 /* ObserverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
 		2A58EB021DC064DD00A1CB7C /* DebateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebateCell.swift; sourceTree = "<group>"; };
 		2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Podium/User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Podium/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
 				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
 				2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */,
+				2A0A09F21DC842790069AF49 /* ObserverVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -426,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */,
 				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
 				2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */,
 				2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */,
