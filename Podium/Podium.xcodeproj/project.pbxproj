@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0638531DB6897400370D55 /* ChronometerVC.swift */; };
+		2A0A09F11DC8372E0069AF49 /* NewCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */; };
 		2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB021DC064DD00A1CB7C /* DebateCell.swift */; };
 		2A58EB0E1DC06ADE00A1CB7C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */; };
 		2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		124BCF3CFEDDA766222E22F2 /* Pods-PodiumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A0638531DB6897400370D55 /* ChronometerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronometerVC.swift; sourceTree = "<group>"; };
+		2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentVC.swift; sourceTree = "<group>"; };
 		2A58EB021DC064DD00A1CB7C /* DebateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebateCell.swift; sourceTree = "<group>"; };
 		2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Podium/User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Podium/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */,
 				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
 				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
+				2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -439,6 +442,7 @@
 				ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */,
 				2A8CDD681DC7BAF100B77B0E /* SaveData.swift in Sources */,
 				2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */,
+				2A0A09F11DC8372E0069AF49 /* NewCommentVC.swift in Sources */,
 				2ABDB45E1DB4377900824F9B /* DebatesFeedVC.swift in Sources */,
 				2A58EB0E1DC06ADE00A1CB7C /* User+CoreDataClass.swift in Sources */,
 			);
