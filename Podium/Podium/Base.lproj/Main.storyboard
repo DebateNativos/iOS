@@ -587,9 +587,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxt-UK-CPs">
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="31O-Yr-3SE" kind="show" id="hvQ-xk-018"/>
-                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-jR-zvR">
                                         <subviews>
@@ -978,105 +975,6 @@
             </objects>
             <point key="canvasLocation" x="5125.6000000000004" y="1482.9085457271365"/>
         </scene>
-        <!--ObserverVC-->
-        <scene sceneID="k1K-hu-J27">
-            <objects>
-                <viewController id="eTy-H1-cLb" customClass="ObserverVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pQ3-RN-YRY"/>
-                        <viewControllerLayoutGuide type="bottom" id="WjU-f5-mHp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ucT-mS-bAj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DebatePicBlur" translatesAutoresizingMaskIntoConstraints="NO" id="2XJ-ve-TGx">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="UMG-Hi-AZ6"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-AM-fdo">
-                                <frame key="frameInset" minX="16" minY="227" width="138" height="52"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Etapa del debate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4s-rt-zyO">
-                                        <frame key="frameInset" width="138" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-nk-OGH">
-                                        <frame key="frameInset" minY="32" width="138" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTI-Il-Jm6">
-                                <frame key="frameInset" minX="329" minY="255" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="5Me-LH-Eia"/>
-                                    <constraint firstAttribute="width" constant="30" id="dnK-3s-V8c"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="CreateWrite"/>
-                                <connections>
-                                    <segue destination="pzk-4Z-MdP" kind="show" id="HEM-IG-sO7"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PF-It-WeM">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Gui-tu-ytC"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Titulo del debate" id="Si7-MY-UbE">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="scd-fR-jfV">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y2h-QI-hJW">
-                                                <rect key="frame" x="16" y="18" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="back_btn">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="BackPressed:" destination="eTy-H1-cLb" eventType="touchUpInside" id="qcS-m2-rvv"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUL-OP-GrS">
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="DUL-OP-GrS" firstAttribute="top" secondItem="2XJ-ve-TGx" secondAttribute="bottom" id="0PS-ic-6rX"/>
-                            <constraint firstAttribute="trailing" secondItem="DUL-OP-GrS" secondAttribute="trailing" id="93u-y3-SNG"/>
-                            <constraint firstItem="2XJ-ve-TGx" firstAttribute="top" secondItem="ucT-mS-bAj" secondAttribute="top" id="Dbu-C3-1Et"/>
-                            <constraint firstItem="DUL-OP-GrS" firstAttribute="leading" secondItem="ucT-mS-bAj" secondAttribute="leading" id="Dri-4E-kn0"/>
-                            <constraint firstAttribute="trailing" secondItem="0PF-It-WeM" secondAttribute="trailing" id="EEo-eh-exh"/>
-                            <constraint firstItem="0PF-It-WeM" firstAttribute="leading" secondItem="ucT-mS-bAj" secondAttribute="leading" id="FZs-FO-qEl"/>
-                            <constraint firstAttribute="trailing" secondItem="2XJ-ve-TGx" secondAttribute="trailing" id="GgX-dR-QKZ"/>
-                            <constraint firstItem="WjU-f5-mHp" firstAttribute="top" secondItem="DUL-OP-GrS" secondAttribute="bottom" id="PRG-kL-09a"/>
-                            <constraint firstItem="2XJ-ve-TGx" firstAttribute="leading" secondItem="ucT-mS-bAj" secondAttribute="leading" id="TUk-On-Anb"/>
-                            <constraint firstItem="ebA-AM-fdo" firstAttribute="leading" secondItem="ucT-mS-bAj" secondAttribute="leadingMargin" id="WGb-Z0-zUE"/>
-                            <constraint firstItem="hTI-Il-Jm6" firstAttribute="trailing" secondItem="ucT-mS-bAj" secondAttribute="trailingMargin" id="aMs-ce-xXE"/>
-                            <constraint firstItem="0PF-It-WeM" firstAttribute="top" secondItem="ucT-mS-bAj" secondAttribute="top" id="f98-Ko-uhu"/>
-                        </constraints>
-                    </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="lblDate" destination="hXz-nk-OGH" id="dqt-4A-d12"/>
-                        <outlet property="lblEtapa" destination="N4s-rt-zyO" id="mVb-zb-bAB"/>
-                        <outlet property="navBar" destination="0PF-It-WeM" id="KsI-NF-JIE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LcK-89-h5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4557.6000000000004" y="693.10344827586209"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Blur 2" width="1241" height="679"/>
@@ -1093,7 +991,4 @@
         <image name="back_btn_light" width="14" height="25"/>
         <image name="iCon" width="346" height="346"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="HEM-IG-sO7"/>
-    </inferredMetricsTieBreakers>
 </document>
