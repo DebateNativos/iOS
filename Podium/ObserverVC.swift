@@ -61,9 +61,9 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func updateLbl (){
         
-        self.navigationController?.navigationBar.topItem?.title = debate.name
-       // lblDate.text = debate.description
-        //lblDate.text = "\(debate.startingDate)"
+       // lblEtapa.text = debate.description
+        lblDate.text = "\(debate.startingDate)"
+        self.navigationItem.title = debate.name
         
     }
     

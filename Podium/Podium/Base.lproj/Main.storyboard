@@ -585,9 +585,6 @@
                                             <action selector="backBtnPressed:" destination="eYv-7u-VhA" eventType="touchUpInside" id="9bY-Mm-Rao"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxt-UK-CPs">
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-jR-zvR">
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="NOMBRE DEL DEBATE" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HYr-t4-yZA">
@@ -631,7 +628,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="studentBtnPressed:" destination="eYv-7u-VhA" eventType="touchUpInside" id="T2p-Pf-aSo"/>
-                                                    <segue destination="SUh-0z-fwM" kind="showDetail" id="vgh-gR-GdD"/>
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="De lo contrario puede ingresar como publico!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-U4-r7f">
@@ -656,7 +652,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="publicBtnPressed:" destination="eYv-7u-VhA" eventType="touchUpInside" id="eDj-dB-vpS"/>
-                                                    <segue destination="Szm-rn-bzc" kind="showDetail" id="hRU-jg-KkJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -669,10 +664,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="8PB-HJ-U8C" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="10" id="45B-pM-ZiX"/>
-                                    <constraint firstItem="Bxt-UK-CPs" firstAttribute="leading" secondItem="dNZ-Yj-Pxc" secondAttribute="leading" constant="8" id="4Ie-oF-gyR"/>
                                     <constraint firstItem="Rwc-jR-zvR" firstAttribute="top" secondItem="dNZ-Yj-Pxc" secondAttribute="top" constant="20" id="9rO-FC-ioI"/>
                                     <constraint firstItem="8PB-HJ-U8C" firstAttribute="top" secondItem="dNZ-Yj-Pxc" secondAttribute="top" constant="15" id="CMW-xO-khc"/>
-                                    <constraint firstAttribute="bottom" secondItem="Bxt-UK-CPs" secondAttribute="bottom" constant="8" id="GOb-Ib-Zdw"/>
                                     <constraint firstAttribute="bottom" secondItem="Rwc-jR-zvR" secondAttribute="bottom" constant="20" id="VCB-f6-W8f"/>
                                     <constraint firstItem="Rwc-jR-zvR" firstAttribute="centerY" secondItem="dNZ-Yj-Pxc" secondAttribute="centerY" id="eN6-Pd-icK"/>
                                     <constraint firstItem="Rwc-jR-zvR" firstAttribute="centerX" secondItem="dNZ-Yj-Pxc" secondAttribute="centerX" id="mGV-Fp-lv8"/>
@@ -690,6 +683,8 @@
                     <connections>
                         <outlet property="debateCodeTxtField" destination="Kbf-L6-mEQ" id="g1t-gL-glk"/>
                         <outlet property="debateNameLbl" destination="HYr-t4-yZA" id="xvn-aB-XOI"/>
+                        <segue destination="31O-Yr-3SE" kind="showDetail" identifier="ObserverVC" id="JXI-zn-Yfu"/>
+                        <segue destination="SUh-0z-fwM" kind="showDetail" identifier="DebaterVC" id="4C3-0t-cIB"/>
                     </connections>
                 </viewController>
             </objects>
@@ -722,7 +717,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2S-Xl-g3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3090" y="1664"/>
+            <point key="canvasLocation" x="3190" y="1747"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="FIo-xd-VA3">
@@ -742,24 +737,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0n-qm-ncp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2273" y="1383"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Xaj-yW-Kls">
-            <objects>
-                <viewController id="Szm-rn-bzc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D00-wx-6r5"/>
-                        <viewControllerLayoutGuide type="bottom" id="PiG-W6-SDR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Anq-gl-dvP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uQe-KK-dUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3574" y="1002"/>
         </scene>
         <!--ObserverVC-->
         <scene sceneID="7wx-gM-ms0">
@@ -897,7 +874,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87y-kD-x2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4291.875" y="1483.0985915492959"/>
+            <point key="canvasLocation" x="3596" y="1006"/>
         </scene>
         <!--New CommentVC-->
         <scene sceneID="C0C-pp-CfK">
@@ -973,7 +950,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3Z-ax-bNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5125.6000000000004" y="1482.9085457271365"/>
+            <point key="canvasLocation" x="4702" y="1005"/>
         </scene>
     </scenes>
     <resources>
