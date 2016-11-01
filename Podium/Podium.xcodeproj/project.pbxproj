@@ -10,6 +10,8 @@
 		2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0638531DB6897400370D55 /* ChronometerVC.swift */; };
 		2A0A09F11DC8372E0069AF49 /* NewCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */; };
 		2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F21DC842790069AF49 /* ObserverVC.swift */; };
+		2A2EB0C31DC8F39500BDEEF6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */; };
+		2A2EB0C91DC8F57700BDEEF6 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */; };
 		2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB021DC064DD00A1CB7C /* DebateCell.swift */; };
 		2A58EB0E1DC06ADE00A1CB7C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */; };
 		2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */; };
@@ -50,6 +52,8 @@
 		2A0638531DB6897400370D55 /* ChronometerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronometerVC.swift; sourceTree = "<group>"; };
 		2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentVC.swift; sourceTree = "<group>"; };
 		2A0A09F21DC842790069AF49 /* ObserverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
+		2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		2A58EB021DC064DD00A1CB7C /* DebateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebateCell.swift; sourceTree = "<group>"; };
 		2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Podium/User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Podium/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */,
 				2A984F991DB7E557008B49A3 /* LabelsUI.swift */,
 				2A58EB021DC064DD00A1CB7C /* DebateCell.swift */,
+				2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */,
 			);
 			name = View;
 			path = ..;
@@ -163,6 +168,7 @@
 				2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */,
 				2A8CDD671DC7BAF100B77B0E /* SaveData.swift */,
 				2A58EB101DC06B7C00A1CB7C /* Generated */,
+				2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -432,6 +438,7 @@
 				2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */,
 				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
 				2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */,
+				2A2EB0C91DC8F57700BDEEF6 /* CommentCell.swift in Sources */,
 				2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */,
 				2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */,
 				2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */,
@@ -439,6 +446,7 @@
 				2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */,
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
+				2A2EB0C31DC8F39500BDEEF6 /* Comment.swift in Sources */,
 				2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */,
 				ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */,
 				2ABDB4541DB4376900824F9B /* Constants.swift in Sources */,

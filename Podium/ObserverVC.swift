@@ -8,11 +8,21 @@
 
 import UIKit
 
-class ObserverVC: UIViewController {
+class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    var comment: Comment!
+    var comments = [Comment]()
+    var debate: Debate!
+    @IBOutlet weak var lblEtapa: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var navBar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateLbl()
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -26,4 +36,36 @@ class ObserverVC: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return comments.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath)as? CommentCell{
+            let comment = comments[indexPath.row]
+            cell.configureCell(comment: comment)
+            return cell
+            
+        } else {
+            
+            return CommentCell()
+            
+        }
+    }
+    
+    func updateLbl (){
+        
+        self.navigationController?.navigationBar.topItem?.title = debate.name
+       // lblDate.text = debate.description
+        //lblDate.text = "\(debate.startingDate)"
+        
+    }
+    
+    
 }

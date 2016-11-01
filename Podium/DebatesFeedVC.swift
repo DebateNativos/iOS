@@ -72,6 +72,9 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             }
             
         }
+        
+        
+        
     }
     
     func getActiveDebates(_ completed: DownloadComplete){

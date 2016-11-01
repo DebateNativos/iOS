@@ -13,16 +13,16 @@ class RegistrationToDebateModalViewController: UIViewController {
     @IBOutlet weak var debateCodeTxtField: UITextField!
     
     var debate: Debate!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         debateNameLbl.text = debate.name
     }
-
+    
     @IBAction func studentBtnPressed(_ sender: AnyObject) {
     }
- 
+    
     @IBAction func publicBtnPressed(_ sender: AnyObject) {
     }
     
@@ -30,4 +30,14 @@ class RegistrationToDebateModalViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? ObserverVC {
+            
+            if let debate = sender as? Debate{
+                destination.debate = debate
+            }
+            
+        }
+    }
 }
