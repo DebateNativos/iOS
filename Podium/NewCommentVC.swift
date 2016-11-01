@@ -8,26 +8,32 @@
 
 import UIKit
 
-class NewCommentVC: UIViewController {
+class NewCommentVC: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var textViewComment: UITextView!
+    var placeholderLabel : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewDidBeginEditing()
+        textViewDidChange(textViewComment)
         // Do any additional setup after loading the view.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func textViewDidBeginEditing(){
+        textViewComment.delegate = self
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "Escribe tu comentario ..."
+        placeholderLabel.sizeToFit()
+        textViewComment.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (textViewComment.font?.pointSize)! / 2)
+        placeholderLabel.textColor = UIColor(white: 0, alpha: 0.3)
+        placeholderLabel.isHidden = !textViewComment.text.isEmpty
     }
     
-    func textViewDidBeginEditing() {
-        if textViewComment.textColor == UIColor.lightGray {
-            textViewComment.text = nil
-            textViewComment.textColor = UIColor.black
-        }
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
     }
     
 }
