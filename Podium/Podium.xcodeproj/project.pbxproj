@@ -208,8 +208,8 @@
 		ECD969C61DB433A100325C4D /* Podium */ = {
 			isa = PBXGroup;
 			children = (
-				2A984F9B1DB7E835008B49A3 /* Files */,
 				2ABDB4501DB4375900824F9B /* Model */,
+				2A984F9B1DB7E835008B49A3 /* Files */,
 				2ABDB44F1DB4375100824F9B /* View */,
 				2ABDB44E1DB4374300824F9B /* Controller */,
 				ECD969C71DB433A100325C4D /* AppDelegate.swift */,
