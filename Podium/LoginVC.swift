@@ -35,13 +35,6 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if reach.isInternetAvailable(){
-            SCLAlertView().showInfo("!!!", subTitle: "Si hay conexión a internet!")
-            
-        }else{
-            
-            SCLAlertView().showWarning("No hay conexión", subTitle: "No se ha logrado establecer conexión a internet.")
-        }
         
     }
     
@@ -49,7 +42,7 @@ class LoginVC: UIViewController {
         
         self.getLogin{
             if self.loginStatus == "@validLogin"{
-                SCLAlertView().showSuccess("LOGIN", subTitle: "Hola \(self.loginUser._name!)")
+                SCLAlertView().showSuccess("Bienvenido", subTitle: "Hola \(self.loginUser._name!)")
                 self.performSegue(withIdentifier: "DebatesFeedVC", sender: self)
                 
             }else if self.loginStatus == "@invalidEmail"{
