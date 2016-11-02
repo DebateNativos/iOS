@@ -1,0 +1,34 @@
+project 'Podium.xcodeproj'
+
+# Uncomment this line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'Podium' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Podium
+
+  target 'PodiumTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+  pod 'Alamofire', '~> 4.0'
+
+  pod 'SnapTimer'
+  
+  pod 'SideMenu'
+  
+  pod 'SCLAlertView'
+  
+  #Cellviews con botones
+  # pod 'EVSlidingTableViewCell', '~> 2.0'
+  
+  #Menu
+  #pod 'SideMenuController'
+  
+  #waitAnimation
+  #pod 'SwiftSpinner'
+
+end

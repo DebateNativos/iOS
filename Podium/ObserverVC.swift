@@ -60,10 +60,10 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func updateLbl (){
-        
+    
+        self.navBar.topItem?.title = debate.name
        // lblEtapa.text = debate.description
         lblDate.text = "\(debate.startingDate)"
-        self.navigationItem.title = debate.name
         
     }
     

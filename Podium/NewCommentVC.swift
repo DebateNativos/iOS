@@ -25,7 +25,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(){
         textViewComment.delegate = self
         placeholderLabel = UILabel()
-        placeholderLabel.text = "Escribe tu comentario ..."
+        placeholderLabel.text = "Escribe tu  ..."
         placeholderLabel.sizeToFit()
         textViewComment.addSubview(placeholderLabel)
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (textViewComment.font?.pointSize)! / 2)

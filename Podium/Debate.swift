@@ -48,6 +48,7 @@ public class Debate {
         if _debateTypeDescription == nil!{
             _debateTypeDescription = ""
         }
+        
         return _debateTypeDescription
     }
 
@@ -71,12 +72,14 @@ public class Debate {
             print("DEBATE:  \(name)")
             self._name = name
         }
+        
         if let startingDebateDate = debate["startingDate"] as? String{
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let debateDateFormatted = dateFormatter.date(from: startingDebateDate)
             self._startingDate = debateDateFormatted!
         }
+        
         if let debateType = debate["debateType"] as? Dictionary<String, AnyObject>{
             
             if let debateType = debateType["name"] as? String{
@@ -88,5 +91,6 @@ public class Debate {
             
         }
 
+        
     }
 }
