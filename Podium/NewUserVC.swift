@@ -25,7 +25,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //  self.tfEmail.delegate = self
+        navBarPicker()
     }
     
     @IBAction func BackBtnPressed(sender: AnyObject) {
@@ -66,12 +66,36 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func navBarPicker(){
+    
+    
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 200, width: view.frame.width, height: 300))
+           
+        pickerView.backgroundColor = .white
+        pickerView.showsSelectionIndicator = true
         
-        self.view.endEditing(true)
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
         
-        return true
         
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(NewUserVC.donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: Selector(("canclePicker")))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        tfBirthday.inputView = pickerView
+        tfBirthday.inputAccessoryView = toolBar
+    
     }
     
+    func donePicker(){
+    
+        tfBirthday.resignFirstResponder()
+        
+    }
 }
