@@ -416,6 +416,7 @@
                         <outlet property="StackViewTextField" destination="GPd-kF-Rj2" id="E1C-3y-CQh"/>
                         <outlet property="btnDone" destination="Aug-a8-up6" id="shL-B6-QN3"/>
                         <outlet property="myDatePicker" destination="eJp-Dl-YZ0" id="QJv-Jy-Br4"/>
+                        <outlet property="scrollView" destination="qx6-nc-v4R" id="QsN-N7-VNj"/>
                         <outlet property="tfAddress" destination="6pv-bD-e3l" id="PhB-jP-GzS"/>
                         <outlet property="tfBirthday" destination="BiL-I3-PXG" id="iGD-nd-zPe"/>
                         <outlet property="tfEmail" destination="yDd-lV-lF8" id="UvP-K3-ppT"/>

@@ -22,10 +22,12 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfBirthday: FieldsUI!
     @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var btnDone: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarPicker()
+        
     }
     
     @IBAction func BackBtnPressed(sender: AnyObject) {
@@ -67,10 +69,10 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     }
     
     func navBarPicker(){
-    
-    
+        
+        
         let pickerView = UIPickerView(frame: CGRect(x: 0, y: 200, width: view.frame.width, height: 300))
-           
+        
         pickerView.backgroundColor = .white
         pickerView.showsSelectionIndicator = true
         
@@ -83,19 +85,39 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(NewUserVC.donePicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-       // let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: Selector(("canclePicker")))
+        // let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: Selector(("canclePicker")))
         
         toolBar.setItems([/*cancelButton,*/ spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
         tfBirthday.inputView = pickerView
         tfBirthday.inputAccessoryView = toolBar
-    
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
     }
     
     func donePicker(){
-    
+        
         tfBirthday.resignFirstResponder()
         
     }
+    
+    func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.scrollView.contentInset = contentInset
+    }
+    
+    func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.scrollView.contentInset = contentInset
+    }
+    
 }
