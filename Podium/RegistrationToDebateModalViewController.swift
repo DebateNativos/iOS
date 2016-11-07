@@ -17,7 +17,7 @@ class RegistrationToDebateModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        debateNameLbl.text = debate.name
+     //   debateNameLbl.text = debate.name
     }
     
     @IBAction func studentBtnPressed(_ sender: AnyObject) {

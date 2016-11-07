@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class NewUserVC: UIViewController, UITextFieldDelegate {
     
@@ -23,10 +24,13 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var btnDone: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var tfidUniversity: FieldsUI!
+    var reach: Reachability!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarPicker()
+        reach = Reachability()
         
     }
     
@@ -60,13 +64,23 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.medium
-        
-        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateFormatter.dateStyle = DateFormatter.Style.short
         
         tfBirthday.text = dateFormatter.string(from: sender.date)
         
     }
+    
+    func convertDate (){
+    
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-DD-YY"
+        let date = dateFormatter.date(from: tfBirthday.text!)
+        
+        dateFormatter.dateFormat = "MM-DD-YYYY"
+         tfBirthday.text = dateFormatter.string(from: date!)
+    
+    }
+    
     
     func navBarPicker(){
         
@@ -118,6 +132,32 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     func keyboardWillHide(notification:NSNotification){
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         self.scrollView.contentInset = contentInset
+    }
+    
+    
+    func createUser(_ completed: @escaping DownloadComplete){
+        
+        let NEW_USER_URL = "\(BASE_URL)\(REGISTER_URL)\(NAME_URL)\(tfName.text!)\(LASTNAME_URL)\(tfLastName.text!)\(LASTNAME2_URL)\(tfLastName2.text!)\(EMAILN_RL)\(tfEmail.text!)\(PASSWORD_URL)\(tfPassword.text!)\(PHONE_URL)\(tfPhone.text!)\(BIRTHDAY_URL)\(tfBirthday.text!)\(ADDRESS_URL)\(tfAddress.text!)\(IDUNIVERSITY_URL)\(tfidUniversity.text!)"
+        
+        Alamofire.request(NEW_USER_URL).responseJSON {response in
+            let result = response.result
+            //DEBUG
+            print(response, result, "--------URL: \(NEW_USER_URL)")
+            
+            if let dict = result.value as? Dictionary<String, AnyObject>{
+                
+                
+            }
+            completed()
+        }
+    }
+    
+    @IBAction func createUserPressed(_ sender: Any) {
+        
+        self.createUser {
+            //CODIGO
+        }
+        
     }
     
 }

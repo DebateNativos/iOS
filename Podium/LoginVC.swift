@@ -61,7 +61,9 @@ class LoginVC: UIViewController {
         
         Alamofire.request(LOGIN_USER_URL).responseJSON {response in
             let result = response.result
+            
             //DEBUG
+           
             print(response, result, "--------URL: \(LOGIN_USER_URL)")
             
             if let dict = result.value as? Dictionary<String, AnyObject>{
