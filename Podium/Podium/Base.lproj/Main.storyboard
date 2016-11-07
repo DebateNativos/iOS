@@ -388,8 +388,8 @@
                                     <action selector="BackBtnPressedWithSender:" destination="Jqv-pn-kzj" eventType="touchUpInside" id="pvw-R1-SRk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-g4-gmM" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
-                                <rect key="frame" x="115" y="683" width="185" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-g4-gmM" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
+                                <rect key="frame" x="115" y="681" width="185" height="35"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.49803921569999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="3sp-2N-lNo"/>
@@ -738,7 +738,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ejemplo: YHTB7" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-L6-mEQ">
-                                <rect key="frame" x="82" y="305" width="250" height="30"/>
+                                <rect key="frame" x="82" y="261" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="QaQ-bH-MdX"/>
                                 </constraints>
@@ -747,7 +747,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PB-HJ-U8C">
-                                <rect key="frame" x="20" y="64" width="30" height="30"/>
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CcP-6S-8jh"/>
                                     <constraint firstAttribute="width" constant="30" id="qmy-0O-osd"/>
@@ -758,7 +758,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="NOMBRE DEL DEBATE" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HYr-t4-yZA">
-                                <rect key="frame" x="0.0" y="102" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="58" width="414" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="qBs-Ef-vxb"/>
@@ -768,7 +768,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dg-bh-JTj" customClass="RoundBtn" customModule="Podium" customModuleProvider="target">
-                                <rect key="frame" x="132" y="360" width="150" height="30"/>
+                                <rect key="frame" x="132" y="316" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.00054382486268877983" green="0.56106525659561157" blue="0.32134449481964111" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="8qD-Bu-MRm"/>
@@ -798,7 +798,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Si desea registrarse al debate como estudiante ingrese el codigo enviado a su correo." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ee4-iB-UFl">
-                                <rect key="frame" x="20" y="207" width="374" height="90"/>
+                                <rect key="frame" x="20" y="163" width="374" height="90"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Vbm-0M-3fk"/>

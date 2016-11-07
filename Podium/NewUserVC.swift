@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SCLAlertView
 
 class NewUserVC: UIViewController, UITextFieldDelegate {
     
@@ -131,7 +132,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         
         Alamofire.request(NEW_USER_URL).responseJSON {response in
             let result = response.result
-           
+            
             print(response, result, " -> URL: \(NEW_USER_URL)")
             
             if (result.value as? Dictionary<String, AnyObject>) != nil{
@@ -139,17 +140,44 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
                 print("NONE")
                 
             }
-           
+            
             completed()
         }
     }
     
     @IBAction func createUserPressed(_ sender: Any) {
-        
-        self.createUser {
-            //CODIGO
+        if (tfName.text!.isEmpty || tfLastName.text!.isEmpty || tfLastName2.text!.isEmpty || tfEmail.text!.isEmpty || tfPassword.text!.isEmpty || tfVPassword.text!.isEmpty || tfAddress.text!.isEmpty || tfPhone.text!.isEmpty || tfBirthday.text!.isEmpty || tfidUniversity.text!.isEmpty) {
+            
+            SCLAlertView().showError("Campos Requeridos", subTitle: "Todos los campos son requeridos")
+            
+            tfName.layer.backgroundColor = UIColor.red.cgColor
+            tfLastName.layer.backgroundColor = UIColor.red.cgColor
+            tfLastName2.layer.backgroundColor = UIColor.red.cgColor
+            tfEmail.layer.backgroundColor = UIColor.red.cgColor
+            tfPassword.layer.backgroundColor = UIColor.red.cgColor
+            tfVPassword.layer.backgroundColor = UIColor.red.cgColor
+            tfPhone.layer.backgroundColor = UIColor.red.cgColor
+            tfAddress.layer.backgroundColor = UIColor.red.cgColor
+            tfBirthday.layer.backgroundColor = UIColor.red.cgColor
+            tfidUniversity.layer.backgroundColor = UIColor.red.cgColor
+            
+        }else{
+            
+            if (tfPassword.text?.isEqual(tfVPassword.text))! {
+                
+                self.createUser {
+                    
+                    //CODIGO
+                    
+                }
+                
+            }else{
+                
+                SCLAlertView().showError("Alerta", subTitle: "Las contraseñas deben coincidir")
+                
+            }
+            
         }
-        
     }
     
 }
