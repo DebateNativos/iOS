@@ -734,7 +734,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Option2" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-27-Bbu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Try" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-27-Bbu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ejemplo: YHTB7" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-L6-mEQ">
@@ -1233,17 +1233,17 @@
         <image name="Menu" width="24" height="24"/>
         <image name="NewUser " width="414" height="228"/>
         <image name="Notifica" width="2000" height="2000"/>
-        <image name="Option2" width="640" height="1136"/>
         <image name="Podium" width="2000" height="1000"/>
         <image name="Red" width="1024" height="1024"/>
+        <image name="Try" width="1242" height="2208"/>
         <image name="back_btn" width="13" height="21"/>
         <image name="back_btn_light" width="14" height="25"/>
         <image name="iCon" width="231" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wlB-Mh-BIH"/>
-        <segue reference="e9j-wv-evc"/>
         <segue reference="eKF-EQ-Deh"/>
-        <segue reference="KOg-HS-DUa"/>
+        <segue reference="JXI-zn-Yfu"/>
+        <segue reference="4C3-0t-cIB"/>
     </inferredMetricsTieBreakers>
 </document>
