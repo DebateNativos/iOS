@@ -141,13 +141,15 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         
         Alamofire.request(NEW_USER_URL).responseJSON {response in
             let result = response.result
-            //DEBUG
-            print(response, result, "--------URL: \(NEW_USER_URL)")
+           
+            print(response, result, " -> URL: \(NEW_USER_URL)")
             
-            if let dict = result.value as? Dictionary<String, AnyObject>{
+            if (result.value as? Dictionary<String, AnyObject>) != nil{
                 
+                print("NONE")
                 
             }
+           
             completed()
         }
     }
