@@ -64,21 +64,11 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.dateFormat = "M-d-YYYY" //DateFormatter.Style.short
         
         tfBirthday.text = dateFormatter.string(from: sender.date)
         
-    }
-    
-    func convertDate (){
-    
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-DD-YY"
-        let date = dateFormatter.date(from: tfBirthday.text!)
         
-        dateFormatter.dateFormat = "MM-DD-YYYY"
-         tfBirthday.text = dateFormatter.string(from: date!)
-    
     }
     
     
