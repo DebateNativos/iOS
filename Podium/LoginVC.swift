@@ -30,11 +30,19 @@ class LoginVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if reach.isInternetAvailable(){
+            //SCLAlertView().showInfo("!!!", subTitle: "Si hay conexión a internet!")
+            
+        }else{
+            
+            SCLAlertView().showWarning("No hay conexión", subTitle: "No se ha logrado establecer conexión a internet.")
+        }
         
     }
     
@@ -82,6 +90,7 @@ class LoginVC: UIViewController {
             }
             completed()
         }
+        
     }
     
     

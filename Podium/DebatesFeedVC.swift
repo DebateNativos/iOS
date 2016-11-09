@@ -16,6 +16,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     var debate: Debate!
     var debates = [Debate]()
+    var debatesVerify = [Debate]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +24,20 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.delegate = self
         tableView.dataSource = self
         menu()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        self.getActiveDebates {
+            self.tableView.reloadData()
+        }
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.getActiveDebates {
-            self.tableView.reloadData()
+
+        self.refreshActiveDebates {
+            
+            if self.debates.count != self.debatesVerify.count{
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -70,14 +74,11 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             if let debate = sender as? Debate{
                 destination.debate = debate
             }
-            
         }
-        
-        
         
     }
     
-    func getActiveDebates(_ completed: DownloadComplete){
+    func getActiveDebates(_ completed: @escaping DownloadComplete){
         
         let ACTIVEDEBATES_URL = "\(BASE_URL)\(DEBATES_URL)"
         Alamofire.request(ACTIVEDEBATES_URL).responseJSON {response in
@@ -94,12 +95,31 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     self.tableView.reloadData()
                 }
             }
+            completed()
         }
-        completed()
     }
-    @IBAction func testbutton(_ sender: AnyObject) {
-        self.tableView.reloadData()
+    
+    func refreshActiveDebates(_ completed: @escaping DownloadComplete){
+        
+        let ACTIVEDEBATES_URL = "\(BASE_URL)\(DEBATES_URL)"
+        Alamofire.request(ACTIVEDEBATES_URL).responseJSON {response in
+            let result = response.result
+            
+            print(response, result, "--------URL: \(ACTIVEDEBATES_URL)")
+            //DEBUG
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
+                
+                for obj in dict{
+                    
+                    let activeDebate = Debate(debate: obj)
+                    self.debatesVerify.append(activeDebate)
+                    self.tableView.reloadData()
+                }
+            }
+            completed()
+        }
     }
+    
     
     func menu () {
         
