@@ -50,7 +50,7 @@
                                             <color key="titleColor" red="0.0001113104445" green="0.56127727029999996" blue="0.32016813760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Jqv-pn-kzj" kind="show" id="9SD-nw-NPV"/>
+                                            <segue destination="Jqv-pn-kzj" kind="show" identifier="CreateUser" id="9SD-nw-NPV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -385,8 +385,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="CreateAccountPressed:" destination="Jqv-pn-kzj" eventType="touchUpInside" id="2qi-6l-VcT"/>
-                                    <action selector="createUserPressed:" destination="Jqv-pn-kzj" eventType="touchUpInside" id="ett-ml-EgF"/>
+                                    <action selector="btnCreatePressed:" destination="Jqv-pn-kzj" eventType="touchUpInside" id="8Dw-FZ-8ER"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -416,7 +415,6 @@
                     </view>
                     <connections>
                         <outlet property="StackViewTextField" destination="GPd-kF-Rj2" id="E1C-3y-CQh"/>
-                        <outlet property="btnDone" destination="Aug-a8-up6" id="shL-B6-QN3"/>
                         <outlet property="scrollView" destination="qx6-nc-v4R" id="QsN-N7-VNj"/>
                         <outlet property="tfAddress" destination="6pv-bD-e3l" id="PhB-jP-GzS"/>
                         <outlet property="tfEmail" destination="yDd-lV-lF8" id="UvP-K3-ppT"/>
@@ -1033,10 +1031,6 @@
                                 <state key="normal" title="Crear Perfil">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="CreateAccountPressed:" destination="Jqv-pn-kzj" eventType="touchUpInside" id="Ybo-MQ-S47"/>
-                                    <action selector="createUserPressed:" destination="Jqv-pn-kzj" eventType="touchUpInside" id="kDJ-oq-7sG"/>
-                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-PL-JD4">
                                 <rect key="frame" x="0.0" y="210" width="414" height="463"/>
@@ -1146,9 +1140,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="tfEditing:" destination="Jqv-pn-kzj" eventType="editingDidBegin" id="ZpJ-W5-kHn"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>

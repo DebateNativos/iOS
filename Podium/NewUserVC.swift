@@ -21,7 +21,6 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfVPassword: FieldsUI!
     @IBOutlet weak var tfPhone: FieldsUI!
     @IBOutlet weak var tfAddress: FieldsUI!
-    @IBOutlet weak var btnDone: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tfidUniversity: FieldsUI!
     var reach: Reachability!
@@ -61,22 +60,27 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
         let NEW_USER_URL = "\(BASE_URL)\(REGISTER_URL)\(NAME_URL)\(tfName.text!)\(LASTNAME_URL)\(tfLastName.text!)\(LASTNAME2_URL)\(tfLastName2.text!)\(EMAILN_RL)\(tfEmail.text!)\(PASSWORD_URL)\(tfPassword.text!)\(PHONE_URL)\(tfPhone.text!)\(ADDRESS_URL)\(tfAddress.text!)\(IDUNIVERSITY_URL)\(tfidUniversity.text!)"
 
-        Alamofire.request(NEW_USER_URL).responseJSON {response in
+        Alamofire.request(NEW_USER_URL).responseString {response in
             let result = response.result
 
             print(response, result, " -> URL: \(NEW_USER_URL)")
 
-            if (result.value as? Dictionary<String, AnyObject>) != nil{
+            if (result.description) != "@invalidRegistration" {
 
-                print("NONE")
+                SCLAlertView().showError("Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde")
 
+            }else{
+
+                SCLAlertView().showSuccess("Exito!", subTitle: "Se creo su perfil de manera correcta")
+                self.performSegue(withIdentifier: "CreateUser", sender: self)
             }
 
             completed()
         }
     }
 
-    @IBAction func createUserPressed(_ sender: Any) {
+    @IBAction func btnCreatePressed(_ sender: Any) {
+
         if (tfName.text!.isEmpty || tfLastName.text!.isEmpty || tfLastName2.text!.isEmpty || tfEmail.text!.isEmpty || tfPassword.text!.isEmpty || tfVPassword.text!.isEmpty || tfAddress.text!.isEmpty || tfPhone.text!.isEmpty || tfidUniversity.text!.isEmpty) {
 
             SCLAlertView().showError("Campos Requeridos", subTitle: "Todos los campos son requeridos")
@@ -89,26 +93,23 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
             tfVPassword.layer.backgroundColor = UIColor.red.cgColor
             tfPhone.layer.backgroundColor = UIColor.red.cgColor
             tfAddress.layer.backgroundColor = UIColor.red.cgColor
-
             tfidUniversity.layer.backgroundColor = UIColor.red.cgColor
 
         }else{
 
             if (tfPassword.text?.isEqual(tfVPassword.text))! {
 
-                self.createUser {
-
-                    //CODIGO
-
-                }
-
+                self.createUser{}
+                
             }else{
-
+                
                 SCLAlertView().showError("Alerta", subTitle: "Las contraseñas deben coincidir")
-
+                
             }
-
+            
         }
+        
     }
+    
     
 }
