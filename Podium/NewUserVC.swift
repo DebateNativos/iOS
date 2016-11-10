@@ -21,8 +21,6 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfVPassword: FieldsUI!
     @IBOutlet weak var tfPhone: FieldsUI!
     @IBOutlet weak var tfAddress: FieldsUI!
-    @IBOutlet weak var tfBirthday: FieldsUI!
-    @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var btnDone: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tfidUniversity: FieldsUI!
@@ -30,7 +28,6 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navBarPicker()
         reach = Reachability()
         
     }
@@ -56,59 +53,9 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         datePickerView.datePickerMode = UIDatePickerMode.date
         
         sender.inputView = datePickerView
-        
-        datePickerView.addTarget(self, action: #selector(NewUserVC.datePickerValueChanged), for: UIControlEvents.valueChanged)
-        
+
     }
-    
-    func datePickerValueChanged(sender:UIDatePicker) {
-        
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "M-d-YYYY" //DateFormatter.Style.short
-        
-        tfBirthday.text = dateFormatter.string(from: sender.date)
-        
-        
-    }
-    
-    
-    func navBarPicker(){
-        
-        
-        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 200, width: view.frame.width, height: 300))
-        
-        pickerView.backgroundColor = .white
-        pickerView.showsSelectionIndicator = true
-        
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
-        toolBar.sizeToFit()
-        
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(NewUserVC.donePicker))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        // let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: Selector(("canclePicker")))
-        
-        toolBar.setItems([/*cancelButton,*/ spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        
-        tfBirthday.inputView = pickerView
-        tfBirthday.inputAccessoryView = toolBar
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-    }
-    
-    func donePicker(){
-        
-        tfBirthday.resignFirstResponder()
-        
-    }
-    
+
     func keyboardWillShow(notification:NSNotification){
         //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
         var userInfo = notification.userInfo!
@@ -128,7 +75,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     
     func createUser(_ completed: @escaping DownloadComplete){
         
-        let NEW_USER_URL = "\(BASE_URL)\(REGISTER_URL)\(NAME_URL)\(tfName.text!)\(LASTNAME_URL)\(tfLastName.text!)\(LASTNAME2_URL)\(tfLastName2.text!)\(EMAILN_RL)\(tfEmail.text!)\(PASSWORD_URL)\(tfPassword.text!)\(PHONE_URL)\(tfPhone.text!)\(BIRTHDAY_URL)\(tfBirthday.text!)\(ADDRESS_URL)\(tfAddress.text!)\(IDUNIVERSITY_URL)\(tfidUniversity.text!)"
+        let NEW_USER_URL = "\(BASE_URL)\(REGISTER_URL)\(NAME_URL)\(tfName.text!)\(LASTNAME_URL)\(tfLastName.text!)\(LASTNAME2_URL)\(tfLastName2.text!)\(EMAILN_RL)\(tfEmail.text!)\(PASSWORD_URL)\(tfPassword.text!)\(PHONE_URL)\(tfPhone.text!)\(ADDRESS_URL)\(tfAddress.text!)\(IDUNIVERSITY_URL)\(tfidUniversity.text!)"
         
         Alamofire.request(NEW_USER_URL).responseJSON {response in
             let result = response.result
@@ -146,7 +93,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createUserPressed(_ sender: Any) {
-        if (tfName.text!.isEmpty || tfLastName.text!.isEmpty || tfLastName2.text!.isEmpty || tfEmail.text!.isEmpty || tfPassword.text!.isEmpty || tfVPassword.text!.isEmpty || tfAddress.text!.isEmpty || tfPhone.text!.isEmpty || tfBirthday.text!.isEmpty || tfidUniversity.text!.isEmpty) {
+        if (tfName.text!.isEmpty || tfLastName.text!.isEmpty || tfLastName2.text!.isEmpty || tfEmail.text!.isEmpty || tfPassword.text!.isEmpty || tfVPassword.text!.isEmpty || tfAddress.text!.isEmpty || tfPhone.text!.isEmpty || tfidUniversity.text!.isEmpty) {
             
             SCLAlertView().showError("Campos Requeridos", subTitle: "Todos los campos son requeridos")
             
@@ -158,7 +105,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
             tfVPassword.layer.backgroundColor = UIColor.red.cgColor
             tfPhone.layer.backgroundColor = UIColor.red.cgColor
             tfAddress.layer.backgroundColor = UIColor.red.cgColor
-            tfBirthday.layer.backgroundColor = UIColor.red.cgColor
+
             tfidUniversity.layer.backgroundColor = UIColor.red.cgColor
             
         }else{

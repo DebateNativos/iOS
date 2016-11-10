@@ -73,13 +73,13 @@ public class Debate {
             self._name = name
         }
         
-        if let startingDebateDate = debate["startingDate"] as? String{
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            let debateDateFormatted = dateFormatter.date(from: startingDebateDate)
-            self._startingDate = debateDateFormatted!
-        }
-        
+//        if let startingDebateDate = debate["startingDate"] as? String{
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "yyyy-MM-dd"
+//            let debateDateFormatted = dateFormatter.date(from: startingDebateDate)
+//            self._startingDate = debateDateFormatted!
+//        }
+
         if let debateType = debate["debateType"] as? Dictionary<String, AnyObject>{
             
             if let debateType = debateType["name"] as? String{
