@@ -250,7 +250,7 @@
                                 <rect key="frame" x="0.0" y="200" width="414" height="466"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="GPd-kF-Rj2">
-                                        <rect key="frame" x="66" y="10" width="282" height="471"/>
+                                        <rect key="frame" x="66" y="10" width="282" height="422"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge7-XM-kmY" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="282" height="30"/>
@@ -345,19 +345,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BiL-I3-PXG" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="441" width="282" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="282" id="HvK-NX-pLn"/>
-                                                    <constraint firstAttribute="height" constant="30" id="gMZ-g8-iuf"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="tfEditing:" destination="Jqv-pn-kzj" eventType="editingDidBegin" id="xhS-sp-6aR"/>
-                                                </connections>
-                                            </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -430,10 +417,8 @@
                     <connections>
                         <outlet property="StackViewTextField" destination="GPd-kF-Rj2" id="E1C-3y-CQh"/>
                         <outlet property="btnDone" destination="Aug-a8-up6" id="shL-B6-QN3"/>
-                        <outlet property="myDatePicker" destination="eJp-Dl-YZ0" id="QJv-Jy-Br4"/>
                         <outlet property="scrollView" destination="qx6-nc-v4R" id="QsN-N7-VNj"/>
                         <outlet property="tfAddress" destination="6pv-bD-e3l" id="PhB-jP-GzS"/>
-                        <outlet property="tfBirthday" destination="BiL-I3-PXG" id="iGD-nd-zPe"/>
                         <outlet property="tfEmail" destination="yDd-lV-lF8" id="UvP-K3-ppT"/>
                         <outlet property="tfLastName" destination="YSm-FZ-xA6" id="dXW-fb-Tgx"/>
                         <outlet property="tfLastName2" destination="FC7-Y2-m31" id="dYx-TR-Q3W"/>
@@ -1225,7 +1210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIt-r1-ive" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3431.884057971015" y="2173.3695652173915"/>
+            <point key="canvasLocation" x="3352" y="2258"/>
         </scene>
         <!--Acerca de nosotros-->
         <scene sceneID="KQY-i4-tNe">
@@ -1290,7 +1275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPX-Xj-2mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4257.971014492754" y="1769.8369565217392"/>
+            <point key="canvasLocation" x="4323" y="1782"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="FIo-xd-VA3">
@@ -1374,19 +1359,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pTe-uq-bdf">
-                                <rect key="frame" x="20" y="228" width="141" height="52"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pTe-uq-bdf">
+                                <rect key="frame" x="20" y="219" width="145" height="61"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etapa del debate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG9-sR-OnW">
-                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="20.333333333333314"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Etapa del debate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG9-sR-OnW">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="25"/>
                                         <color key="backgroundColor" white="0.75" alpha="0.50156800176056338" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="7h5-Db-lqt"/>
+                                            <constraint firstAttribute="width" constant="145" id="ZeP-8Y-tbb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlC-NF-3j0">
-                                        <rect key="frame" x="0.0" y="31.333333333333314" width="141.33333333333334" height="20.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlC-NF-3j0">
+                                        <rect key="frame" x="0.0" y="36" width="145" height="25"/>
                                         <color key="backgroundColor" white="0.75" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="HV6-pW-HeG"/>
+                                            <constraint firstAttribute="width" constant="145" id="db5-XV-Add"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1432,7 +1425,7 @@
                         <constraints>
                             <constraint firstItem="4Li-Hm-pSN" firstAttribute="top" secondItem="6uo-eM-TpE" secondAttribute="top" id="10I-4D-5pO"/>
                             <constraint firstItem="hvN-xv-050" firstAttribute="top" secondItem="6uo-eM-TpE" secondAttribute="top" id="2Kd-6s-PZy"/>
-                            <constraint firstItem="IY4-Fh-bO8" firstAttribute="top" secondItem="pTe-uq-bdf" secondAttribute="bottom" constant="20" id="DCX-ei-srn"/>
+                            <constraint firstItem="IY4-Fh-bO8" firstAttribute="top" secondItem="pTe-uq-bdf" secondAttribute="bottom" constant="10" id="DCX-ei-srn"/>
                             <constraint firstAttribute="trailing" secondItem="4Li-Hm-pSN" secondAttribute="trailing" id="Mp6-Zg-o7g"/>
                             <constraint firstItem="klD-r2-kYV" firstAttribute="top" secondItem="IY4-Fh-bO8" secondAttribute="bottom" id="Ov4-bD-gDR"/>
                             <constraint firstItem="pTe-uq-bdf" firstAttribute="leading" secondItem="6uo-eM-TpE" secondAttribute="leadingMargin" id="PsL-or-bwg"/>
