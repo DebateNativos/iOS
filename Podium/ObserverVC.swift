@@ -63,8 +63,9 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
         self.navBar.topItem?.title = debate.name
        // lblEtapa.text = debate.description
+        lblEtapa.layer.cornerRadius = 8.0
         lblDate.text = "\(debate.startingDate)"
-        
+        lblDate.layer.cornerRadius = 8.0
     }
     
     
