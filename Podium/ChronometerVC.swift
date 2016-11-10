@@ -40,9 +40,4 @@ class ChronometerVC: UIViewController {
         
     }
     
-    @IBAction func ClosePressed(_ sender: Any) {
-
-         dismiss(animated: true, completion: nil)
-
-    }
 }
