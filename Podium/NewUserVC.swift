@@ -58,21 +58,23 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
     func createUser(_ completed: @escaping DownloadComplete){
 
-        let NEW_USER_URL = "\(BASE_URL)\(REGISTER_URL)\(NAME_URL)\(tfName.text!)\(LASTNAME_URL)\(tfLastName.text!)\(LASTNAME2_URL)\(tfLastName2.text!)\(EMAILN_RL)\(tfEmail.text!)\(PASSWORD_URL)\(tfPassword.text!)\(PHONE_URL)\(tfPhone.text!)\(ADDRESS_URL)\(tfAddress.text!)\(IDUNIVERSITY_URL)\(tfidUniversity.text!)"
+        let url = "\(BASE_URL)\(REGISTER_URL)\(NAME_URL)\(tfName.text!)\(LASTNAME_URL)\(tfLastName.text!)\(LASTNAME2_URL)\(tfLastName2.text!)\(EMAILN_RL)\(tfEmail.text!)\(PASSWORD_URL)\(tfPassword.text!)\(PHONE_URL)\(tfPhone.text!)\(ADDRESS_URL)\(tfAddress.text!)\(IDUNIVERSITY_URL)\(tfidUniversity.text!)"
 
-        Alamofire.request(NEW_USER_URL).responseString {response in
+        let NEW_USER_URL = url.addingPercentEncoding( withAllowedCharacters: .urlQueryAllowed)
+
+        Alamofire.request(NEW_USER_URL!).responseString {response in
             let result = response.result
 
             print(response, result, " -> URL: \(NEW_USER_URL)")
 
-            if (result.description) != "@invalidRegistration" {
+            if (result.description) == "@invalidRegistration" {
 
                 SCLAlertView().showError("Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde")
 
             }else{
 
                 SCLAlertView().showSuccess("Exito!", subTitle: "Se creo su perfil de manera correcta")
-                self.performSegue(withIdentifier: "CreateUser", sender: self)
+                self.dismiss(animated: true, completion: nil)
             }
 
             completed()

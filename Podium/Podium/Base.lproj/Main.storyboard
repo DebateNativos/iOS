@@ -891,6 +891,9 @@
                                                 <constraint firstItem="To4-fb-brM" firstAttribute="top" secondItem="bea-iq-EdH" secondAttribute="topMargin" constant="5" id="xuz-rY-6CQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Kqp-rk-XoG" kind="show" id="ijB-L0-oX6"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="6qA-GP-Jxt">
                                         <rect key="frame" x="0.0" y="80" width="414" height="80"/>
@@ -925,6 +928,9 @@
                                                 <constraint firstItem="QlX-jt-Cwz" firstAttribute="leading" secondItem="fpI-Ea-6AR" secondAttribute="leadingMargin" id="pk7-dI-RRb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BnN-GV-f8E" kind="show" id="1F7-7F-IyP"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="aMe-wd-IQU">
                                         <rect key="frame" x="0.0" y="160" width="414" height="80"/>
@@ -959,6 +965,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="lAj-pu-UZY" secondAttribute="trailing" id="rRC-Ez-Zy8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="djh-ew-h0F" kind="show" id="zfU-ZS-bvU"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="YY2-8D-gbN">
                                         <rect key="frame" x="0.0" y="240" width="414" height="80"/>
@@ -1008,10 +1017,10 @@
             </objects>
             <point key="canvasLocation" x="2461" y="1564"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="j5l-Xm-iZx">
             <objects>
-                <viewController id="Kqp-rk-XoG" sceneMemberID="viewController">
+                <viewController id="Kqp-rk-XoG" customClass="ProfileVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FCz-OU-gjG"/>
                         <viewControllerLayoutGuide type="bottom" id="H3u-8k-6y0"/>
@@ -1170,6 +1179,9 @@
                             <constraint firstAttribute="trailing" secondItem="lOE-PL-JD4" secondAttribute="trailing" id="to9-7t-gOZ"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT6-8u-Z4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
