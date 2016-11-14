@@ -93,6 +93,7 @@ public class Debate {
 
             print("date: \(myDate)")
 
+
             let dateFormate = DateFormatter()
             dateFormate.dateStyle = .medium
             let stringOfDate = dateFormate.string(from: myDate)

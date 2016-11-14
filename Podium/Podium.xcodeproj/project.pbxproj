@@ -12,6 +12,7 @@
 		2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F21DC842790069AF49 /* ObserverVC.swift */; };
 		2A11C0081DD95E8500E391F3 /* ProtocolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */; };
 		2A11C00A1DD95F9200E391F3 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */; };
+		2A138E4D1DD9991500C513F9 /* OldDebate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E4C1DD9991500C513F9 /* OldDebate.swift */; };
 		2A2EB0C31DC8F39500BDEEF6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */; };
 		2A2EB0C91DC8F57700BDEEF6 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */; };
 		2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB021DC064DD00A1CB7C /* DebateCell.swift */; };
@@ -58,6 +59,7 @@
 		2A0A09F21DC842790069AF49 /* ObserverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
 		2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolVC.swift; sourceTree = "<group>"; };
 		2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		2A138E4C1DD9991500C513F9 /* OldDebate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldDebate.swift; sourceTree = "<group>"; };
 		2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		2A58EB021DC064DD00A1CB7C /* DebateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebateCell.swift; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		2A8CDD671DC7BAF100B77B0E /* SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		2A984F991DB7E557008B49A3 /* LabelsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsUI.swift; sourceTree = "<group>"; };
 		2ABDB4511DB4376900824F9B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; usesTabs = 0; };
 		2ABDB4581DB4377900824F9B /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
 		2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLostVC.swift; sourceTree = "<group>"; };
 		2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebatesFeedVC.swift; sourceTree = "<group>"; };
@@ -141,18 +143,19 @@
 		2ABDB44E1DB4374300824F9B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2ABDB4571DB4377900824F9B /* LoginVC.swift */,
-				2ABDB4581DB4377900824F9B /* NewUserVC.swift */,
-				2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */,
-				2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */,
+				2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */,
 				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
-				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
-				2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */,
-				2A0A09F21DC842790069AF49 /* ObserverVC.swift */,
+				2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */,
+				2ABDB4571DB4377900824F9B /* LoginVC.swift */,
 				2A894AD61DD00E00005F2DBC /* MenuTVC.swift */,
+				2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */,
+				2ABDB4581DB4377900824F9B /* NewUserVC.swift */,
+				2A0A09F21DC842790069AF49 /* ObserverVC.swift */,
+				2A138E4C1DD9991500C513F9 /* OldDebate.swift */,
+				2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */,
 				2A6578511DD9132000685213 /* ProfileVC.swift */,
 				2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */,
-				2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */,
+				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -161,11 +164,11 @@
 		2ABDB44F1DB4375100824F9B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */,
-				2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */,
-				2A984F991DB7E557008B49A3 /* LabelsUI.swift */,
-				2A58EB021DC064DD00A1CB7C /* DebateCell.swift */,
 				2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */,
+				2A58EB021DC064DD00A1CB7C /* DebateCell.swift */,
+				2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */,
+				2A984F991DB7E557008B49A3 /* LabelsUI.swift */,
+				2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */,
 			);
 			name = View;
 			path = ..;
@@ -174,12 +177,12 @@
 		2ABDB4501DB4375900824F9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2ABDB4511DB4376900824F9B /* Constants.swift */,
-				ECBD0AAC1DB48B2E00DF53CC /* User.swift */,
-				ECBD0AAE1DB48B5700DF53CC /* Debate.swift */,
-				2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */,
-				2A8CDD671DC7BAF100B77B0E /* SaveData.swift */,
 				2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */,
+				2ABDB4511DB4376900824F9B /* Constants.swift */,
+				ECBD0AAE1DB48B5700DF53CC /* Debate.swift */,
+				2A8CDD671DC7BAF100B77B0E /* SaveData.swift */,
+				ECBD0AAC1DB48B2E00DF53CC /* User.swift */,
+				2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */,
 				2A58EB101DC06B7C00A1CB7C /* Generated */,
 			);
 			name = Model;
@@ -201,10 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				ECD969C61DB433A100325C4D /* Podium */,
-				ECD969DE1DB433A100325C4D /* PodiumTests */,
-				ECD969C51DB433A100325C4D /* Products */,
-				3972869E7D67A4CD33863575 /* Pods */,
 				06A1C9527B7047267FFE4CA4 /* Frameworks */,
+				ECD969DE1DB433A100325C4D /* PodiumTests */,
+				3972869E7D67A4CD33863575 /* Pods */,
+				ECD969C51DB433A100325C4D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -466,6 +469,7 @@
 				2A11C0081DD95E8500E391F3 /* ProtocolVC.swift in Sources */,
 				2ABDB4541DB4376900824F9B /* Constants.swift in Sources */,
 				ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */,
+				2A138E4D1DD9991500C513F9 /* OldDebate.swift in Sources */,
 				ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */,
 				2A8CDD681DC7BAF100B77B0E /* SaveData.swift in Sources */,
 				2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */,

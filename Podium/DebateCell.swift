@@ -24,9 +24,7 @@ class DebateCell: UITableViewCell {
 
         if debate.timeStatus == "DONE"{
             debateImage.image = UIImage(named: "Done")
-        }else if debate.timeStatus == "SOON" {
-            debateImage.image = UIImage(named: "iCon")
-        }else{
+        } else {
             debateImage.image = UIImage(named: "iCon")
         }
         

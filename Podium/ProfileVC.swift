@@ -56,27 +56,5 @@ class ProfileVC: UIViewController {
 
     }
 
-
-    func getActiveDebates(_ completed: @escaping DownloadComplete){
-
-        let ACTIVEDEBATES_URL = "\(BASE_URL)\(DEBATES_URL)"
-        Alamofire.request(ACTIVEDEBATES_URL).responseJSON {response in
-            let result = response.result
-
-            print(response, result, "--------URL: \(ACTIVEDEBATES_URL)")
-            //DEBUG
-            if let dict = result.value as? [Dictionary<String, AnyObject>]{
-
-                for obj in dict{
-
-
-                    
-                }
-            }
-            completed()
-        }
-    }
-
-
-
+    
 }

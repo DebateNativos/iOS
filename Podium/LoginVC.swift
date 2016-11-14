@@ -19,7 +19,8 @@ class LoginVC: UIViewController {
     var loginStatus: String = ""
     var loginUser: User!
     var reach: Reachability!
-    let saveData: SaveData! = nil
+    var user: UserCoreData!
+    var userToEdit: UserCoreData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +81,8 @@ class LoginVC: UIViewController {
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
                             let userFound = User(user: user)
                             self.loginUser = userFound
-                           // self.saveData.SaveUserInfo()
+                            //SaveData().SaveUserInfo()
+                          //  self.SaveUserInfo()
                         }
                         self.loginStatus = status
                     }else{
@@ -92,10 +94,86 @@ class LoginVC: UIViewController {
         }
 
     }
-    
-    
-    
-    
+
+
+   // let employee = NSEntityDescription.insertNewObjectForEntityForName("Employee", inManagedObjectContext: managedObjectContext) as! AAAEmployeeMO
+
+    func SaveUserInfo(){
+
+
+
+
+
+        if userToEdit == nil {
+
+            user = UserCoreData(context: context)
+
+        } else {
+
+            user = userToEdit
+
+        }
+
+
+        if  let nameOfUser: String = loginUser.name {
+
+            user.name = nameOfUser
+
+        }
+
+
+        if  let lastNameOfUser: String = loginUser.lastName {
+
+            user.lastname = lastNameOfUser
+
+        }
+
+        if  let lastName2OfUser: String = loginUser.lastName2 {
+
+            user.lastname2 = lastName2OfUser
+
+        }
+
+
+        if  let email: String = loginUser.email {
+
+            user.email = email
+
+        }
+
+
+        if let address: String = loginUser.address {
+
+            user.address = address
+
+        }
+
+        //
+
+
+        if let idUniversity: Int = loginUser.idUniversity{
+
+            user.idUniversity = Int64(idUniversity)
+
+        }
+
+
+        if let phone: String = loginUser.phone{
+
+            user.phone = phone
+
+        }
+
+        if let idToken: String = loginUser.idToken{
+
+            user.idToken = idToken
+
+        }
+
+        ad.saveContext()
+
+    }
+
     //    func SignOut() {
     //
     //        if userToEdit != nil {
