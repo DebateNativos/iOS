@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SCLAlertView
+import CoreData
 
 class LoginVC: UIViewController {
 
@@ -81,7 +82,7 @@ class LoginVC: UIViewController {
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
                             let userFound = User(user: user)
                             self.loginUser = userFound
-                            //SaveData().SaveUserInfo()
+                            SaveData().SaveUserInfo()
                           //  self.SaveUserInfo()
                         }
                         self.loginStatus = status
@@ -92,85 +93,6 @@ class LoginVC: UIViewController {
             }
             completed()
         }
-
-    }
-
-
-   // let employee = NSEntityDescription.insertNewObjectForEntityForName("Employee", inManagedObjectContext: managedObjectContext) as! AAAEmployeeMO
-
-    func SaveUserInfo(){
-
-
-
-
-
-        if userToEdit == nil {
-
-            user = UserCoreData(context: context)
-
-        } else {
-
-            user = userToEdit
-
-        }
-
-
-        if  let nameOfUser: String = loginUser.name {
-
-            user.name = nameOfUser
-
-        }
-
-
-        if  let lastNameOfUser: String = loginUser.lastName {
-
-            user.lastname = lastNameOfUser
-
-        }
-
-        if  let lastName2OfUser: String = loginUser.lastName2 {
-
-            user.lastname2 = lastName2OfUser
-
-        }
-
-
-        if  let email: String = loginUser.email {
-
-            user.email = email
-
-        }
-
-
-        if let address: String = loginUser.address {
-
-            user.address = address
-
-        }
-
-        //
-
-
-        if let idUniversity: Int = loginUser.idUniversity{
-
-            user.idUniversity = Int64(idUniversity)
-
-        }
-
-
-        if let phone: String = loginUser.phone{
-
-            user.phone = phone
-
-        }
-
-        if let idToken: String = loginUser.idToken{
-
-            user.idToken = idToken
-
-        }
-
-        ad.saveContext()
 
     }
 

@@ -23,7 +23,7 @@ let PHONE_URL="&phone="
 let BIRTHDAY_URL="&birthday="
 let ADDRESS_URL="&address="
 let IDUNIVERSITY_URL="&idUniversity="
-let DEBATES_URL = "/debate/activedebates"
+let DEBATES_URL = "/debate/getdebates"
 
 typealias DownloadComplete = () -> ()
 
