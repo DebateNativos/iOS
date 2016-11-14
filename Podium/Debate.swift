@@ -15,6 +15,7 @@ public class Debate {
     fileprivate var _debateTypeName: String!
     fileprivate var _debateTypeDescription: String!
     fileprivate var _startingDate: String!
+    fileprivate var _timeStatus: String!
 
 
     var idDebates : Int{
@@ -53,6 +54,14 @@ public class Debate {
         return _debateTypeDescription
     }
 
+    var timeStatus: String{
+        if _timeStatus == nil!{
+            _timeStatus = ""
+        }
+
+        return _timeStatus
+    }
+
     init(){
 
         _idDebates = 0
@@ -60,6 +69,7 @@ public class Debate {
         _debateTypeName = ""
         _debateTypeDescription = ""
         //_startingDate = Date()
+        _timeStatus=""
 
     }
 
@@ -89,6 +99,21 @@ public class Debate {
             print(stringOfDate)
 
             self._startingDate = stringOfDate
+            let date = NSDate()
+
+            switch myDate.compare(date as Date) {
+            case .orderedAscending     :
+                print("Date A is earlier than date B")
+                self._timeStatus = "DONE"
+
+            case .orderedDescending    :
+                print("Date A is later than date B")
+                self._timeStatus = "SOON"
+            case .orderedSame          :
+                print("The two dates are the same")
+                self._timeStatus = "TODAY"
+                print(date)
+            }
         }
 
         if let debateType = debate["debateType"] as? Dictionary<String, AnyObject>{

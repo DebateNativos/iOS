@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileVC: UIViewController {
     @IBOutlet weak var scrollview: UIScrollView!
+    @IBOutlet weak var tfName: FieldsUI!
+    @IBOutlet weak var tfLastName: FieldsUI!
+    @IBOutlet weak var tfLastName2: FieldsUI!
+    @IBOutlet weak var tfEmail: FieldsUI!
+    @IBOutlet weak var tfPassword: FieldsUI!
+    @IBOutlet weak var tfPhone: FieldsUI!
+    @IBOutlet weak var tfAddress: FieldsUI!
+    @IBOutlet weak var tfidUniversity: FieldsUI!
+    var userData: SaveData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,5 +49,34 @@ class ProfileVC: UIViewController {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         self.scrollview.contentInset = contentInset
     }
-    
+
+    @IBAction func BackPressed(_ sender: Any) {
+
+        dismiss(animated: true, completion: nil)
+
+    }
+
+
+    func getActiveDebates(_ completed: @escaping DownloadComplete){
+
+        let ACTIVEDEBATES_URL = "\(BASE_URL)\(DEBATES_URL)"
+        Alamofire.request(ACTIVEDEBATES_URL).responseJSON {response in
+            let result = response.result
+
+            print(response, result, "--------URL: \(ACTIVEDEBATES_URL)")
+            //DEBUG
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
+
+                for obj in dict{
+
+
+                    
+                }
+            }
+            completed()
+        }
+    }
+
+
+
 }

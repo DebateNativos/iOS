@@ -11,7 +11,7 @@ import Alamofire
 import SCLAlertView
 
 class LoginVC: UIViewController {
-    
+
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnEnter: UIButton!
@@ -19,68 +19,68 @@ class LoginVC: UIViewController {
     var loginStatus: String = ""
     var loginUser: User!
     var reach: Reachability!
-    var saveData: SaveData!
-    
-    
+    let saveData: SaveData! = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         reach = Reachability()
-        
+
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
-        
+
+
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if reach.isInternetAvailable(){
             //SCLAlertView().showInfo("!!!", subTitle: "Si hay conexión a internet!")
-            
+
         }else{
-            
+
             SCLAlertView().showWarning("No hay conexión", subTitle: "No se ha logrado establecer conexión a internet.")
         }
-        
+
     }
-    
+
     @IBAction func loginBtnPressed(_ sender: AnyObject) {
-        
+
         self.getLogin{
             if self.loginStatus == "@validLogin"{
                 SCLAlertView().showSuccess("Bienvenido", subTitle: "Hola \(self.loginUser._name!)")
                 self.performSegue(withIdentifier: "DebatesFeedVC", sender: self)
-                
+
             }else if self.loginStatus == "@invalidEmail"{
                 SCLAlertView().showError("Correo electronico Invalido!", subTitle: "Debe de estar registrado para ingresar a Podium.")
             }else if self.loginStatus == "@invalidPassword"{
                 SCLAlertView().showError("Contraseña Invalida!", subTitle: "Trate de nuevo.")
             }
-            
+
         }
-        
+
     }
-    
+
     func getLogin(_ completed: @escaping DownloadComplete){
-        
+
         let LOGIN_USER_URL = "\(BASE_URL)\(LOGIN_URL)\(EMAIL_URL)\(tfEmail.text!)\(PASS_URL)\(tfPassword.text!)"
-        
+
         Alamofire.request(LOGIN_USER_URL).responseJSON {response in
             let result = response.result
-            
+
             //DEBUG
-           
+
             print(response, result, "--------URL: \(LOGIN_USER_URL)")
-            
+
             if let dict = result.value as? Dictionary<String, AnyObject>{
-                
+
                 if let status = dict["status"] as? String{
                     if status == "@validLogin"{
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
                             let userFound = User(user: user)
                             self.loginUser = userFound
+                           // self.saveData.SaveUserInfo()
                         }
                         self.loginStatus = status
                     }else{
@@ -90,7 +90,7 @@ class LoginVC: UIViewController {
             }
             completed()
         }
-        
+
     }
     
     
