@@ -19,7 +19,7 @@ class DebateCell: UITableViewCell {
 
 
         lblSubject.text = "\(debate.name)"
-        lblDate.text = debate.startingDate //convertedDate
+        lblDate.text = "\(debate.startingDate)"
         lblTime.text = "\(debate.debateTypeName)"
 
         if debate.timeStatus == "DONE"{
@@ -27,7 +27,7 @@ class DebateCell: UITableViewCell {
         } else {
             debateImage.image = UIImage(named: "iCon")
         }
-        
+
     }
     
 }

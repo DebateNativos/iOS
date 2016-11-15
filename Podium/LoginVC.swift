@@ -82,8 +82,6 @@ class LoginVC: UIViewController {
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
                             let userFound = User(user: user)
                             self.loginUser = userFound
-                            SaveData().SaveUserInfo()
-                          //  self.SaveUserInfo()
                         }
                         self.loginStatus = status
                     }else{
@@ -95,7 +93,9 @@ class LoginVC: UIViewController {
         }
 
     }
-
+    
+    
+    
     //    func SignOut() {
     //
     //        if userToEdit != nil {

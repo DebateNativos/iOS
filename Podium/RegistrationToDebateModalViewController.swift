@@ -22,7 +22,7 @@ class RegistrationToDebateModalViewController: UIViewController {
 
     @IBAction func studentBtnPressed(_ sender: AnyObject) {
 
-  performSegue(withIdentifier: "DebaterVC", sender: debate)
+        performSegue(withIdentifier: "DebaterVC", sender: debate)
 
     }
 
@@ -47,7 +47,14 @@ class RegistrationToDebateModalViewController: UIViewController {
                     destination.debate = debate
                 }
             }
+        } else if segue.identifier == "DebaterVC" {
+
+            if let destination = segue.destination as? ChronometerVC {
+
+                if let debate = sender as? Debate{
+                    destination.debate = debate
+                }
+            }
         }
     }
-
 }

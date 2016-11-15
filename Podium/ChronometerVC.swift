@@ -8,12 +8,14 @@
 
 import UIKit
 import SnapTimer
+import Alamofire
 
 class ChronometerVC: UIViewController {
 
     @IBOutlet weak var timer: SnapTimerView!
     @IBOutlet weak var lblDebPart: UILabel!
     @IBOutlet weak var warning: UILabel!
+    var debate: Debate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,34 @@ class ChronometerVC: UIViewController {
     @IBAction func ClosePressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)
+        
+    }
+
+    func getDebateInfo(_ completed: @escaping DownloadComplete){
+
+        let DEBATE_USER_URL = "\(BASE_URL)\(DEBATE_URL)\(IdDEBATE_URL)\(debate.idDebates)"
+
+        Alamofire.request(DEBATE_USER_URL).responseJSON {response in
+            let result = response.result
+
+            //DEBUG
+
+            print(response, result, " -> URL: \(DEBATE_USER_URL)")
+
+            if let dict = result.value as? Dictionary<String, AnyObject>{
+
+                if let status = dict["sectionNUmber"] as? Int{
+
+                    if status == 1 {
+
+                       //CODE
+                        
+                    }
+
+                }
+            }
+            completed()
+        }
         
     }
     

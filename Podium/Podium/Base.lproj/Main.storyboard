@@ -690,10 +690,10 @@
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="debateCell" rowHeight="70" id="Ied-Z8-fTx" customClass="DebateCell" customModule="Podium" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="414" height="70"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ied-Z8-fTx" id="rQ3-oW-cbL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-cC-WZx">
@@ -1307,28 +1307,60 @@
                                 <items>
                                     <navigationItem title="Mis Cursos" id="ZJI-sJ-vBR">
                                         <barButtonItem key="leftBarButtonItem" image="back_btn" style="plain" id="cPM-d5-YF8">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fpp-hc-j9l">
-                                                <rect key="frame" x="20" y="3" width="92" height="30"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fpp-hc-j9l">
+                                                <rect key="frame" x="20" y="7" width="67" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" image="back_btn"/>
                                             </button>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ydr-W3-8NO">
+                                <rect key="frame" x="0.0" y="40" width="414" height="696"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Rjr-o2-qUM">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rjr-o2-qUM" id="jaf-Wy-LTZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Curso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NB-6y-iWZ">
+                                                    <rect key="frame" x="8" y="8" width="398" height="27.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3NB-6y-iWZ" firstAttribute="leading" secondItem="jaf-Wy-LTZ" secondAttribute="leadingMargin" id="Ftp-kx-q2c"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3NB-6y-iWZ" secondAttribute="bottom" id="fRw-CT-sgI"/>
+                                                <constraint firstItem="3NB-6y-iWZ" firstAttribute="top" secondItem="jaf-Wy-LTZ" secondAttribute="topMargin" id="lIw-E4-MiB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3NB-6y-iWZ" secondAttribute="trailing" id="lZm-ZG-VOh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kHa-7P-BEV" firstAttribute="top" secondItem="xZb-4R-XQp" secondAttribute="bottom" id="2s6-oC-jis"/>
                             <constraint firstAttribute="trailing" secondItem="kHa-7P-BEV" secondAttribute="trailing" id="CtU-qp-Qkn"/>
+                            <constraint firstItem="JU8-UH-388" firstAttribute="top" secondItem="ydr-W3-8NO" secondAttribute="bottom" id="JtH-z4-P3p"/>
+                            <constraint firstItem="ydr-W3-8NO" firstAttribute="top" secondItem="kHa-7P-BEV" secondAttribute="bottom" id="JtN-IU-br4"/>
+                            <constraint firstAttribute="trailing" secondItem="ydr-W3-8NO" secondAttribute="trailing" id="lFr-1L-XN3"/>
                             <constraint firstItem="kHa-7P-BEV" firstAttribute="leading" secondItem="eRS-Bn-Gkp" secondAttribute="leading" id="rdR-NK-1Fl"/>
+                            <constraint firstItem="ydr-W3-8NO" firstAttribute="leading" secondItem="eRS-Bn-Gkp" secondAttribute="leading" id="uO7-kt-i0H"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdr-UM-cRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3264" y="3541"/>
+            <point key="canvasLocation" x="3263.7681159420295" y="3540.489130434783"/>
         </scene>
         <!--NavToProfile-->
         <scene sceneID="ojk-RX-0Tq">
@@ -1460,6 +1492,9 @@
                                     <navigationItem title="Acerca de nosotros" id="0G1-LV-QT6">
                                         <barButtonItem key="leftBarButtonItem" image="back_btn" id="cQo-eE-IRi">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="BackPressed:" destination="djh-ew-h0F" id="ewv-Zs-atu"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

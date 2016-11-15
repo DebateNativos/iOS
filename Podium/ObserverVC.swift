@@ -62,7 +62,7 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func updateLbl (){
 
         self.navBar.topItem?.title = debate.name
-        //lblEtapa.text = debate.description
+        lblEtapa.text = debate.timeStatus
         lblDate.text = "\(debate.startingDate)"
 
         lblEtapa.layer.masksToBounds = true

@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import CoreData
 
 public class User {
-    
+
     var _idUsers: Int!
     var _name: String!
     var _lastName: String!
@@ -120,8 +121,5 @@ public class User {
         get { return _idToken }
     }
     
-    
-    
-    
-    
+
 }

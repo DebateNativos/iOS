@@ -16,6 +16,7 @@ public class Debate {
     fileprivate var _debateTypeDescription: String!
     fileprivate var _startingDate: String!
     fileprivate var _timeStatus: String!
+    fileprivate var _status: Bool!
 
 
     var idDebates : Int{
@@ -62,6 +63,14 @@ public class Debate {
         return _timeStatus
     }
 
+    var Status: Bool{
+        if _status == nil!{
+            _status = false
+        }
+
+        return _status
+    }
+
     init(){
 
         _idDebates = 0
@@ -70,6 +79,7 @@ public class Debate {
         _debateTypeDescription = ""
         //_startingDate = Date()
         _timeStatus=""
+        _status=false
 
     }
 
@@ -80,29 +90,39 @@ public class Debate {
         }
 
         if let name = debate["name"] as? String{
-            print("DEBATE:  \(name)")
+            print("Nombre:  \(name)")
             self._name = name
         }
 
-        if let startingDebateDate = debate["startingDate"] as? String{
-            print(startingDebateDate)
+        if let startingDebateDate = debate["startingDate"] as? CLong{
+            print("Fecha: \(startingDebateDate)")
+
+            //OCUPO EL FORMATO
+            let date = Date()
+
+            let dateTimeStamp = NSDate(timeIntervalSince1970:Double(startingDebateDate)/1000)  //UTC time
 
             let dateFormatter = DateFormatter()
+            dateFormatter.timeZone = NSTimeZone.local //Edit
             dateFormatter.dateFormat = "yyyy-MM-dd"
-            let myDate = dateFormatter.date(from: startingDebateDate)!
+            dateFormatter.dateStyle = DateFormatter.Style.medium
+            //dateFormatter.timeStyle = DateFormatter.Style.short
 
-            print("date: \(myDate)")
 
+            let strDateSelect = dateFormatter.string(from: dateTimeStamp as Date)
+            print(strDateSelect) //Local time
 
-            let dateFormate = DateFormatter()
-            dateFormate.dateStyle = .medium
-            let stringOfDate = dateFormate.string(from: myDate)
-            print(stringOfDate)
+            let dateFormatter2 = DateFormatter()
+            dateFormatter2.timeZone = NSTimeZone.local
+            dateFormatter2.dateFormat = "yyyy-MM-dd"
 
-            self._startingDate = stringOfDate
-            let date = NSDate()
+            let myDate = dateFormatter.date(from: strDateSelect)
 
-            switch myDate.compare(date as Date) {
+            self._startingDate = strDateSelect
+
+            print("Fecha: \(myDate)")
+
+            switch myDate!.compare(date as Date) {
             case .orderedAscending     :
                 print("Date A is earlier than date B")
                 self._timeStatus = "DONE"
@@ -114,20 +134,21 @@ public class Debate {
                 print("The two dates are the same")
                 self._timeStatus = "TODAY"
                 print(date)
+
+
             }
-        }
 
-        if let debateType = debate["debateType"] as? Dictionary<String, AnyObject>{
-
-            if let debateType = debateType["name"] as? String{
+            if let debateType = debate["debateType"] as? String{
                 self._debateTypeName = debateType
+                print("Modelo:  \(_debateTypeName)")
             }
-            if let name = debateType["name"] as? String{
-                self._debateTypeDescription = name
+            
+            if let debateType = debate["isActive"] as? Bool{
+                self._status = debateType
+                print("Active?:  \(_status)")
             }
             
         }
-        
-        
     }
+    
 }
