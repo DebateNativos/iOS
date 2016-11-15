@@ -97,7 +97,6 @@ public class Debate {
         if let startingDebateDate = debate["startingDate"] as? CLong{
             print("Fecha: \(startingDebateDate)")
 
-            //OCUPO EL FORMATO
             let date = Date()
 
             let dateTimeStamp = NSDate(timeIntervalSince1970:Double(startingDebateDate)/1000)  //UTC time

@@ -23,7 +23,7 @@ let PHONE_URL="&phone="
 let BIRTHDAY_URL="&birthday="
 let ADDRESS_URL="&address="
 let IDUNIVERSITY_URL="&idUniversity="
-let DEBATES_URL = "/debate/getdebates"
+let DEBATES_URL = "/debate/getactualdebates"
 let DEBATE_URL = "/debate/getsections?"
 let IdDEBATE_URL = "id="
 
