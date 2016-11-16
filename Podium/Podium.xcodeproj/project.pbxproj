@@ -20,7 +20,6 @@
 		2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */; };
 		2A6578521DD9132000685213 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6578511DD9132000685213 /* ProfileVC.swift */; };
 		2A894AD71DD00E00005F2DBC /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A894AD61DD00E00005F2DBC /* MenuTVC.swift */; };
-		2A8CDD681DC7BAF100B77B0E /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8CDD671DC7BAF100B77B0E /* SaveData.swift */; };
 		2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A984F991DB7E557008B49A3 /* LabelsUI.swift */; };
 		2ABDB4541DB4376900824F9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4511DB4376900824F9B /* Constants.swift */; };
 		2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4571DB4377900824F9B /* LoginVC.swift */; };
@@ -67,7 +66,6 @@
 		2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Podium/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2A6578511DD9132000685213 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		2A894AD61DD00E00005F2DBC /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
-		2A8CDD671DC7BAF100B77B0E /* SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		2A984F991DB7E557008B49A3 /* LabelsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsUI.swift; sourceTree = "<group>"; };
 		2ABDB4511DB4376900824F9B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -180,7 +178,6 @@
 				2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */,
 				2ABDB4511DB4376900824F9B /* Constants.swift */,
 				ECBD0AAE1DB48B5700DF53CC /* Debate.swift */,
-				2A8CDD671DC7BAF100B77B0E /* SaveData.swift */,
 				ECBD0AAC1DB48B2E00DF53CC /* User.swift */,
 				2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */,
 				2A58EB101DC06B7C00A1CB7C /* Generated */,
@@ -471,7 +468,6 @@
 				ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */,
 				2A138E4D1DD9991500C513F9 /* OldDebate.swift in Sources */,
 				ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */,
-				2A8CDD681DC7BAF100B77B0E /* SaveData.swift in Sources */,
 				2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */,
 				2A0A09F11DC8372E0069AF49 /* NewCommentVC.swift in Sources */,
 				2ABDB45E1DB4377900824F9B /* DebatesFeedVC.swift in Sources */,

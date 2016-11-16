@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class ProfileVC: UIViewController {
     @IBOutlet weak var scrollview: UIScrollView!
@@ -19,7 +20,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var tfPhone: FieldsUI!
     @IBOutlet weak var tfAddress: FieldsUI!
     @IBOutlet weak var tfidUniversity: FieldsUI!
-    var userData: SaveData!
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,5 +57,43 @@ class ProfileVC: UIViewController {
 
     }
 
+    @IBAction func CoursesPressed(_ sender: Any) {
+
+        viewShit()
+
+    }
+
+    func viewShit() {
+
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
+
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        request.entity = entityDescription
+
+        let pred = NSPredicate(format: "(name = %@)", tfName.text!)
+        request.predicate = pred
+
+        do {
+            var results =
+                try managedObjectContext.fetch(request as!
+                    NSFetchRequest<NSFetchRequestResult>)
+
+            if results.count > 0 {
+                let match = results[0] as! NSManagedObject
+
+                tfName.text = match.value(forKey: "name") as? String
+                tfLastName.text = match.value(forKey: "lastname") as? String
+                tfLastName2.text = match.value(forKey: "lastname2") as? String
+                print("Matches found: \(results.count)")
+            } else {
+                print("No Match")
+            }
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+    }
     
 }

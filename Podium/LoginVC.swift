@@ -22,6 +22,7 @@ class LoginVC: UIViewController {
     var reach: Reachability!
     var user: UserCoreData!
     var userToEdit: UserCoreData?
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +74,7 @@ class LoginVC: UIViewController {
 
             //DEBUG
 
-            print(response, result, "--------URL: \(LOGIN_USER_URL)")
+            print(response, result, " -> URL: \(LOGIN_USER_URL)")
 
             if let dict = result.value as? Dictionary<String, AnyObject>{
 
@@ -82,6 +83,7 @@ class LoginVC: UIViewController {
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
                             let userFound = User(user: user)
                             self.loginUser = userFound
+                            self.saveUser(user: self.loginUser)
                         }
                         self.loginStatus = status
                     }else{
@@ -93,16 +95,24 @@ class LoginVC: UIViewController {
         }
 
     }
-    
-    
-    
-    //    func SignOut() {
-    //
-    //        if userToEdit != nil {
-    //            context.delete(userToEdit!)
-    //            ad.saveContext()
-    //        }
-    //
-    //    }
+
+    func saveUser(user: User){
+
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
+
+        let userD = UserCoreData(entity: entityDescription!, insertInto: managedObjectContext)
+
+        userD.name = user.name
+        userD.lastname = user.lastName
+        userD.lastname2 = user.lastName2
+        
+        do {
+            try managedObjectContext.save()
+            print("GUARDADO")
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
     
 }
