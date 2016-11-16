@@ -16,6 +16,6 @@ public class UserCoreData: NSManagedObject {
         super.awakeFromInsert()
 
     }
-
-
+    
+    
 }

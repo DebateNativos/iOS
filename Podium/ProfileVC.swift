@@ -59,11 +59,11 @@ class ProfileVC: UIViewController {
 
     @IBAction func CoursesPressed(_ sender: Any) {
 
-        viewShit()
+        viewUser()
 
     }
 
-    func viewShit() {
+    func viewUser() {
 
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
@@ -71,7 +71,7 @@ class ProfileVC: UIViewController {
         let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
         request.entity = entityDescription
 
-        let pred = NSPredicate(format: "(name = %@)", tfName.text!)
+        let pred = NSPredicate(format: "(id = %@)", 0)
         request.predicate = pred
 
         do {
@@ -85,7 +85,12 @@ class ProfileVC: UIViewController {
                 tfName.text = match.value(forKey: "name") as? String
                 tfLastName.text = match.value(forKey: "lastname") as? String
                 tfLastName2.text = match.value(forKey: "lastname2") as? String
-                print("Matches found: \(results.count)")
+                tfEmail.text = match.value(forKey: "email") as? String
+                tfPhone.text = match.value(forKey: "phone") as? String
+                tfAddress.text = match.value(forKey: "address") as? String
+
+            print("Matches found: \(results.count)")
+
             } else {
                 print("No Match")
             }

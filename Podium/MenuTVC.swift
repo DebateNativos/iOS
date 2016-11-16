@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MenuTVC: UITableViewController {
 
@@ -36,8 +37,5 @@ class MenuTVC: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 4
     }
-
-
-
 
 }

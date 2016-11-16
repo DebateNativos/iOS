@@ -19,7 +19,7 @@ extension UserCoreData {
     @NSManaged public var address: String?
     @NSManaged public var birthday: NSDate?
     @NSManaged public var email: String?
-    @NSManaged public var id: Int64
+    @NSManaged public var id: Int
     @NSManaged public var idToken: String
     @NSManaged public var idUniversity: Int64
     @NSManaged public var lastname: String?

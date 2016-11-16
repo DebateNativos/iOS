@@ -13,6 +13,7 @@ import CoreData
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var AutoLogin: UISwitch!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnEnter: UIButton!
@@ -83,7 +84,7 @@ class LoginVC: UIViewController {
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
                             let userFound = User(user: user)
                             self.loginUser = userFound
-                            self.saveUser(user: self.loginUser)
+                            self.SaveUser(user: self.loginUser)
                         }
                         self.loginStatus = status
                     }else{
@@ -96,23 +97,54 @@ class LoginVC: UIViewController {
 
     }
 
-    func saveUser(user: User){
+    func SaveUser(user: User) {
 
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
 
-        let userD = UserCoreData(entity: entityDescription!, insertInto: managedObjectContext)
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        request.entity = entityDescription
 
-        userD.name = user.name
-        userD.lastname = user.lastName
-        userD.lastname2 = user.lastName2
-        
+        let pred = NSPredicate(format: "(id = %@)", 0)
+        request.predicate = pred
+
         do {
-            try managedObjectContext.save()
-            print("GUARDADO")
+            let results =
+                try managedObjectContext.fetch(request as!
+                    NSFetchRequest<NSFetchRequestResult>)
+
+            if results.count > 0 {
+
+                print("Matches found: \(results.count)")
+
+            } else {
+
+                let entityDescription =
+                    NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
+
+                let userD = UserCoreData(entity: entityDescription!, insertInto: managedObjectContext)
+
+                userD.name = user.name
+                userD.lastname = user.lastName
+                userD.lastname2 = user.lastName2
+                userD.id = 0
+                userD.email = user.email
+                userD.address = user.address
+                userD.phone = user.phone
+
+                do {
+                    try managedObjectContext.save()
+                    print("GUARDADO")
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+                
+            }
+            
         } catch let error {
             print(error.localizedDescription)
         }
+        
     }
     
 }
