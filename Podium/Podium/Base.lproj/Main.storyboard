@@ -104,7 +104,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QZi-ld-vzc">
                                 <rect key="frame" x="115" y="567" width="185" height="35"/>
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uvK-2i-TFR">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvK-2i-TFR">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="35"/>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordarme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBz-T8-xr6">
@@ -148,7 +148,7 @@
                         <outlet property="loginStatusLabel" destination="zPc-pG-nKg" id="nMs-e5-w07"/>
                         <outlet property="tfEmail" destination="Vbb-dC-RyB" id="aPo-G3-T7h"/>
                         <outlet property="tfPassword" destination="uUc-9R-Oab" id="sOR-zg-mfP"/>
-                        <segue destination="edN-Ad-6mb" kind="show" identifier="DebatesFeedVC" id="wlB-Mh-BIH"/>
+                        <segue destination="edN-Ad-6mb" kind="showDetail" identifier="DebatesFeedVC" id="wiN-Bz-Kj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYZ-7F-ig5" sceneMemberID="firstResponder"/>
@@ -680,7 +680,7 @@
         <!--DebatesFeedVC-->
         <scene sceneID="PkH-Lc-hJx">
             <objects>
-                <viewController id="edN-Ad-6mb" userLabel="DebatesFeedVC" customClass="DebatesFeedVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DebatesFeedVC" title="DebatesFeedVC" id="edN-Ad-6mb" userLabel="DebatesFeedVC" customClass="DebatesFeedVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hxq-X1-lFz"/>
                         <viewControllerLayoutGuide type="bottom" id="BG9-zM-DqH"/>
@@ -701,10 +701,10 @@
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="debateCell" rowHeight="70" id="Ied-Z8-fTx" customClass="DebateCell" customModule="Podium" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="70"/>
+                                        <rect key="frame" x="0.0" y="56" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ied-Z8-fTx" id="rQ3-oW-cbL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-cC-WZx">
@@ -945,7 +945,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lS-gB-jxj" id="bea-iq-EdH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="To4-fb-brM">
@@ -982,7 +982,7 @@
                                         <rect key="frame" x="0.0" y="80" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qA-GP-Jxt" id="fpI-Ea-6AR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QlX-jt-Cwz">
@@ -1019,7 +1019,7 @@
                                         <rect key="frame" x="0.0" y="160" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMe-wd-IQU" id="Rqg-fP-ixp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lAj-pu-UZY">
@@ -1056,7 +1056,7 @@
                                         <rect key="frame" x="0.0" y="240" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YY2-8D-gbN" id="hPo-0w-Xi5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ttQ-nE-xSn">
@@ -1076,7 +1076,7 @@
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="LogOutPressed:" destination="LS5-df-hsO" eventType="touchUpInside" id="pam-av-6xe"/>
+                                                                <action selector="LogOutPressed:" destination="LS5-df-hsO" eventType="touchUpInside" id="3bH-Z9-9b0"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -1104,6 +1104,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Menu" id="DJB-8n-JgH"/>
+                    <connections>
+                        <segue destination="a9M-QO-smX" kind="show" identifier="LoginVC" action="showDetailViewController:sender:" id="Ob2-Zn-0QZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2S-Xl-g3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1348,7 +1351,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rjr-o2-qUM" id="jaf-Wy-LTZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Curso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NB-6y-iWZ">
@@ -1605,7 +1608,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cWt-yC-8TO" id="CHh-TN-IIc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1613,7 +1616,7 @@
                                         <rect key="frame" x="0.0" y="72" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="debateCell" tableViewCell="4L6-G4-M1y" id="bCd-Z0-p1L">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvE-ko-GCX">

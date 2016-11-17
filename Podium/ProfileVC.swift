@@ -27,6 +27,7 @@ class ProfileVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
         // Do any additional setup after loading the view.
+        viewUser()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,9 +59,7 @@ class ProfileVC: UIViewController {
     }
 
     @IBAction func CoursesPressed(_ sender: Any) {
-
         viewUser()
-
     }
 
     func viewUser() {
@@ -89,7 +88,7 @@ class ProfileVC: UIViewController {
                 tfPhone.text = match.value(forKey: "phone") as? String
                 tfAddress.text = match.value(forKey: "address") as? String
 
-            print("Matches found: \(results.count)")
+                print("Matches found: \(results.count)")
 
             } else {
                 print("No Match")

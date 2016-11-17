@@ -27,6 +27,7 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Autologin()
         reach = Reachability()
 
     }
@@ -85,6 +86,8 @@ class LoginVC: UIViewController {
                             let userFound = User(user: user)
                             self.loginUser = userFound
                             self.SaveUser(user: self.loginUser)
+                            self.tfPassword.text=""
+                            self.tfEmail.text=""
                         }
                         self.loginStatus = status
                     }else{
@@ -115,8 +118,6 @@ class LoginVC: UIViewController {
 
             if results.count > 0 {
 
-                print("Matches found: \(results.count)")
-
             } else {
 
                 let entityDescription =
@@ -138,13 +139,49 @@ class LoginVC: UIViewController {
                 } catch let error {
                     print(error.localizedDescription)
                 }
+
+            }
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+
+    }
+
+
+    func Autologin() {
+
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
+
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        request.entity = entityDescription
+
+        let pred = NSPredicate(format: "(id = %@)", 0)
+        request.predicate = pred
+
+        do {
+            let results =
+
+                try managedObjectContext.fetch(request as!
+                    NSFetchRequest<NSFetchRequestResult>)
+
+            if results.count > 0 {
+
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let resultViewController = storyBoard.instantiateViewController(withIdentifier: "DebatesFeedVC") as! DebatesFeedVC
+                self.present(resultViewController, animated:true, completion:nil)
+                
+                print("Matches found: \(results.count)")
+                
+            } else {
+                
+                print("No Match")
                 
             }
             
         } catch let error {
             print(error.localizedDescription)
         }
-        
     }
-    
 }
