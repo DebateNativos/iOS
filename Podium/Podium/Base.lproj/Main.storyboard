@@ -13,7 +13,10 @@
         <!--LauchVC-->
         <scene sceneID="lzB-Kh-LMT">
             <objects>
-                <navigationController id="sek-1s-YDU" customClass="LauchVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="sek-1s-YDU" customClass="LauchVC" customModule="Podium" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kax-W2-Xil">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
