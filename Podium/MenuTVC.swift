@@ -37,7 +37,7 @@ class MenuTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 5
     }
     @IBAction func LogOutPressed(_ sender: Any) {
         // let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -61,4 +61,11 @@ class MenuTVC: UITableViewController {
             print("Detele all data in UserData error : \(error) \(error.userInfo)")
         }
     }
+
+    @IBAction func NewCourse(_ sender: Any) {
+
+
+
+    }
+
 }
