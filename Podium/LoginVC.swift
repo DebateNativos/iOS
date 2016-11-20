@@ -171,11 +171,11 @@ class LoginVC: UIViewController {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let resultViewController = storyBoard.instantiateViewController(withIdentifier: "DebatesFeedVC") as! DebatesFeedVC
                 self.present(resultViewController, animated:true, completion:nil)
-                
+
                 print("Matches found: \(results.count)")
-                
+
             } else {
-                
+
                 print("No Match")
                 
             }
@@ -184,4 +184,5 @@ class LoginVC: UIViewController {
             print(error.localizedDescription)
         }
     }
+
 }

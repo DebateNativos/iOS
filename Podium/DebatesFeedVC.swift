@@ -9,14 +9,20 @@
 import UIKit
 import Alamofire
 import SideMenu
+import CoreData
 
 class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var debate: Debate!
     var debates = [Debate]()
     var debatesVerify = [Debate]()
+    var email: String!
+    var activeDebate: Debate!
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var actUsr: ActiveUser!
+    var id: Int!
+    var actualDebate: Debate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +30,10 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.delegate = self
         tableView.dataSource = self
         menu()
+        viewUser()
         self.getActiveDebates {
             self.tableView.reloadData()
+
         }
 
     }
@@ -37,6 +45,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
             if self.debates.count != self.debatesVerify.count{
                 self.tableView.reloadData()
+
             }
         }
     }
@@ -64,13 +73,25 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let debate = debates[indexPath.row]
+        actualDebate = debate
 
-        if debate.timeStatus == "DONE" {
-            performSegue(withIdentifier: "OldDebate", sender: debate)
-        }else{
-            performSegue(withIdentifier: "registrationToDebate", sender: debate)
+        if (debate.timeStatus == "DONE" ) {
+
+            performSegue(withIdentifier: "CloseDebate", sender: debate)
+
+        } else {
+            if debate.Status == true {
+
+                VerifyUser () {
+
+                }
+
+            }else{
+
+                performSegue(withIdentifier: "InactiveDebate", sender: debate)
+
+            }
         }
-
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,8 +107,20 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 destination.debate = debate
             }
 
-        }
+        }else if let destination = segue.destination as? ChronometerVC{
 
+            if let debate = sender as? Debate{
+                destination.debate = debate
+            }
+
+        }else if let destination = segue.destination as? ObserverVC{
+
+            if let debate = sender as? Debate{
+                destination.debate = debate
+            }
+
+        }
+        
     }
 
     func getActiveDebates(_ completed: @escaping DownloadComplete){
@@ -102,8 +135,8 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
                 for obj in dict{
 
-                    let activeDebate = Debate(debate: obj)
-                    self.debates.append(activeDebate)
+                    self.activeDebate = Debate(debate: obj)
+                    self.debates.append(self.activeDebate)
                     self.tableView.reloadData()
                 }
             }
@@ -132,15 +165,83 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
     }
 
+    func viewUser() {
+
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
+
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        request.entity = entityDescription
+
+        let pred = NSPredicate(format: "(id = %@)", 0)
+        request.predicate = pred
+
+        do {
+            var results =
+                try managedObjectContext.fetch(request as!
+                    NSFetchRequest<NSFetchRequestResult>)
+
+            if results.count > 0 {
+                let match = results[0] as! NSManagedObject
+
+                self.email = (match.value(forKey: "email") as? String)!
+
+                print("Matches found: \(results.count)")
+
+            } else {
+                print("No Match")
+            }
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+
+    }
+
+    func VerifyUser (_ completed: @escaping DownloadComplete) {
+
+        let USER_VER_URL = "\(BASE_URL)\(USER_VERIFICATION)\(EMAIL_URL)\(email!)"
+
+        Alamofire.request(USER_VER_URL).responseJSON {response in
+            let result = response.result
+
+            print(response, result, " -> URL: \(USER_VER_URL)")
+
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
+
+                for obj in dict{
+
+                    let activeUser = ActiveUser (ActiveUser: obj)
+
+                    if activeUser.Debate == self.actualDebate.idDebates {
+
+                        self.performSegue(withIdentifier: "Debating", sender: self.actualDebate)
+
+                    }else{
+
+                        self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+
+
+                    }
+
+                }
+
+            }
+            completed()
+        }
+
+    }
+
+
 
     func menu () {
-
+        
         // Define the menus
         let menuLeftNavigationController = UISideMenuNavigationController()
         menuLeftNavigationController.leftSide = true
         // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
         SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
-
+        
         let menuRightNavigationController = UISideMenuNavigationController()
         // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
         SideMenuManager.menuRightNavigationController = menuRightNavigationController

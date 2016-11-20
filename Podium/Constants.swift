@@ -26,6 +26,7 @@ let IDUNIVERSITY_URL="&idUniversity="
 let DEBATES_URL = "/debate/getactualdebates"
 let DEBATE_URL = "/debate/getsections?"
 let IdDEBATE_URL = "id="
+let USER_VERIFICATION = "/debate/confirmeddebates?"
 
 typealias DownloadComplete = () -> ()
 

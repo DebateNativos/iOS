@@ -15,6 +15,7 @@
 		2A138E4D1DD9991500C513F9 /* OldDebate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E4C1DD9991500C513F9 /* OldDebate.swift */; };
 		2A2EB0C31DC8F39500BDEEF6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */; };
 		2A2EB0C91DC8F57700BDEEF6 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */; };
+		2A3479DF1DE104220034545A /* ActiveUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3479DE1DE104220034545A /* ActiveUser.swift */; };
 		2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB021DC064DD00A1CB7C /* DebateCell.swift */; };
 		2A58EB0E1DC06ADE00A1CB7C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */; };
 		2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */; };
@@ -62,6 +63,7 @@
 		2A138E4C1DD9991500C513F9 /* OldDebate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldDebate.swift; sourceTree = "<group>"; };
 		2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		2A2EB0C81DC8F57700BDEEF6 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		2A3479DE1DE104220034545A /* ActiveUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveUser.swift; sourceTree = "<group>"; };
 		2A58EB021DC064DD00A1CB7C /* DebateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebateCell.swift; sourceTree = "<group>"; };
 		2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Podium/User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2A58EB0D1DC06ADE00A1CB7C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Podium/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */,
 				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
 				2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */,
+				2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */,
 				2ABDB4571DB4377900824F9B /* LoginVC.swift */,
 				2A894AD61DD00E00005F2DBC /* MenuTVC.swift */,
 				2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */,
@@ -156,7 +159,6 @@
 				2A6578511DD9132000685213 /* ProfileVC.swift */,
 				2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */,
 				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
-				2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -178,6 +180,7 @@
 		2ABDB4501DB4375900824F9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A3479DE1DE104220034545A /* ActiveUser.swift */,
 				2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */,
 				2ABDB4511DB4376900824F9B /* Constants.swift */,
 				ECBD0AAE1DB48B5700DF53CC /* Debate.swift */,
@@ -464,6 +467,7 @@
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
 				2A6578521DD9132000685213 /* ProfileVC.swift in Sources */,
+				2A3479DF1DE104220034545A /* ActiveUser.swift in Sources */,
 				2A2EB0C31DC8F39500BDEEF6 /* Comment.swift in Sources */,
 				2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */,
 				ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */,
