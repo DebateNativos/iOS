@@ -32,6 +32,10 @@ class MyCourseTVC: UITableViewController {
         return 0
     }
 
+    @IBAction func BacKPressed(_ sender: Any) {
 
+         dismiss(animated: true, completion: nil) 
+
+    }
 
 }

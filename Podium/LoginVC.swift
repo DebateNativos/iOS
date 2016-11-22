@@ -86,7 +86,6 @@ class LoginVC: UIViewController {
                             let userFound = User(user: user)
                             self.loginUser = userFound
                             self.SaveUser(user: self.loginUser)
-                            self.tfPassword.text=""
                             self.tfEmail.text=""
                         }
                         self.loginStatus = status
@@ -132,6 +131,7 @@ class LoginVC: UIViewController {
                 userD.email = user.email
                 userD.address = user.address
                 userD.phone = user.phone
+                userD.idToken = user.idToken
 
                 do {
                     try managedObjectContext.save()
@@ -177,12 +177,19 @@ class LoginVC: UIViewController {
             } else {
 
                 print("No Match")
-                
+
             }
-            
+
         } catch let error {
             print(error.localizedDescription)
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
+        self.tfEmail.resignFirstResponder()
+        self.tfPassword.resignFirstResponder()
+        
+    }
+    
 }

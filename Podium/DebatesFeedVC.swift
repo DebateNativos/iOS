@@ -76,7 +76,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         actualDebate = debate
 
         if (debate.timeStatus == "DONE" ) {
-
+            print("DebateTerminado")
             performSegue(withIdentifier: "CloseDebate", sender: debate)
 
         } else {
@@ -87,7 +87,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 }
 
             }else{
-
+                print("Debate inactivo")
                 performSegue(withIdentifier: "InactiveDebate", sender: debate)
 
             }
@@ -120,7 +120,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             }
 
         }
-        
+
     }
 
     func getActiveDebates(_ completed: @escaping DownloadComplete){
@@ -209,45 +209,48 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
             if let dict = result.value as? [Dictionary<String, AnyObject>]{
 
-                for obj in dict{
+                if dict.isEmpty{
 
-                    let activeUser = ActiveUser (ActiveUser: obj)
+                    print("Observador")
+                    self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
 
-                    if activeUser.Debate == self.actualDebate.idDebates {
+                }else{
 
-                        self.performSegue(withIdentifier: "Debating", sender: self.actualDebate)
+                    for obj in dict{
 
-                    }else{
+                        let activeUser = ActiveUser (ActiveUser: obj)
 
-                        self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+                        if activeUser.Debate == self.actualDebate.idDebates {
+                            print("Debatiente")
+                            self.performSegue(withIdentifier: "Debating", sender: self.actualDebate)
+
+                        }else{
+                            print("Observador")
+                            self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
 
 
+                        }
                     }
-
                 }
-
             }
-            completed()
         }
-
-    }
-
-
-
-    func menu () {
-        
-        // Define the menus
-        let menuLeftNavigationController = UISideMenuNavigationController()
-        menuLeftNavigationController.leftSide = true
-        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
-        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
-        
-        let menuRightNavigationController = UISideMenuNavigationController()
-        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
-        SideMenuManager.menuRightNavigationController = menuRightNavigationController
-        
+        completed()
     }
     
+func menu () {
     
+    // Define the menus
+    let menuLeftNavigationController = UISideMenuNavigationController()
+    menuLeftNavigationController.leftSide = true
+    // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
+    SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
     
+    let menuRightNavigationController = UISideMenuNavigationController()
+    // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
+    SideMenuManager.menuRightNavigationController = menuRightNavigationController
+    
+}
+
+
+
 }

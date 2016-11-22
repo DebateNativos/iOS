@@ -20,35 +20,35 @@ public class Debate {
 
 
     var idDebates : Int{
-        if _idDebates == nil!{
+        if _idDebates == nil{
             _idDebates = 0
         }
         return _idDebates
     }
 
     var name: String{
-        if _name == nil!{
+        if _name == nil{
             _name = ""
         }
         return _name
     }
 
     var debateTypeName: String{
-        if _debateTypeName == nil!{
+        if _debateTypeName == nil{
             _debateTypeName = ""
         }
         return _debateTypeName
     }
 
     var startingDate: String{
-        if _startingDate == nil!{
+        if _startingDate == nil{
             _startingDate = ""
         }
         return _startingDate
     }
 
     var debateTypeDescription: String{
-        if _debateTypeDescription == nil!{
+        if _debateTypeDescription == nil{
             _debateTypeDescription = ""
         }
 
@@ -56,7 +56,7 @@ public class Debate {
     }
 
     var timeStatus: String{
-        if _timeStatus == nil!{
+        if _timeStatus == nil{
             _timeStatus = ""
         }
 
@@ -64,7 +64,7 @@ public class Debate {
     }
 
     var Status: Bool{
-        if _status == nil!{
+        if _status == nil{
             _status = false
         }
 

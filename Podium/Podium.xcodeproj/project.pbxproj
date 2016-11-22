@@ -155,6 +155,7 @@
 				2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */,
 				2ABDB4571DB4377900824F9B /* LoginVC.swift */,
 				2A894AD61DD00E00005F2DBC /* MenuTVC.swift */,
+				2A25DF301DE374BC00EA5734 /* MyCourseTVC.swift */,
 				2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */,
 				2A1730871DE15FA800D758CF /* NewCourseVC.swift */,
 				2ABDB4581DB4377900824F9B /* NewUserVC.swift */,
@@ -164,7 +165,6 @@
 				2A6578511DD9132000685213 /* ProfileVC.swift */,
 				2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */,
 				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
-				2A25DF301DE374BC00EA5734 /* MyCourseTVC.swift */,
 			);
 			name = Controller;
 			path = ..;

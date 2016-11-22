@@ -19,7 +19,6 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tfPassword: FieldsUI!
     @IBOutlet weak var tfPhone: FieldsUI!
     @IBOutlet weak var tfAddress: FieldsUI!
-    @IBOutlet weak var tfidUniversity: FieldsUI!
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
@@ -104,7 +103,6 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
         self.tfPassword.resignFirstResponder()
         self.tfPhone.resignFirstResponder()
         self.tfAddress.resignFirstResponder()
-        self.tfidUniversity.resignFirstResponder()
 
 
     }
