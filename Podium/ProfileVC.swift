@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import CoreData
 
-class ProfileVC: UIViewController {
+class ProfileVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var tfName: FieldsUI!
     @IBOutlet weak var tfLastName: FieldsUI!
@@ -26,15 +26,9 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
-        // Do any additional setup after loading the view.
         viewUser()
+        scrollview.isScrollEnabled = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     func keyboardWillShow(notification:NSNotification){
         //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
@@ -59,7 +53,7 @@ class ProfileVC: UIViewController {
     }
 
     @IBAction func CoursesPressed(_ sender: Any) {
-        viewUser()
+
     }
 
     func viewUser() {
@@ -93,11 +87,31 @@ class ProfileVC: UIViewController {
             } else {
                 print("No Match")
             }
-            
+
         } catch let error {
             print(error.localizedDescription)
         }
-        
+
     }
-    
+
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        self.tfName.resignFirstResponder()
+        self.tfLastName.resignFirstResponder()
+        self.tfLastName2.resignFirstResponder()
+        self.tfEmail.resignFirstResponder()
+        self.tfPassword.resignFirstResponder()
+        self.tfPhone.resignFirstResponder()
+        self.tfAddress.resignFirstResponder()
+        self.tfidUniversity.resignFirstResponder()
+
+
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
 }
