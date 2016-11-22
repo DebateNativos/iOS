@@ -33,5 +33,10 @@ class PasswordLostVC: UIViewController {
         dismiss(animated: true, completion: nil)
         
     }
+    @IBAction func returnKey(_ sender: Any) {
+
+        print("SHIT")
+
+    }
     
 }

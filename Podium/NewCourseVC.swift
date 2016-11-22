@@ -29,6 +29,13 @@ class NewCourseVC: UIViewController {
         dismiss(animated: true, completion: nil)
 
     }
+    @IBAction func ReturnKey(_ sender: Any) {
+
+        NewCourse {
+
+        }
+
+    }
 
     @IBAction func BtnDone(_ sender: Any) {
 

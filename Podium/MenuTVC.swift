@@ -40,26 +40,9 @@ class MenuTVC: UITableViewController {
         return 5
     }
     @IBAction func LogOutPressed(_ sender: Any) {
-        // let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        //   let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserData")
-        fetchRequest.returnsObjectsAsFaults = false
 
-        do
-        {
-            let results = try managedObjectContext.fetch(fetchRequest)
-            for managedObject in results
-            {
-                let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
-                managedObjectContext.delete(managedObjectData)
-                print("Borrado")
+        LogOut()
 
-                self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
-
-            }
-        } catch let error as NSError {
-            print("Detele all data in UserData error : \(error) \(error.userInfo)")
-        }
     }
 
     @IBAction func NewCourse(_ sender: Any) {
@@ -68,4 +51,39 @@ class MenuTVC: UITableViewController {
 
     }
 
+    func LogOut() {
+        let entityDescription =
+            NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
+
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        request.entity = entityDescription
+
+        let pred = NSPredicate(format: "(id = %@)", 0)
+        request.predicate = pred
+
+        do {
+            var results =
+                try managedObjectContext.fetch(request as!
+                    NSFetchRequest<NSFetchRequestResult>)
+
+            if results.count > 0 {
+                let match = results[0] as! NSManagedObject
+
+              //  var deleteUserError: NSError?
+
+                managedObjectContext.delete(match)
+                try! managedObjectContext.save()
+                print("BORRADO")
+
+                self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+                
+            } else {
+                print("No Match")
+            }
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
 }
