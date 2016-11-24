@@ -29,6 +29,8 @@ let IdDEBATE_URL = "id="
 let USER_VERIFICATION = "/debate/confirmeddebates?"
 let ADD_COURSE = "/course/registerusercourse?"
 let COURSE_CODE = "&coursecode="
+let COURSES_BY_USER = "/course/getusercourses?"
+let COURSE_BY_CODE = "/course/getcoursebycode?"
 
 typealias DownloadComplete = () -> ()
 

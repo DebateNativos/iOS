@@ -28,8 +28,8 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         reach = Reachability()
-         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-          NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
         self.scrollView.contentSize = CGSize(width:1, height:self.scrollView.frame.size.height * 9)
     }
 
@@ -40,22 +40,21 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     }
 
 
-        func keyboardWillShow(notification:NSNotification){
-            //give room at the bottom of the scroll view so it doesn't cover up anything the user needs to tap
-            var userInfo = notification.userInfo!
-            var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-            keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-    
-            var contentInset:UIEdgeInsets = self.scrollView.contentInset
-            contentInset.bottom = keyboardFrame.size.height
-            self.scrollView.contentInset = contentInset
-        }
-    
-        func keyboardWillHide(notification:NSNotification){
-            let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-            self.scrollView.contentInset = contentInset
-        }
-    
+    func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.scrollView.contentInset = contentInset
+    }
+
+    func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.scrollView.contentInset = contentInset
+    }
 
     func createUser(_ completed: @escaping DownloadComplete){
 
@@ -76,11 +75,13 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
                 SCLAlertView().showSuccess("Exito!", subTitle: "Se creo su perfil de manera correcta")
                 self.dismiss(animated: true, completion: nil)
+
             }
 
             completed()
         }
     }
+
 
     @IBAction func btnCreatePressed(_ sender: Any) {
 
@@ -114,24 +115,24 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
     }
 
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.tfName.resignFirstResponder()
+        self.tfLastName.resignFirstResponder()
+        self.tfLastName2.resignFirstResponder()
+        self.tfEmail.resignFirstResponder()
+        self.tfPassword.resignFirstResponder()
+        self.tfVPassword.resignFirstResponder()
+        self.tfPhone.resignFirstResponder()
+        self.tfAddress.resignFirstResponder()
+        self.tfidUniversity.resignFirstResponder()
+        
+        
+    }
     
-            self.tfName.resignFirstResponder()
-            self.tfLastName.resignFirstResponder()
-            self.tfLastName2.resignFirstResponder()
-            self.tfEmail.resignFirstResponder()
-            self.tfPassword.resignFirstResponder()
-            self.tfVPassword.resignFirstResponder()
-            self.tfPhone.resignFirstResponder()
-            self.tfAddress.resignFirstResponder()
-            self.tfidUniversity.resignFirstResponder()
-    
-    
-        }
-    
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 }

@@ -16,6 +16,8 @@ class NewCourseVC: UIViewController {
     @IBOutlet weak var tfCode: UITextField!
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var email: String!
+    var code: String!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,21 +93,38 @@ class NewCourseVC: UIViewController {
 
                 if let status = dict["status"] as? String{
                     if status == "@validRegistration"{
+                        self.code = self.tfCode.text
 
+                        self.performSegue(withIdentifier: "Course", sender: self.code)
 
-                        print("Shit Happens")
+                        print("S Happens")
 
-                    }else if status == "@invalidRegistration" {
-                        
+                    }else {
+
                         SCLAlertView().showError("Error", subTitle: "El curso ingresado no existe")
-                        print("Shit NOT Happens")
-                        
+                        print("S NOT Happens")
+
                     }
                 }
+            }else{
+
+                SCLAlertView().showError("Error", subTitle: "Ha ocurrido un error, por favor intente de nuevo más tarde.")
+                print("S NOT Happens (IMPORTANT)")
+
             }
         }
         completed()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? CourseVC {
+            
+            if let course = sender as? String{
+                destination.courseCode = course
+            }
+        }
+        
+    }
+    
 }
-

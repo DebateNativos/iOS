@@ -211,7 +211,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
                 if dict.isEmpty{
 
-                    print("Observador")
+                    print("Observador1")
                     self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
 
                 }else{
@@ -225,7 +225,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             self.performSegue(withIdentifier: "Debating", sender: self.actualDebate)
 
                         }else{
-                            print("Observador")
+                            print("Observador2")
                             self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
 
 

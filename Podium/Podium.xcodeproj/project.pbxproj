@@ -32,6 +32,9 @@
 		2AC5B0681DDE64AB00D6FCB5 /* LauchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */; };
 		2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */; };
 		2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */; };
+		2AF993421DE63D8C007602F0 /* CourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF993411DE63D8C007602F0 /* CourseVC.swift */; };
+		2AF993441DE64030007602F0 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF993431DE64030007602F0 /* Course.swift */; };
+		2AF993461DE69E30007602F0 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF993451DE69E30007602F0 /* CourseCell.swift */; };
 		3F7CE034D3D2A64DFF073CDD /* Pods_PodiumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */; };
 		D665A2C083EAA9F9310BB056 /* Pods_Podium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C486291DE40EE285960049 /* Pods_Podium.framework */; };
 		EC3711731DC3BD560053D952 /* RegistrationToDebateModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */; };
@@ -82,6 +85,9 @@
 		2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LauchVC.swift; sourceTree = "<group>"; };
 		2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldsUI.swift; sourceTree = "<group>"; };
+		2AF993411DE63D8C007602F0 /* CourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseVC.swift; sourceTree = "<group>"; };
+		2AF993431DE64030007602F0 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		2AF993451DE69E30007602F0 /* CourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		3273E3A0F12BD2610B7F5810 /* Pods-PodiumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodiumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodiumTests/Pods-PodiumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		436CE905F0F109D04C37C4D8 /* Pods_PodiumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodiumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5640EAF61D3953E44EEBD901 /* Pods-Podium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podium.release.xcconfig"; path = "Pods/Target Support Files/Pods-Podium/Pods-Podium.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			children = (
 				2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */,
 				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
+				2AF993411DE63D8C007602F0 /* CourseVC.swift */,
 				2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */,
 				2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */,
 				2ABDB4571DB4377900824F9B /* LoginVC.swift */,
@@ -178,6 +185,7 @@
 				2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */,
 				2A984F991DB7E557008B49A3 /* LabelsUI.swift */,
 				2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */,
+				2AF993451DE69E30007602F0 /* CourseCell.swift */,
 			);
 			name = View;
 			path = ..;
@@ -189,6 +197,7 @@
 				2A3479DE1DE104220034545A /* ActiveUser.swift */,
 				2A2EB0C21DC8F39500BDEEF6 /* Comment.swift */,
 				2ABDB4511DB4376900824F9B /* Constants.swift */,
+				2AF993431DE64030007602F0 /* Course.swift */,
 				ECBD0AAE1DB48B5700DF53CC /* Debate.swift */,
 				ECBD0AAC1DB48B2E00DF53CC /* User.swift */,
 				2A58EB0C1DC06ADE00A1CB7C /* User+CoreDataClass.swift */,
@@ -463,6 +472,7 @@
 				2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */,
 				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
 				2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */,
+				2AF993461DE69E30007602F0 /* CourseCell.swift in Sources */,
 				2A2EB0C91DC8F57700BDEEF6 /* CommentCell.swift in Sources */,
 				2A58EB0F1DC06ADE00A1CB7C /* User+CoreDataProperties.swift in Sources */,
 				2A58EB031DC064DD00A1CB7C /* DebateCell.swift in Sources */,
@@ -473,6 +483,7 @@
 				2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */,
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
+				2AF993421DE63D8C007602F0 /* CourseVC.swift in Sources */,
 				2A6578521DD9132000685213 /* ProfileVC.swift in Sources */,
 				2A3479DF1DE104220034545A /* ActiveUser.swift in Sources */,
 				2A2EB0C31DC8F39500BDEEF6 /* Comment.swift in Sources */,
@@ -483,6 +494,7 @@
 				ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */,
 				2A1730881DE15FA800D758CF /* NewCourseVC.swift in Sources */,
 				2A138E4D1DD9991500C513F9 /* OldDebate.swift in Sources */,
+				2AF993441DE64030007602F0 /* Course.swift in Sources */,
 				ECBD0AAF1DB48B5700DF53CC /* Debate.swift in Sources */,
 				2A25DF311DE374BC00EA5734 /* MyCourseTVC.swift in Sources */,
 				2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */,
