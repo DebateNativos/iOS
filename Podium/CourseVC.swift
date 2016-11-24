@@ -11,7 +11,7 @@ import Alamofire
 
 class CourseVC: UIViewController {
 
-    @IBOutlet weak var lblName: UITextView!
+    @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblSchedule: UILabel!
     @IBOutlet weak var lblTeacher: UILabel!
     @IBOutlet weak var lblClass: UILabel!
@@ -63,7 +63,7 @@ class CourseVC: UIViewController {
                         if let course = dict["course"] as? Dictionary<String, AnyObject>{
                             let courseFound = Course(course: course)
                             self.actualCourse = courseFound
-                            print("\(dict)")
+                            print("DICT -> \(dict)")
                             self.UpdateLabels(course: self.actualCourse)
                         }
 
@@ -72,6 +72,13 @@ class CourseVC: UIViewController {
             }
             completed()
         }
+        
+    }
+    
+    @IBAction func DoneBtn(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+
         
     }
     
