@@ -14,7 +14,7 @@ import CoreData
 class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-
+    var timerS : Timer?
     var debates = [Debate]()
     var debatesVerify = [Debate]()
     var email: String!
@@ -123,6 +123,32 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     }
 
+    func startTimer () {
+
+        if timerS == nil {
+            timerS =  Timer.scheduledTimer(
+                timeInterval: TimeInterval(3600),
+                target      : self,
+                selector    : #selector(self.update),
+                userInfo    : nil,
+                repeats     : true)
+        }
+    }
+
+    func update () {
+
+        print("REFRESH")
+        refreshActiveDebates{}
+
+    }
+
+    func stopTimerTest() {
+        if timerS != nil {
+            timerS?.invalidate()
+            timerS = nil
+        }
+    }
+
     func getActiveDebates(_ completed: @escaping DownloadComplete){
 
         let ACTIVEDEBATES_URL = "\(BASE_URL)\(DEBATES_URL)"
@@ -138,6 +164,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     self.activeDebate = Debate(debate: obj)
                     self.debates.append(self.activeDebate)
                     self.tableView.reloadData()
+                    self.startTimer()
                 }
             }
             completed()
@@ -237,20 +264,20 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         completed()
     }
     
-func menu () {
+    func menu () {
+        
+        // Define the menus
+        let menuLeftNavigationController = UISideMenuNavigationController()
+        menuLeftNavigationController.leftSide = true
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
+        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
+        
+        let menuRightNavigationController = UISideMenuNavigationController()
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
+        SideMenuManager.menuRightNavigationController = menuRightNavigationController
+        
+    }
     
-    // Define the menus
-    let menuLeftNavigationController = UISideMenuNavigationController()
-    menuLeftNavigationController.leftSide = true
-    // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
-    SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
     
-    let menuRightNavigationController = UISideMenuNavigationController()
-    // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration of it here like setting its viewControllers.
-    SideMenuManager.menuRightNavigationController = menuRightNavigationController
     
-}
-
-
-
 }

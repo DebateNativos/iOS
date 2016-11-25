@@ -103,6 +103,7 @@ class MyCourseTVC: UITableViewController {
 //            completed()
 //        }
 //    }
+
 }
 
 //COURSES_BY_USER/EMAIL_URL

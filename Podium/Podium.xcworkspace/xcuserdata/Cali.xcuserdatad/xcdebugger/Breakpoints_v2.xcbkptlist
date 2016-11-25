@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DebatesFeedVC.swift"
-            timestampString = "501301228.147539"
+            timestampString = "501722478.944597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "refreshActiveDebates(_:)"
             landmarkType = "7">
          </BreakpointContent>

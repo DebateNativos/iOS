@@ -12,6 +12,7 @@ import Alamofire
 
 class ChronometerVC: UIViewController {
 
+    var timerS : Timer?
     @IBOutlet weak var timer: SnapTimerView!
     @IBOutlet weak var lblDebPart: UILabel!
     @IBOutlet weak var warning: UILabel!
@@ -19,8 +20,7 @@ class ChronometerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        startTimer ()
     }
 
     //Primer numero es el % del GUI y el segundo son la cantidad de segundos que va a durar //
@@ -38,14 +38,16 @@ class ChronometerVC: UIViewController {
 
     @IBAction func Pause(_ sender: AnyObject) {
 
+
         self.timer.pauseAnimation()
 
     }
 
     @IBAction func ClosePressed(_ sender: Any) {
 
+        stopTimerTest()
         dismiss(animated: true, completion: nil)
-        
+
     }
 
     func getDebateInfo(_ completed: @escaping DownloadComplete){
@@ -65,15 +67,41 @@ class ChronometerVC: UIViewController {
 
                     if status == 1 {
 
-                       //CODE
-                        
+                        //CODE
+
                     }
 
                 }
             }
             completed()
         }
-        
+
+    }
+
+    func update () {
+
+        print("Hola")
+        getDebateInfo{
+        }
+    }
+
+    func startTimer () {
+
+        if timerS == nil {
+            timerS =  Timer.scheduledTimer(
+                timeInterval: TimeInterval(1),
+                target      : self,
+                selector    : #selector(self.update),
+                userInfo    : nil,
+                repeats     : true)
+        }
+    }
+    
+    func stopTimerTest() {
+        if timerS != nil {
+            timerS?.invalidate()
+            timerS = nil
+        }
     }
     
 }
