@@ -119,6 +119,12 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 destination.debate = debate
             }
 
+        }else if let destination = segue.destination as? PublicVC {
+
+            if let debate = sender as? Debate{
+                destination.debate = debate
+            }
+
         }
 
     }
@@ -156,7 +162,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             let result = response.result
 
             print(response, result, "--------URL: \(ACTIVEDEBATES_URL)")
-            //DEBUG
+
             if let dict = result.value as? [Dictionary<String, AnyObject>]{
 
                 for obj in dict{
@@ -238,8 +244,8 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
                 if dict.isEmpty{
 
-                    print("Observador1")
-                    self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+                    print("Publico sin registrar")
+                    self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
 
                 }else{
 
@@ -248,14 +254,35 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                         let activeUser = ActiveUser (ActiveUser: obj)
 
                         if activeUser.Debate == self.actualDebate.idDebates {
-                            print("Debatiente")
-                            self.performSegue(withIdentifier: "Debating", sender: self.actualDebate)
+
+                            if activeUser.Role == 1 {
+
+                                print("Debatiente")
+                                self.performSegue(withIdentifier: "Debating", sender: self.actualDebate )
+
+                            } else if activeUser.Role == 2 {
+
+                                print("Asesor")
+                                self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+
+                            } else if activeUser.Role == 3 {
+
+                                print("Observador")
+                                self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+
+                            } else {
+
+                                print("REVISAR!")
+                                self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+
+                            }
+
 
                         }else{
-                            print("Observador2")
-                            self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
 
-
+                            print("Publico")
+                            self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
+                            
                         }
                     }
                 }

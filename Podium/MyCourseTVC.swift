@@ -12,14 +12,17 @@ import CoreData
 
 class MyCourseTVC: UITableViewController {
 
+    var courses = [Course]()
     var email:String!
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var courseDebate: Course!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         viewUser()
-       // getCourses{}
+        getCourses{
+        }
+        // getCourses{}
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,12 +34,24 @@ class MyCourseTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return courses.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath)as? CourseCell{
+            let course = courses[indexPath.row]
+            cell.configureCell(course: course)
+            return cell
+
+        } else {
+            return CourseCell()
+        }
     }
 
     @IBAction func BacKPressed(_ sender: Any) {
@@ -79,31 +94,31 @@ class MyCourseTVC: UITableViewController {
     }
 
 
-//    func getCourses(_ completed: @escaping DownloadComplete){
-//
-//        let MYCOURSES_URL = "\(BASE_URL)\(COURSES_BY_USER)\(EMAIL_URL)\(email!)"
-//        Alamofire.request(MYCOURSES_URL).responseJSON {response in
-//            let result = response.result
-//
-//            print(response, result, "--------URL: \(MYCOURSES_URL)")
-//
-//            if let dict = result.value as? Dictionary<String, AnyObject>{
-//
-//                if let course = dict["course"] as? Dictionary<String, AnyObject>{
-//
-//                    for obj in dict{
-//
-//                        let myCourse = Course(course: obj)
-//                        self.tableView.reloadData()
-//                    }
-//                }
-//                
-//                
-//            }
-//            completed()
-//        }
-//    }
+    func getCourses(_ completed: @escaping DownloadComplete){
 
+        let MYCOURSES_URL = "\(BASE_URL)\(COURSES_BY_USER)\(EMAIL_URL)\(email!)"
+        Alamofire.request(MYCOURSES_URL).responseJSON {response in
+            let result = response.result
+
+            print(response, result, "--------URL: \(MYCOURSES_URL)")
+
+            if let dict = result.value as? Dictionary<String, AnyObject>{
+
+                if let course = dict["course"] as? [Dictionary<String, AnyObject>] {
+
+                    print(dict)
+
+                    for obj in dict{
+                        
+                        //self.courseDebate = Course(course: obj)
+                        //self.courses.append(self.courseDebate)
+                        self.tableView.reloadData()
+                        
+                    }
+                }
+            }
+            completed()
+        }
+    }
+    
 }
-
-//COURSES_BY_USER/EMAIL_URL

@@ -10,6 +10,7 @@
 		2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0638531DB6897400370D55 /* ChronometerVC.swift */; };
 		2A0A09F11DC8372E0069AF49 /* NewCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */; };
 		2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A09F21DC842790069AF49 /* ObserverVC.swift */; };
+		2A0A77051DEA4FF100965CFA /* StagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A77041DEA4FF100965CFA /* StagesVC.swift */; };
 		2A11C0081DD95E8500E391F3 /* ProtocolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */; };
 		2A11C00A1DD95F9200E391F3 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */; };
 		2A138E4D1DD9991500C513F9 /* OldDebate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A138E4C1DD9991500C513F9 /* OldDebate.swift */; };
@@ -30,6 +31,8 @@
 		2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */; };
 		2ABDB45E1DB4377900824F9B /* DebatesFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */; };
 		2AC5B0681DDE64AB00D6FCB5 /* LauchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */; };
+		2AC714341DEA34DE007CC517 /* PublicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC714331DEA34DE007CC517 /* PublicVC.swift */; };
+		2AC714361DEA34F7007CC517 /* AskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC714351DEA34F7007CC517 /* AskVC.swift */; };
 		2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */; };
 		2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */; };
 		2AF993421DE63D8C007602F0 /* CourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF993411DE63D8C007602F0 /* CourseVC.swift */; };
@@ -63,6 +66,7 @@
 		2A0638531DB6897400370D55 /* ChronometerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronometerVC.swift; sourceTree = "<group>"; };
 		2A0A09F01DC8372E0069AF49 /* NewCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentVC.swift; sourceTree = "<group>"; };
 		2A0A09F21DC842790069AF49 /* ObserverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverVC.swift; sourceTree = "<group>"; };
+		2A0A77041DEA4FF100965CFA /* StagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StagesVC.swift; sourceTree = "<group>"; };
 		2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolVC.swift; sourceTree = "<group>"; };
 		2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
 		2A138E4C1DD9991500C513F9 /* OldDebate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldDebate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordLostVC.swift; sourceTree = "<group>"; };
 		2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebatesFeedVC.swift; sourceTree = "<group>"; };
 		2AC5B0671DDE64AB00D6FCB5 /* LauchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LauchVC.swift; sourceTree = "<group>"; };
+		2AC714331DEA34DE007CC517 /* PublicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicVC.swift; sourceTree = "<group>"; };
+		2AC714351DEA34F7007CC517 /* AskVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskVC.swift; sourceTree = "<group>"; };
 		2ADFB7B11DB46B7E008B87A0 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		2ADFB7B51DB46EFC008B87A0 /* FieldsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldsUI.swift; sourceTree = "<group>"; };
 		2AF993411DE63D8C007602F0 /* CourseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseVC.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				2A11C0091DD95F9200E391F3 /* AboutUsVC.swift */,
+				2AC714351DEA34F7007CC517 /* AskVC.swift */,
 				2A0638531DB6897400370D55 /* ChronometerVC.swift */,
 				2AF993411DE63D8C007602F0 /* CourseVC.swift */,
 				2ABDB45A1DB4377900824F9B /* DebatesFeedVC.swift */,
@@ -171,7 +178,9 @@
 				2ABDB4591DB4377900824F9B /* PasswordLostVC.swift */,
 				2A6578511DD9132000685213 /* ProfileVC.swift */,
 				2A11C0071DD95E8500E391F3 /* ProtocolVC.swift */,
+				2AC714331DEA34DE007CC517 /* PublicVC.swift */,
 				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
+				2A0A77041DEA4FF100965CFA /* StagesVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -470,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A0A09F31DC842790069AF49 /* ObserverVC.swift in Sources */,
+				2A0A77051DEA4FF100965CFA /* StagesVC.swift in Sources */,
 				ECD969D01DB433A100325C4D /* Podium.xcdatamodeld in Sources */,
 				2ADFB7B21DB46B7E008B87A0 /* RoundBtn.swift in Sources */,
 				2AF993461DE69E30007602F0 /* CourseCell.swift in Sources */,
@@ -480,6 +490,7 @@
 				2AC5B0681DDE64AB00D6FCB5 /* LauchVC.swift in Sources */,
 				2ADFB7B61DB46EFC008B87A0 /* FieldsUI.swift in Sources */,
 				EC3711731DC3BD560053D952 /* RegistrationToDebateModalViewController.swift in Sources */,
+				2AC714341DEA34DE007CC517 /* PublicVC.swift in Sources */,
 				2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */,
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
@@ -491,6 +502,7 @@
 				ECD969C81DB433A100325C4D /* AppDelegate.swift in Sources */,
 				2A11C0081DD95E8500E391F3 /* ProtocolVC.swift in Sources */,
 				2ABDB4541DB4376900824F9B /* Constants.swift in Sources */,
+				2AC714361DEA34F7007CC517 /* AskVC.swift in Sources */,
 				ECBD0AAD1DB48B2E00DF53CC /* User.swift in Sources */,
 				2A1730881DE15FA800D758CF /* NewCourseVC.swift in Sources */,
 				2A138E4D1DD9991500C513F9 /* OldDebate.swift in Sources */,
