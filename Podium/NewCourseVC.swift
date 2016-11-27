@@ -93,16 +93,22 @@ class NewCourseVC: UIViewController {
 
                 if let status = dict["status"] as? String{
                     if status == "@validRegistration"{
+
                         self.code = self.tfCode.text
 
                         self.performSegue(withIdentifier: "Course", sender: self.code)
 
                         print("S Happens")
 
-                    }else {
+                    }else if status == "@invalidCode" {
 
                         SCLAlertView().showError("Error", subTitle: "El curso ingresado no existe")
                         print("S NOT Happens")
+
+                    } else {
+
+                        SCLAlertView().showError("Error", subTitle: "El curso ingresado no existe")
+                        print("S NOT Happens NOP")
 
                     }
                 }
@@ -110,7 +116,7 @@ class NewCourseVC: UIViewController {
 
                 SCLAlertView().showError("Error", subTitle: "Ha ocurrido un error, por favor intente de nuevo más tarde.")
                 print("S NOT Happens (IMPORTANT)")
-
+                
             }
         }
         completed()

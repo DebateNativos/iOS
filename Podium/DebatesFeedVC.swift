@@ -79,18 +79,23 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             print("DebateTerminado")
             performSegue(withIdentifier: "CloseDebate", sender: debate)
 
-        } else {
+        } else if (debate.timeStatus == "TODAY" ){
             if debate.Status == true {
 
                 VerifyUser () {
 
                 }
 
-            }else{
+            }else {
                 print("Debate inactivo")
                 performSegue(withIdentifier: "InactiveDebate", sender: debate)
 
             }
+        } else {
+
+            print("Debate inactivo")
+            performSegue(withIdentifier: "InactiveDebate", sender: debate)
+
         }
     }
 
@@ -279,7 +284,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
 
                         }else{
-
+                            
                             print("Publico")
                             self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
                             

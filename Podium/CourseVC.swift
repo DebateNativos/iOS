@@ -61,17 +61,16 @@ class CourseVC: UIViewController {
                 if let status = dict["status"] as? String{
                     if status == "@validCode"{
                         if let course = dict["course"] as? Dictionary<String, AnyObject>{
-
                             let courseFound = Course(course: course)
                             self.actualCourse = courseFound
                             print("DICT -> \(dict)")
                             self.UpdateLabels(course: self.actualCourse)
-
-                        }else{
-
-
-
                         }
+
+                    }else {
+
+                        self.dismiss(animated: true, completion: nil)
+
                     }
                 }
             }
@@ -83,7 +82,7 @@ class CourseVC: UIViewController {
     @IBAction func DoneBtn(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
-
+        
         
     }
     
