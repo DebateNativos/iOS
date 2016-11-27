@@ -102,18 +102,17 @@ public class Debate {
             let dateTimeStamp = NSDate(timeIntervalSince1970:Double(startingDebateDate)/1000)  //UTC time
 
             let dateFormatter = DateFormatter()
+
             dateFormatter.timeZone = NSTimeZone.local //Edit
             dateFormatter.dateFormat = "yyyy-MM-dd"
             dateFormatter.dateStyle = DateFormatter.Style.medium
             //dateFormatter.timeStyle = DateFormatter.Style.short
-
-
             let strDateSelect = dateFormatter.string(from: dateTimeStamp as Date)
-            print(strDateSelect) //Local time
+            print("-> FECHA \(strDateSelect)") //Local time
 
-            let dateFormatter2 = DateFormatter()
-            dateFormatter2.timeZone = NSTimeZone.local
-            dateFormatter2.dateFormat = "yyyy-MM-dd"
+
+            //dateFormatter2.timeZone = NSTimeZone.local
+            dateFormatter.dateStyle = DateFormatter.Style.medium
 
             let myDate = dateFormatter.date(from: strDateSelect)
 
@@ -121,18 +120,32 @@ public class Debate {
 
             print("Fecha: \(myDate)")
 
-            switch myDate!.compare(date as Date) {
+            let today = NSDate().addingTimeInterval(0)
+
+            dateFormatter.dateStyle = .medium
+
+            let dateToPrint: NSString = dateFormatter.string(from: today as Date) as NSString
+
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            let s = dateFormatter.date(from: dateToPrint as String)
+            print("HEY! \(s)")
+
+
+            switch myDate!.compare(s! as Date) {
             case .orderedAscending     :
                 print("Date A is earlier than date B")
+                print(date)
                 self._timeStatus = "DONE"
 
             case .orderedDescending    :
                 print("Date A is later than date B")
+                print(date)
                 self._timeStatus = "SOON"
             case .orderedSame          :
                 print("The two dates are the same")
-                self._timeStatus = "TODAY"
                 print(date)
+                self._timeStatus = "TODAY"
 
 
             }
@@ -149,5 +162,7 @@ public class Debate {
             
         }
     }
+    
+    
     
 }

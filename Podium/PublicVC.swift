@@ -16,7 +16,7 @@ class PublicVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UpdateLabels()
         // Do any additional setup after loading the view.
     }
 
@@ -31,7 +31,12 @@ class PublicVC: UIViewController {
     @IBAction func BackPressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)
+
+    }
+
+    @IBAction func InfoPressed(_ sender: Any) {
+
+        self.performSegue(withIdentifier: "Stages", sender: nil)
         
     }
-    
 }

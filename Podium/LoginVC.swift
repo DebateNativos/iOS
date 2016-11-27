@@ -86,7 +86,7 @@ class LoginVC: UIViewController {
                             let userFound = User(user: user)
                             self.loginUser = userFound
                             self.SaveUser(user: self.loginUser)
-                            self.tfEmail.text=""
+                            self.tfPassword.text = ""
                         }
                         self.loginStatus = status
                     }else{
