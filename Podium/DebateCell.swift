@@ -24,10 +24,12 @@ class DebateCell: UITableViewCell {
 
         if debate.timeStatus == "DONE"{
             debateImage.image = UIImage(named: "Done")
-        } else {
+        } else if debate.timeStatus == "SOON" {
             debateImage.image = UIImage(named: "iCon")
+        } else if debate.timeStatus == "TODAY" {
+            debateImage.image = UIImage(named: "Today")
         }
-
+        
     }
     
 }

@@ -37,6 +37,12 @@ class PublicVC: UIViewController {
     @IBAction func InfoPressed(_ sender: Any) {
 
         self.performSegue(withIdentifier: "Stages", sender: nil)
+
+    }
+
+    @IBAction func NewQuestionPressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "Pregunta", sender: nil)
         
     }
 }

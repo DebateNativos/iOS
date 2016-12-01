@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SCLAlertView
 import CoreData
+import AudioToolbox
 
 class LoginVC: UIViewController {
 
@@ -58,8 +59,10 @@ class LoginVC: UIViewController {
                 self.performSegue(withIdentifier: "DebatesFeedVC", sender: self)
 
             }else if self.loginStatus == "@invalidEmail"{
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                 SCLAlertView().showError("Correo electronico Invalido!", subTitle: "Debe de estar registrado para ingresar a Podium.")
             }else if self.loginStatus == "@invalidPassword"{
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                 SCLAlertView().showError("Contraseña Invalida!", subTitle: "Trate de nuevo.")
             }
 
@@ -171,22 +174,22 @@ class LoginVC: UIViewController {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let resultViewController = storyBoard.instantiateViewController(withIdentifier: "DebatesFeedVC") as! DebatesFeedVC
                 self.present(resultViewController, animated:true, completion:nil)
-
+                
                 print("Matches found: \(results.count)")
-
+                
             } else {
-
+                
                 print("No Match")
-
+                
             }
-
+            
         } catch let error {
             print(error.localizedDescription)
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        
         self.tfEmail.resignFirstResponder()
         self.tfPassword.resignFirstResponder()
         

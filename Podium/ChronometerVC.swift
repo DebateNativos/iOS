@@ -9,6 +9,8 @@
 import UIKit
 import SnapTimer
 import Alamofire
+import SCLAlertView
+import AudioToolbox.AudioServices
 
 class ChronometerVC: UIViewController {
 
@@ -17,10 +19,14 @@ class ChronometerVC: UIViewController {
     @IBOutlet weak var lblDebPart: UILabel!
     @IBOutlet weak var warning: UILabel!
     var debate: Debate!
+    var sections = [Section]()
+    var activeSection: Section!
+    var minutesOfUser: Int!
+    @IBOutlet var uiView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startTimer ()
+        getDebateSection{}
     }
 
     //Primer numero es el % del GUI y el segundo son la cantidad de segundos que va a durar //
@@ -50,46 +56,62 @@ class ChronometerVC: UIViewController {
 
     }
 
-    func getDebateInfo(_ completed: @escaping DownloadComplete){
+    func getDebateSection(_ completed: @escaping DownloadComplete){
 
         let DEBATE_USER_URL = "\(BASE_URL)\(DEBATE_URL)\(IdDEBATE_URL)\(debate.idDebates)"
 
         Alamofire.request(DEBATE_USER_URL).responseJSON {response in
             let result = response.result
 
-            //DEBUG
+            print(response, result, "--------URL: \(DEBATE_USER_URL)")
 
-            print(response, result, " -> URL: \(DEBATE_USER_URL)")
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
 
-            if let dict = result.value as? Dictionary<String, AnyObject>{
+                for obj in dict{
 
-                if let status = dict["sectionNUmber"] as? Int{
+                    self.activeSection = Section(Section: obj)
+                    self.sections.append(self.activeSection)
 
-                    if status == 1 {
+                    print("CONTANDO - \(self.sections.count)")
 
-                        //CODE
-
-                    }
+                    self.UpdateLbls ()
 
                 }
+                self.sections.removeAll()
             }
             completed()
         }
+    }
 
+
+    func UpdateLbls () {
+
+        if let i = self.sections.index(where: {$0.ActiveSection == true}) {
+
+            //ACA JALO EL NOMBRE DE LA ETAPA! Aun no esta
+
+            self.minutesOfUser = (self.sections[i].MinutesPerUser)*60
+
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+
+            self.timer.animateOuterToValue(100, duration: Double(self.minutesOfUser), completion: nil)
+
+            startTimer (refresh: minutesOfUser)
+
+        }
     }
 
     func update () {
 
         print("Hola")
-        getDebateInfo{
-        }
+        getDebateSection{}
     }
 
-    func startTimer () {
+    func startTimer (refresh: Int) {
 
         if timerS == nil {
             timerS =  Timer.scheduledTimer(
-                timeInterval: TimeInterval(1),
+                timeInterval: TimeInterval(refresh),
                 target      : self,
                 selector    : #selector(self.update),
                 userInfo    : nil,
