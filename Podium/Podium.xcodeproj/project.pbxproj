@@ -26,6 +26,7 @@
 		2A6578521DD9132000685213 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6578511DD9132000685213 /* ProfileVC.swift */; };
 		2A894AD71DD00E00005F2DBC /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A894AD61DD00E00005F2DBC /* MenuTVC.swift */; };
 		2A984F9A1DB7E557008B49A3 /* LabelsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A984F991DB7E557008B49A3 /* LabelsUI.swift */; };
+		2AA4D7F81DEFC7A500336DE6 /* WaiTurnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA4D7F71DEFC7A500336DE6 /* WaiTurnVC.swift */; };
 		2ABDB4541DB4376900824F9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4511DB4376900824F9B /* Constants.swift */; };
 		2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4571DB4377900824F9B /* LoginVC.swift */; };
 		2ABDB45C1DB4377900824F9B /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABDB4581DB4377900824F9B /* NewUserVC.swift */; };
@@ -83,6 +84,7 @@
 		2A6578511DD9132000685213 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		2A894AD61DD00E00005F2DBC /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
 		2A984F991DB7E557008B49A3 /* LabelsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsUI.swift; sourceTree = "<group>"; };
+		2AA4D7F71DEFC7A500336DE6 /* WaiTurnVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaiTurnVC.swift; sourceTree = "<group>"; };
 		2ABDB4511DB4376900824F9B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2ABDB4571DB4377900824F9B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; usesTabs = 0; };
 		2ABDB4581DB4377900824F9B /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserVC.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				2AC714331DEA34DE007CC517 /* PublicVC.swift */,
 				EC3711721DC3BD560053D952 /* RegistrationToDebateModalViewController.swift */,
 				2A0A77041DEA4FF100965CFA /* StagesVC.swift */,
+				2AA4D7F71DEFC7A500336DE6 /* WaiTurnVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -498,6 +501,7 @@
 				2A0638541DB6897400370D55 /* ChronometerVC.swift in Sources */,
 				2ABDB45B1DB4377900824F9B /* LoginVC.swift in Sources */,
 				2ABDB45D1DB4377900824F9B /* PasswordLostVC.swift in Sources */,
+				2AA4D7F81DEFC7A500336DE6 /* WaiTurnVC.swift in Sources */,
 				2AF993421DE63D8C007602F0 /* CourseVC.swift in Sources */,
 				2A6578521DD9132000685213 /* ProfileVC.swift in Sources */,
 				2A3479DF1DE104220034545A /* ActiveUser.swift in Sources */,

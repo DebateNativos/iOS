@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SideMenu
 import CoreData
+import PullToMakeFlight
 
 class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -23,6 +24,8 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var actUsr: ActiveUser!
     var id: Int!
     var actualDebate: Debate!
+    let refresher = PullToMakeFlight()
+    var accessToDebate = [ActiveUser]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     }
 
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -47,6 +51,15 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             if self.debates.count != self.debatesVerify.count{
                 self.tableView.reloadData()
 
+            }
+        }
+
+        tableView.addPullToRefresh(PullToMakeFlight(at: .top)) {
+
+            self.refreshActiveDebates{}
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.tableView.endRefreshing(at: .top)
             }
         }
     }
@@ -81,7 +94,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             print("DebateTerminado")
             performSegue(withIdentifier: "CloseDebate", sender: debate)
 
-        } else if (debate.timeStatus == "TODAY" ){
+        } else if (debate.timeStatus == "TODAY") || (debate.timeStatus == "SOON"){
             if debate.Status == true {
 
                 VerifyUser () {
@@ -260,48 +273,55 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     for obj in dict{
 
                         let activeUser = ActiveUser (ActiveUser: obj)
+                        self.accessToDebate.append(activeUser)
 
-                        if activeUser.Debate == self.actualDebate.idDebates {
+                    }
 
-                            if activeUser.Role == 1 {
+                    let id = self.actualDebate.idDebates
 
-                                print("Debatiente")
-                                self.performSegue(withIdentifier: "Debating", sender: self.actualDebate )
+                    if let i = self.accessToDebate.index(where: {$0.Debate == id }) {
 
-                            } else if activeUser.Role == 2 {
+                        // if activeUser.Debate == self.actualDebate.idDebates {
 
-                                print("Asesor")
-                                self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+                        if self.accessToDebate[i].Role == 1 {
 
-                            } else if activeUser.Role == 3 {
+                            print("Debatiente")
+                            self.performSegue(withIdentifier: "Debating", sender: self.actualDebate )
 
-                                print("Observador")
-                                self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
+                        } else if self.accessToDebate[i].Role == 2 {
 
-                            } else if activeUser.Role == 4 {
+                            print("Asesor")
+                            self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
 
-                                print("Publico!")
-                                self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
+                        } else if self.accessToDebate[i].Role == 3 {
 
-                            } else {
+                            print("Observador")
+                            self.performSegue(withIdentifier: "Observer", sender: self.actualDebate)
 
-                                print("Error")
+                        } else if self.accessToDebate[i].Role == 4 {
 
-                            }
-                            
-                            
-                        }else{
-                            
-                            print("Publico")
+                            print("Publico!")
                             self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
+
+                        } else {
+
+                            print("Error")
                             
                         }
+
+                    }else{
+                        
+                        print("Publico")
+                        self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
+                        
                     }
                 }
             }
         }
         completed()
     }
+    
+    
     
     func menu () {
         
