@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import CoreData
 import SCLAlertView
+import AudioToolbox.AudioServices
 
 class NewCourseVC: UIViewController {
 
@@ -33,18 +34,17 @@ class NewCourseVC: UIViewController {
     }
     @IBAction func ReturnKey(_ sender: Any) {
 
-        NewCourse {
+        if (tfCode.text?.isEmpty)! {
 
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+            SCLAlertView().showError("Error", subTitle: "Debe ingresar un codigo")
+
+        }else{
+
+            NewCourse {
+
+            }
         }
-
-    }
-
-    @IBAction func BtnDone(_ sender: Any) {
-
-        NewCourse {
-
-        }
-
     }
 
     func viewUser() {
@@ -100,13 +100,15 @@ class NewCourseVC: UIViewController {
 
                         print("S Happens")
 
-                    }else if status == "@invalidCode" {
+                    }else if status == "@courseAlreadyRegistrated" {
 
-                        SCLAlertView().showError("Error", subTitle: "El curso ingresado no existe")
+                        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                        SCLAlertView().showError("Error", subTitle: "Usted ya matriculo este curso")
                         print("S NOT Happens")
 
                     } else {
 
+                        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                         SCLAlertView().showError("Error", subTitle: "El curso ingresado no existe")
                         print("S NOT Happens NOP")
 
@@ -114,6 +116,7 @@ class NewCourseVC: UIViewController {
                 }
             }else{
 
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                 SCLAlertView().showError("Error", subTitle: "Ha ocurrido un error, por favor intente de nuevo más tarde.")
                 print("S NOT Happens (IMPORTANT)")
                 

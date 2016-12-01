@@ -46,6 +46,7 @@ class LoginVC: UIViewController {
 
         }else{
 
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
             SCLAlertView().showWarning("No hay conexión", subTitle: "No se ha logrado establecer conexión a internet.")
         }
 
@@ -59,9 +60,12 @@ class LoginVC: UIViewController {
                 self.performSegue(withIdentifier: "DebatesFeedVC", sender: self)
 
             }else if self.loginStatus == "@invalidEmail"{
+
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                 SCLAlertView().showError("Correo electronico Invalido!", subTitle: "Debe de estar registrado para ingresar a Podium.")
+                
             }else if self.loginStatus == "@invalidPassword"{
+
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                 SCLAlertView().showError("Contraseña Invalida!", subTitle: "Trate de nuevo.")
             }
@@ -174,7 +178,7 @@ class LoginVC: UIViewController {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let resultViewController = storyBoard.instantiateViewController(withIdentifier: "DebatesFeedVC") as! DebatesFeedVC
                 self.present(resultViewController, animated:true, completion:nil)
-                
+
                 print("Matches found: \(results.count)")
                 
             } else {

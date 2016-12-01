@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SCLAlertView
+import AudioToolbox
 
 class NewUserVC: UIViewController, UITextFieldDelegate {
 
@@ -69,6 +70,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
             if (result.description) == "@invalidRegistration" {
 
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                 SCLAlertView().showError("Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde")
 
             }else{
@@ -87,6 +89,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
         if (tfName.text!.isEmpty || tfLastName.text!.isEmpty || tfLastName2.text!.isEmpty || tfEmail.text!.isEmpty || tfPassword.text!.isEmpty || tfVPassword.text!.isEmpty || tfAddress.text!.isEmpty || tfPhone.text!.isEmpty || tfidUniversity.text!.isEmpty) {
 
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
             SCLAlertView().showError("Campos Requeridos", subTitle: "Todos los campos son requeridos")
 
             tfName.layer.backgroundColor = UIColor.red.cgColor
@@ -107,6 +110,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
             }else{
 
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                 SCLAlertView().showError("Alerta", subTitle: "Las contraseñas deben coincidir")
 
             }
@@ -116,7 +120,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+
         self.tfName.resignFirstResponder()
         self.tfLastName.resignFirstResponder()
         self.tfLastName2.resignFirstResponder()
