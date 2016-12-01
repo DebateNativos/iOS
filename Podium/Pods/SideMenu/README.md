@@ -1,5 +1,6 @@
 # ▤ SideMenu
 [![Version](https://img.shields.io/cocoapods/v/SideMenu.svg?style=flat)](http://cocoapods.org/pods/SideMenu)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/SideMenu.svg?style=flat)](http://cocoapods.org/pods/SideMenu)
 [![Platform](https://img.shields.io/cocoapods/p/SideMenu.svg?style=flat)](http://cocoapods.org/pods/SideMenu)
 
@@ -51,6 +52,23 @@ Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate SideMenu into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "jonkykong/SideMenu"
 ```
 
 ## Usage
@@ -160,10 +178,42 @@ open static var menuFadeStatusBar = true
 
 /// When true, pushViewController called within the menu it will push the new view controller inside of the menu. Otherwise, it is pushed on the menu's presentingViewController. Default is false.
 open static var menuAllowSubmenus: Bool = false
+
+/**
+ The blur effect style of the menu if the menu's root view controller is a UITableViewController or UICollectionViewController.
+
+ - Note: If you want cells in a UITableViewController menu to show vibrancy, make them a subclass of UITableViewVibrantCell.
+ */
+open static var menuBlurEffectStyle: UIBlurEffectStyle?
+
+/// The left menu.
+open static var menuLeftNavigationController: UISideMenuNavigationController?
+
+/// The right menu.
+open static var menuRightNavigationController: UISideMenuNavigationController?
+
+/**
+ Adds screen edge gestures to a view to present a menu.
+
+ - Parameter toView: The view to add gestures to.
+ - Parameter forMenu: The menu (left or right) you want to add a gesture for. If unspecified, gestur=es will be added for both sides.
+
+ - Returns: The array of screen edge gestures added to `toView`.
+ */
+@discardableResult open class func menuAddScreenEdgePanGesturesToPresent(toView: UIView, forMenu:UIRectEdge? = nil) -> [UIScreenEdgePanGestureRecognizer]
+
+/**
+ Adds a pan edge gesture to a view to present menus.
+
+ - Parameter toView: The view to add a pan gesture to.
+
+ - Returns: The pan gesture added to `toView`.
+ */
+@discardableResult open class func menuAddPanGestureToPresent(toView: UIView) -> UIPanGestureRecognizer
 ```
 
 ## Known Issues
-Don't try to change the status bar appearance when presenting a menu. When used with quick gestures/animations, it causes the presentation animation to not complete properly and locks the UI. See [radar 21961293](http://www.openradar.me/21961293) for more information.
+Don't try to change the status bar appearance when presenting a menu. When used with quick gestures/animations, it causes the presentation animation to not complete properly and locks the UI. This was fixed in iOS 9.3. See [radar 21961293](http://www.openradar.me/21961293) for more information.
 
 ## Thank You
 A special thank you to everyone that has [contributed](https://github.com/jonkykong/SideMenu/graphs/contributors) to this library to make it better. Your support is appreciated!

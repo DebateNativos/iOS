@@ -22,11 +22,14 @@ target 'Podium' do
   
   pod 'SCLAlertView'
   
+  pod 'PullToMakeFlight', '~> 2.0'
+  
+  pod 'DoneHUD'
+  
+  pod 'AASquaresLoading'
+  
   #Cellviews con botones
   # pod 'EVSlidingTableViewCell', '~> 2.0'
-  
-  #Menu
-  #pod 'SideMenuController'
   
   #waitAnimation
   #pod 'SwiftSpinner'

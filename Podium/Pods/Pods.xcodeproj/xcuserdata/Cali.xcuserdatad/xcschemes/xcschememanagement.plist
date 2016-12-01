@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AASquaresLoading.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>DoneHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>Pods-Podium.xcscheme</key>
 		<dict>
@@ -18,6 +28,16 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>PullToMakeFlight.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>PullToRefresher.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>SCLAlertView.xcscheme</key>
 		<dict>
@@ -47,7 +67,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0E579C8B6EC88FD31F0C2B47C9058B48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>241300041B8256517E7183EE597204E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2998C0D59E43F7F3BD2E200685C5FC01</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +92,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>419D15911CFC4B4FAC7E55BF5D252A3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4E7CB96CB573051797BC9217D12F1352</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>59C5F3A8255C4312379EAB5B0B989D62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5AC666FE07DF18E99B57DF2ADBB31B56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C9640E83D264158EE9C873D1FF2F6F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6575D284FC35A20C800D4EC23E842CD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,6 +137,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>90C9426D2039236F568F30B712F3F4D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9F5C7DFF8AF18F1F22CDE96CFC00F213</key>
 		<dict>
 			<key>primary</key>
@@ -98,6 +153,11 @@
 			<true/>
 		</dict>
 		<key>B2D512A6CFCCF69A8E4293C1E384AFFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C28B181483882B457DE59F1204A296B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
