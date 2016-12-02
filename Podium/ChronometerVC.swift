@@ -23,31 +23,17 @@ class ChronometerVC: UIViewController {
     var activeSection: Section!
     var minutesOfUser: Int!
     @IBOutlet var uiView: UIView!
+    var accessToDebate = [ActiveUser]()
+    @IBOutlet weak var lblWarning: UILabel!
+    @IBOutlet weak var lblREDCircle: UIImageView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getDebateSection{}
+        getWarnings()
     }
 
-    //Primer numero es el % del GUI y el segundo son la cantidad de segundos que va a durar //
-
-    @IBAction func Play(_ sender: AnyObject) {
-
-        self.timer.animateOuterToValue(100, duration: 120) {
-            puts("Done!")}
-
-        self.timer.animateInnerToValue(100, duration: 60) {
-            puts("Done!")}
-
-    }
-
-
-    @IBAction func Pause(_ sender: AnyObject) {
-
-
-        self.timer.pauseAnimation()
-
-    }
 
     @IBAction func ClosePressed(_ sender: Any) {
 
@@ -89,6 +75,7 @@ class ChronometerVC: UIViewController {
         if let i = self.sections.index(where: {$0.ActiveSection == true}) {
 
             //ACA JALO EL NOMBRE DE LA ETAPA! Aun no esta
+            lblDebPart.text = self.sections[i].name
 
             self.minutesOfUser = (self.sections[i].MinutesPerUser)*60
 
@@ -118,12 +105,45 @@ class ChronometerVC: UIViewController {
                 repeats     : true)
         }
     }
-    
+
     func stopTimerTest() {
         if timerS != nil {
             timerS?.invalidate()
             timerS = nil
         }
+    }
+
+    func getWarnings(){
+
+        let i = self.accessToDebate.index(where: {$0.Debate == debate.idDebates })
+
+        let warn = accessToDebate[i!].Warning
+
+        if warn>0 {
+
+            lblWarning.isHidden = false
+            lblREDCircle.isHidden = false
+            lblWarning.text = ("\(warn)")
+
+        }
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? StagesVC {
+            
+            if let idDebate = sender as? Int{
+                destination.id = idDebate
+            }
+        }
+        
+    }
+    
+    @IBAction func btnInfo(_ sender: Any) {
+        
+        performSegue(withIdentifier: "Stages", sender: debate.idDebates)
+        
     }
     
 }

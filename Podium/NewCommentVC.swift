@@ -25,7 +25,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(){
         textViewComment.delegate = self
         placeholderLabel = UILabel()
-        placeholderLabel.text = "Escribe tu  ..."
+        placeholderLabel.text = "Escribe tu  comentario..."
         placeholderLabel.sizeToFit()
         textViewComment.addSubview(placeholderLabel)
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (textViewComment.font?.pointSize)! / 2)
@@ -38,7 +38,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
         keyboardToolbar.barTintColor = UIColor.white
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(btnDone))           
-        addButton.tintColor = UIColor.green
+        addButton.tintColor = UIColor.lightGray
         keyboardToolbar.items = [addButton]
         textViewComment.inputAccessoryView = keyboardToolbar
 

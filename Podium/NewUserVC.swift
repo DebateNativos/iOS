@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SCLAlertView
 import AudioToolbox
+import AASquaresLoading
 
 class NewUserVC: UIViewController, UITextFieldDelegate {
 
@@ -87,6 +88,8 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
     @IBAction func btnCreatePressed(_ sender: Any) {
 
+        self.view.squareLoading.start(1.0)
+
         if (tfName.text!.isEmpty || tfLastName.text!.isEmpty || tfLastName2.text!.isEmpty || tfEmail.text!.isEmpty || tfPassword.text!.isEmpty || tfVPassword.text!.isEmpty || tfAddress.text!.isEmpty || tfPhone.text!.isEmpty || tfidUniversity.text!.isEmpty) {
 
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
@@ -104,19 +107,37 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
         }else{
 
-            if (tfPassword.text?.isEqual(tfVPassword.text))! {
+            if isValidEmail(testStr: tfEmail.text!){
 
-                self.createUser{}
+                if (tfPassword.text?.isEqual(tfVPassword.text))! {
 
-            }else{
+                    self.createUser{}
 
+                }else{
+
+                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                    SCLAlertView().showError("Alerta", subTitle: "Las contraseñas deben coincidir")
+
+                }
+
+            }
+            else{
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                SCLAlertView().showError("Alerta", subTitle: "Las contraseñas deben coincidir")
-
+                SCLAlertView().showError("Alerta", subTitle: "No es un email valido")
             }
 
         }
 
+        self.view.squareLoading.stop(1.0)
+
+    }
+
+    func isValidEmail(testStr:String) -> Bool {
+        print("validate emilId: \(testStr)")
+        let emailRegEx = "^(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?(?:(?:(?:[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+(?:\\.[-A-Za-z0-9!#$%&’*+/=?^_'{|}~]+)*)|(?:\"(?:(?:(?:(?: )*(?:(?:[!#-Z^-~]|\\[|\\])|(?:\\\\(?:\\t|[ -~]))))+(?: )*)|(?: )+)\"))(?:@)(?:(?:(?:[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)(?:\\.[A-Za-z0-9](?:[-A-Za-z0-9]{0,61}[A-Za-z0-9])?)*)|(?:\\[(?:(?:(?:(?:(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))\\.){3}(?:[0-9]|(?:[1-9][0-9])|(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5]))))|(?:(?:(?: )*[!-Z^-~])*(?: )*)|(?:[Vv][0-9A-Fa-f]+\\.[-A-Za-z0-9._~!$&'()*+,;=:]+))\\])))(?:(?:(?:(?: )*(?:(?:(?:\\t| )*\\r\\n)?(?:\\t| )+))+(?: )*)|(?: )+)?$"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluate(with: testStr)
+        return result
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

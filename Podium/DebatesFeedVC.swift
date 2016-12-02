@@ -57,9 +57,11 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.addPullToRefresh(PullToMakeFlight(at: .top)) {
 
             self.refreshActiveDebates{}
+            self.tableView.reloadData()
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 self.tableView.endRefreshing(at: .top)
+
             }
         }
     }
@@ -94,7 +96,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             print("DebateTerminado")
             performSegue(withIdentifier: "CloseDebate", sender: debate)
 
-        } else if (debate.timeStatus == "TODAY") || (debate.timeStatus == "SOON"){
+        } else if (debate.timeStatus == "TODAY") {
             if debate.Status == true {
 
                 VerifyUser () {
@@ -129,6 +131,8 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             }
 
         }else if let destination = segue.destination as? ChronometerVC{
+
+            destination.accessToDebate = accessToDebate
 
             if let debate = sender as? Debate{
                 destination.debate = debate
@@ -308,7 +312,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             print("Error")
                             
                         }
-
+                        
                     }else{
                         
                         print("Publico")

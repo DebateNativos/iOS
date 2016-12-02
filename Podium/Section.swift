@@ -13,7 +13,7 @@ public class Section {
     var _sectionNUmber: Int!
     var _minutesPerUser: Int!
     var _activeSection: Bool!
-    //    var _name: String!
+    var _name: String!
 
     init(Section: Dictionary<String, AnyObject>) {
 
@@ -27,9 +27,9 @@ public class Section {
         if let activeSection = Section["activeSection"] as? Bool{
             self._activeSection = activeSection
         }
-        //        if let name = Section["name"] as? String{
-        //            self._name = name
-        //        }
+        if let name = Section["name"] as? String{
+            self._name = name
+        }
 
     }
 
@@ -48,9 +48,9 @@ public class Section {
         get { return _activeSection }
     }
 
-    //    public var name: String {
-    //        set { _name = name }
-    //        get { return _name }
-    //    }
+    public var name: String {
+        set { _name = name }
+        get { return _name }
+    }
     
 }

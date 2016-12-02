@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -14,13 +15,15 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var comment: Comment!
     var comments = [Comment]()
     var debate: Debate!
+    var sections = [Section]()
+    var activeSection: Section!
     @IBOutlet weak var lblEtapa: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLbl()
+        getDebateSection{}
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -59,12 +62,41 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    func getDebateSection(_ completed: @escaping DownloadComplete){
+
+        let DEBATE_USER_URL = "\(BASE_URL)\(DEBATE_URL)\(IdDEBATE_URL)\(debate.idDebates)"
+
+        Alamofire.request(DEBATE_USER_URL).responseJSON {response in
+            let result = response.result
+
+            print(response, result, "--------URL: \(DEBATE_USER_URL)")
+
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
+
+                for obj in dict{
+
+                    self.activeSection = Section(Section: obj)
+                    self.sections.append(self.activeSection)
+
+                    print("CONTANDO - \(self.sections.count)")
+
+                    self.updateLbl ()
+
+                }
+                self.sections.removeAll()
+            }
+            completed()
+        }
+    }
+
     func updateLbl (){
 
-        self.navBar.topItem?.title = debate.name
-      //  lblEtapa.text = debate.description
-        lblDate.text = "\(debate.startingDate)"
+        let i = self.sections.index(where: {$0.ActiveSection == true})
 
+        self.navBar.topItem?.title = debate.name
+        lblEtapa.text = self.sections[i!].name
+        lblDate.text = "\(debate.startingDate)"
+        
         lblEtapa.layer.masksToBounds = true
         lblEtapa.layer.cornerRadius = 5
         lblDate.layer.masksToBounds = true
