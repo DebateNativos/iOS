@@ -107,6 +107,7 @@ class ChronometerVC: UIViewController {
     }
 
     func stopTimerTest() {
+
         if timerS != nil {
             timerS?.invalidate()
             timerS = nil
@@ -129,21 +130,4 @@ class ChronometerVC: UIViewController {
 
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let destination = segue.destination as? StagesVC {
-            
-            if let idDebate = sender as? Int{
-                destination.id = idDebate
-            }
-        }
-        
-    }
-    
-    @IBAction func btnInfo(_ sender: Any) {
-        
-        performSegue(withIdentifier: "Stages", sender: debate.idDebates)
-        
-    }
-    
 }

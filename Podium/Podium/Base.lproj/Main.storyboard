@@ -332,7 +332,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GPd-kF-Rj2">
                                         <rect key="frame" x="25" y="20" width="364" height="390"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge7-XM-kmY" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge7-XM-kmY" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Uez-zw-pvR"/>
@@ -344,7 +344,7 @@
                                                     <outlet property="delegate" destination="Jqv-pn-kzj" id="kpe-OV-lmn"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSm-FZ-xA6" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSm-FZ-xA6" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="45" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="UH5-aX-dF0"/>
@@ -356,7 +356,7 @@
                                                     <outlet property="delegate" destination="Jqv-pn-kzj" id="kGs-rP-T9u"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segundo Apellido:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FC7-Y2-m31" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segundo Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FC7-Y2-m31" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="90" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="MnA-FT-sjg"/>
@@ -365,7 +365,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDd-lV-lF8" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDd-lV-lF8" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="135" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Weq-jn-BER"/>
@@ -377,7 +377,7 @@
                                                     <outlet property="delegate" destination="Jqv-pn-kzj" id="pE6-De-ncX"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FBV-pq-IB5" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FBV-pq-IB5" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="180" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="TvZ-y5-MV0"/>
@@ -386,7 +386,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3Y-sA-e7x" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3Y-sA-e7x" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="225" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="WSY-cS-jQU"/>
@@ -395,7 +395,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Carné:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpO-7j-9qp" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Carné" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpO-7j-9qp" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="270" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="WW6-ee-3bL"/>
@@ -404,7 +404,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="done"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sol-cg-qH1" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sol-cg-qH1" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="315" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ono-RU-aFS"/>
@@ -413,7 +413,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="done"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pv-bD-e3l" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pv-bD-e3l" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="360" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LJ9-Bu-52e"/>
@@ -574,7 +574,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgU-V4-dFd">
-                                        <rect key="frame" x="365.66666666666669" y="678.66666666666663" width="17" height="35"/>
+                                        <rect key="frame" x="366" y="679" width="17" height="35"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                         <color key="textColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -613,21 +613,9 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws1-oT-9fV">
-                                        <rect key="frame" x="374" y="10" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="cBR-kN-Mju"/>
-                                            <constraint firstAttribute="width" constant="30" id="cog-qG-iO6"/>
-                                        </constraints>
-                                        <state key="normal" image="Info"/>
-                                        <connections>
-                                            <action selector="btnInfo:" destination="SUh-0z-fwM" eventType="touchUpInside" id="JJ5-Eb-OOT"/>
-                                            <segue destination="tBt-hl-bcR" kind="showDetail" identifier="Stages" id="HxM-Gb-Ryj"/>
-                                        </connections>
-                                    </button>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyN-HF-tUH">
-                                        <rect key="frame" x="29.666666666666664" y="675" width="20.999999999999993" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <rect key="frame" x="33" y="682" width="14" height="29"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                                         <color key="textColor" red="0.93875485749999998" green="0.3298171848" blue="0.27895027319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -669,11 +657,9 @@
                                     <constraint firstItem="PyN-HF-tUH" firstAttribute="centerY" secondItem="tTF-Oj-9Bf" secondAttribute="centerY" id="XpX-Bk-VXJ"/>
                                     <constraint firstItem="PgU-V4-dFd" firstAttribute="centerY" secondItem="IAs-LI-zo5" secondAttribute="centerY" id="auT-ei-tn2"/>
                                     <constraint firstItem="qxu-2K-Pug" firstAttribute="centerX" secondItem="1tW-XQ-JtB" secondAttribute="centerX" id="c1K-cf-v8x"/>
-                                    <constraint firstItem="Ws1-oT-9fV" firstAttribute="top" secondItem="1tW-XQ-JtB" secondAttribute="top" constant="10" id="hhF-dF-wG1"/>
                                     <constraint firstItem="7l4-Gi-Y4d" firstAttribute="leading" secondItem="1tW-XQ-JtB" secondAttribute="leading" constant="10" id="jgC-q7-aux"/>
                                     <constraint firstAttribute="trailing" secondItem="IAs-LI-zo5" secondAttribute="trailing" constant="10" id="svd-Co-Wvk"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ws1-oT-9fV" secondAttribute="trailing" constant="10" id="vlq-lb-RkE"/>
-                                    <constraint firstItem="gni-L9-DRo" firstAttribute="top" secondItem="Ws1-oT-9fV" secondAttribute="bottom" constant="10" id="z7e-8G-9j6"/>
+                                    <constraint firstItem="gni-L9-DRo" firstAttribute="top" secondItem="7l4-Gi-Y4d" secondAttribute="bottom" constant="10" id="tu7-kd-uox"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1260,9 +1246,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-Yt-BUo">
-                                <rect key="frame" x="8" y="8" width="398" height="63"/>
+                                <rect key="frame" x="8" y="8" width="398" height="62"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C34C503D-1F4E-4C39-A80F-743A07D0D3C5" translatesAutoresizingMaskIntoConstraints="NO" id="doO-wS-Io7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4E924756-BCDB-477E-9DD1-54ED86D324D7" translatesAutoresizingMaskIntoConstraints="NO" id="doO-wS-Io7">
                                         <rect key="frame" x="0.0" y="19" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="dsJ-i2-lgg"/>
@@ -1270,7 +1256,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVo-FT-8x3">
-                                        <rect key="frame" x="36" y="0.0" width="362" height="63"/>
+                                        <rect key="frame" x="36" y="0.0" width="362" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Cerrar Sesion">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1350,7 +1336,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ndg-Zd-a3o">
                                         <rect key="frame" x="20" y="20" width="374" height="373"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qle-qj-KqJ" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qle-qj-KqJ" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KUq-ag-6tX"/>
@@ -1359,7 +1345,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvI-mS-yKm" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvI-mS-yKm" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="49" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="QG0-Gy-mcg"/>
@@ -1368,7 +1354,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segundo Apellido:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sii-Hh-B8q" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Segundo Apellido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sii-Hh-B8q" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="98" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="oMY-uc-Bhe"/>
@@ -1377,7 +1363,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pK-gj-PK3" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pK-gj-PK3" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="147" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KNu-Bg-p8M"/>
@@ -1389,7 +1375,7 @@
                                                     <outlet property="delegate" destination="Jqv-pn-kzj" id="O7U-SY-Dv9"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPs-4B-gfT" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPs-4B-gfT" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="196" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="sfS-K7-6nd"/>
@@ -1401,7 +1387,7 @@
                                                     <outlet property="delegate" destination="Kqp-rk-XoG" id="0U0-9h-Rv3"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyi-Tt-KhM" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyi-Tt-KhM" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="245" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ZOT-4i-hPE"/>
@@ -1410,7 +1396,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6p5-6i-sly" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6p5-6i-sly" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="294" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="gHv-DP-Fp4"/>
@@ -1419,7 +1405,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Uw-av-qa0" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Uw-av-qa0" customClass="FieldsUI" customModule="Podium" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="343" width="374" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="prI-tN-Hx8"/>
@@ -1893,7 +1879,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xM6-Sb-1nw">
-                                <rect key="frame" x="20" y="90" width="374" height="200"/>
+                                <rect key="frame" x="20" y="65" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="L95-dt-sGL">
                                         <variation key="heightClass=regular-widthClass=regular" constant="400"/>
@@ -1950,7 +1936,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protocolo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zM-2e-WPg">
-                                <rect key="frame" x="20" y="50" width="374" height="30"/>
+                                <rect key="frame" x="20" y="25" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0eN-a1-h5u"/>
                                 </constraints>
@@ -1958,7 +1944,7 @@
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reglamento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55L-aB-Fud">
-                                <rect key="frame" x="20" y="300" width="374" height="50"/>
+                                <rect key="frame" x="20" y="275" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UOH-O0-G0t"/>
                                 </constraints>
@@ -1966,7 +1952,7 @@
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6s-tY-eJe">
-                                <rect key="frame" x="20" y="360" width="374" height="356"/>
+                                <rect key="frame" x="20" y="335" width="374" height="381"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">	1.	</string>
@@ -3817,7 +3803,7 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                             <constraint firstItem="xM6-Sb-1nw" firstAttribute="leading" secondItem="psJ-a0-1Ns" secondAttribute="leadingMargin" id="KHz-Hs-b6m"/>
                             <constraint firstItem="55L-aB-Fud" firstAttribute="leading" secondItem="psJ-a0-1Ns" secondAttribute="leadingMargin" id="Kpp-ux-Qfk"/>
                             <constraint firstItem="2zM-2e-WPg" firstAttribute="trailing" secondItem="psJ-a0-1Ns" secondAttribute="trailingMargin" id="L56-S4-1Jp"/>
-                            <constraint firstItem="2zM-2e-WPg" firstAttribute="top" secondItem="U6u-pO-5h1" secondAttribute="bottom" constant="50" id="MWf-Hd-3eq"/>
+                            <constraint firstItem="2zM-2e-WPg" firstAttribute="top" secondItem="U6u-pO-5h1" secondAttribute="bottom" constant="25" id="MWf-Hd-3eq"/>
                             <constraint firstItem="Z6s-tY-eJe" firstAttribute="centerX" secondItem="psJ-a0-1Ns" secondAttribute="centerX" id="T2u-mK-JsZ"/>
                             <constraint firstItem="Z6s-tY-eJe" firstAttribute="leading" secondItem="psJ-a0-1Ns" secondAttribute="leadingMargin" id="WNf-ar-X0b"/>
                             <constraint firstItem="xM6-Sb-1nw" firstAttribute="centerX" secondItem="psJ-a0-1Ns" secondAttribute="centerX" id="ZBz-uY-0j7"/>
@@ -4486,6 +4472,18 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                                             </constraint>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVX-WK-Das">
+                                        <rect key="frame" x="374" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Jeu-6m-1GM"/>
+                                            <constraint firstAttribute="height" constant="30" id="c6e-LT-xbT"/>
+                                        </constraints>
+                                        <state key="normal" image="Info"/>
+                                        <connections>
+                                            <action selector="InfoPressed:" destination="SGu-W7-q4P" eventType="touchUpInside" id="3nc-rq-8gn"/>
+                                            <segue destination="tBt-hl-bcR" kind="showDetail" id="04c-wu-9wO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -4503,10 +4501,12 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                                     <constraint firstItem="r3n-sD-mh8" firstAttribute="centerX" secondItem="zqO-Mu-Oj1" secondAttribute="centerX" id="SVe-Bo-e6L"/>
                                     <constraint firstItem="LaB-pY-WUV" firstAttribute="top" secondItem="Hte-jp-2aO" secondAttribute="top" constant="10" id="Tna-Ov-i05"/>
                                     <constraint firstItem="Cu9-pU-gSF" firstAttribute="leading" secondItem="Hte-jp-2aO" secondAttribute="leading" constant="20" id="VVG-Nc-Iwd"/>
+                                    <constraint firstItem="rVX-WK-Das" firstAttribute="top" secondItem="Hte-jp-2aO" secondAttribute="top" constant="10" id="XLo-G1-HzX"/>
                                     <constraint firstAttribute="trailing" secondItem="zqO-Mu-Oj1" secondAttribute="trailing" constant="10" id="YZ5-7b-nEV"/>
                                     <constraint firstItem="Xhk-qY-9lu" firstAttribute="top" secondItem="LaB-pY-WUV" secondAttribute="bottom" constant="10" id="et6-No-QJu"/>
                                     <constraint firstAttribute="bottom" secondItem="zqO-Mu-Oj1" secondAttribute="bottom" constant="10" id="pCv-H0-gwG"/>
                                     <constraint firstItem="r3n-sD-mh8" firstAttribute="centerY" secondItem="zqO-Mu-Oj1" secondAttribute="centerY" id="pIV-GL-29P"/>
+                                    <constraint firstAttribute="trailing" secondItem="rVX-WK-Das" secondAttribute="trailing" constant="10" id="rxW-gK-ePR"/>
                                     <constraint firstItem="Jej-KX-0sR" firstAttribute="centerY" secondItem="aUL-CX-czq" secondAttribute="centerY" id="sYg-e7-q6A"/>
                                     <constraint firstAttribute="trailing" secondItem="Cu9-pU-gSF" secondAttribute="trailing" constant="20" id="tzD-D4-gV5"/>
                                 </constraints>
@@ -4529,9 +4529,7 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
         </scene>
     </scenes>
     <resources>
-        <image name="AboutUs " width="682" height="910"/>
-        <image name="Blur 2" width="1241" height="679"/>
-        <image name="C34C503D-1F4E-4C39-A80F-743A07D0D3C5" width="512" height="512">
+        <image name="4E924756-BCDB-477E-9DD1-54ED86D324D7" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -22080,6 +22078,8 @@ iAAQDo8AEA6XABAOpAAQDqkAEA6rABAOrQAQDrIAEA66ABAOvQAQDsIAEA7KABAOzQAQDt8AEA7iABAO
 5wAAAAAAAAQBAAAAAAAAAD4AAAAAAAAAAAAAAAAAEA7pA
 </mutableData>
         </image>
+        <image name="AboutUs " width="682" height="910"/>
+        <image name="Blur 2" width="1241" height="679"/>
         <image name="Close" width="16" height="16"/>
         <image name="DebatesVer " width="682" height="910"/>
         <image name="FAQ-512" width="512" height="512"/>
@@ -22106,6 +22106,6 @@ iAAQDo8AEA6XABAOpAAQDqkAEA6rABAOrQAQDrIAEA66ABAOvQAQDsIAEA7KABAOzQAQDt8AEA7iABAO
         <image name="iCon" width="231" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HxM-Gb-Ryj"/>
+        <segue reference="QW2-df-Z32"/>
     </inferredMetricsTieBreakers>
 </document>

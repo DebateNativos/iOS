@@ -50,10 +50,13 @@ class StagesVC: UIViewController {
 
                     print("CONTANDO - \(self.sections.count)")
 
-                    self.SelectStage()
+
 
                 }
+
+                self.SelectStage()
                 self.sections.removeAll()
+
             }
             completed()
         }
@@ -78,7 +81,7 @@ class StagesVC: UIViewController {
             lblPreguntas.font = UIFont.boldSystemFont(ofSize: 20)
 
         }else if stageName.lowercased() == "nuevas argumentaciones" {
-
+            
             lblNuevasArgumentaciones.font = UIFont.boldSystemFont(ofSize: 20)
             
         }else if stageName.lowercased() == "conclusiones" {

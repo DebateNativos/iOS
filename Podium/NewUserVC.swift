@@ -44,6 +44,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
     func keyboardWillShow(notification:NSNotification){
         //give room at the bottom of the scroll view so it doesn't cover up anything the user needs to tap
+
         var userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
@@ -76,6 +77,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
             }else{
 
+                self.view.squareLoading.stop(0.0)
                 SCLAlertView().showSuccess("Exito!", subTitle: "Se creo su perfil de manera correcta")
                 self.dismiss(animated: true, completion: nil)
 
@@ -105,6 +107,8 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
             tfAddress.layer.backgroundColor = UIColor.red.cgColor
             tfidUniversity.layer.backgroundColor = UIColor.red.cgColor
 
+            self.view.squareLoading.stop(0.0)
+
         }else{
 
             if isValidEmail(testStr: tfEmail.text!){
@@ -115,6 +119,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
                 }else{
 
+                    self.view.squareLoading.stop(0.0)
                     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                     SCLAlertView().showError("Alerta", subTitle: "Las contraseñas deben coincidir")
 
@@ -122,13 +127,15 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
             }
             else{
+
+                self.view.squareLoading.stop(0.0)
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                 SCLAlertView().showError("Alerta", subTitle: "No es un email valido")
             }
 
         }
 
-        self.view.squareLoading.stop(1.0)
+
 
     }
 
