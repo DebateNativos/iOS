@@ -642,15 +642,27 @@
                                             <constraint firstAttribute="width" constant="60" id="ShM-qj-ERE"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-yw-Nxn">
+                                        <rect key="frame" x="157" y="686.66666666666663" width="100" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="X40-pI-Bqf"/>
+                                            <constraint firstAttribute="width" constant="100" id="ub2-eM-zNp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.72146652918781728" green="0.72146652918781728" blue="0.72146652918781728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="7l4-Gi-Y4d" firstAttribute="top" secondItem="1tW-XQ-JtB" secondAttribute="top" constant="10" id="2kt-xr-NnD"/>
+                                    <constraint firstItem="tQg-yw-Nxn" firstAttribute="centerY" secondItem="IAs-LI-zo5" secondAttribute="centerY" id="BY4-E1-Gaf"/>
                                     <constraint firstAttribute="bottom" secondItem="IAs-LI-zo5" secondAttribute="bottom" constant="10" id="Bed-Fh-kcb"/>
                                     <constraint firstItem="PgU-V4-dFd" firstAttribute="centerX" secondItem="IAs-LI-zo5" secondAttribute="centerX" id="HYx-xF-mBj"/>
                                     <constraint firstItem="qxu-2K-Pug" firstAttribute="centerY" secondItem="1tW-XQ-JtB" secondAttribute="centerY" id="JDp-cY-p5Z"/>
                                     <constraint firstItem="gni-L9-DRo" firstAttribute="leading" secondItem="1tW-XQ-JtB" secondAttribute="leading" constant="20" id="JYk-YM-43q"/>
                                     <constraint firstAttribute="bottom" secondItem="tTF-Oj-9Bf" secondAttribute="bottom" constant="10" id="M9m-P2-tOS"/>
+                                    <constraint firstItem="tQg-yw-Nxn" firstAttribute="centerX" secondItem="1tW-XQ-JtB" secondAttribute="centerX" id="PVT-4t-IAP"/>
                                     <constraint firstItem="tTF-Oj-9Bf" firstAttribute="leading" secondItem="1tW-XQ-JtB" secondAttribute="leading" constant="10" id="TUy-bZ-3V1"/>
                                     <constraint firstItem="PyN-HF-tUH" firstAttribute="centerX" secondItem="tTF-Oj-9Bf" secondAttribute="centerX" id="UMZ-EL-tdt"/>
                                     <constraint firstAttribute="trailing" secondItem="gni-L9-DRo" secondAttribute="trailing" constant="20" id="Uws-LR-CTe"/>
@@ -674,13 +686,14 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="lblChronometer" destination="tQg-yw-Nxn" id="Ajn-l0-Ynb"/>
                         <outlet property="lblDebPart" destination="gni-L9-DRo" id="Kzp-EH-4aM"/>
                         <outlet property="lblREDCircle" destination="tTF-Oj-9Bf" id="owv-By-0qy"/>
                         <outlet property="lblWarning" destination="PyN-HF-tUH" id="cgw-mc-BmK"/>
                         <outlet property="timer" destination="qxu-2K-Pug" id="jnL-sq-oV8"/>
                         <outlet property="uiView" destination="swt-xQ-z4U" id="UZp-Ot-8pu"/>
                         <outlet property="warning" destination="PyN-HF-tUH" id="gJr-rC-d4t"/>
-                        <segue destination="THN-4C-EZr" kind="showDetail" id="hUQ-jj-FZo"/>
+                        <segue destination="THN-4C-EZr" kind="showDetail" identifier="WaiTurnVC" id="hUQ-jj-FZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="try-sF-cfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -717,7 +730,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ied-Z8-fTx" id="rQ3-oW-cbL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-cC-WZx">
@@ -1033,7 +1046,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lS-gB-jxj" id="bea-iq-EdH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="To4-fb-brM">
@@ -1070,7 +1083,7 @@
                                         <rect key="frame" x="0.0" y="80" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qA-GP-Jxt" id="fpI-Ea-6AR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QlX-jt-Cwz">
@@ -1107,7 +1120,7 @@
                                         <rect key="frame" x="0.0" y="160" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMe-wd-IQU" id="Rqg-fP-ixp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lAj-pu-UZY">
@@ -1144,7 +1157,7 @@
                                         <rect key="frame" x="0.0" y="240" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hgb-YS-Uc7" id="eDE-4l-RpR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ORM-Ib-HtD">
@@ -1188,7 +1201,7 @@
                                         <rect key="frame" x="0.0" y="320" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YY2-8D-gbN" id="hPo-0w-Xi5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ttQ-nE-xSn">
@@ -1246,9 +1259,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-Yt-BUo">
-                                <rect key="frame" x="8" y="8" width="398" height="62"/>
+                                <rect key="frame" x="8" y="8" width="398" height="63"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4E924756-BCDB-477E-9DD1-54ED86D324D7" translatesAutoresizingMaskIntoConstraints="NO" id="doO-wS-Io7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B9F1041F-64ED-4110-9093-96AE19C528DA" translatesAutoresizingMaskIntoConstraints="NO" id="doO-wS-Io7">
                                         <rect key="frame" x="0.0" y="19" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="dsJ-i2-lgg"/>
@@ -1256,7 +1269,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVo-FT-8x3">
-                                        <rect key="frame" x="36" y="0.0" width="362" height="62"/>
+                                        <rect key="frame" x="36" y="0.0" width="362" height="63"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Cerrar Sesion">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1509,7 +1522,7 @@
                                 <rect key="frame" x="0.0" y="72" width="414" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MQg-xw-XwH" id="Qqc-Ih-yaR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UcQ-oW-Mav">
@@ -4039,9 +4052,12 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                                                 <rect key="frame" x="364" y="18" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Info"/>
+                                                <connections>
+                                                    <action selector="InfoPressed:" destination="31O-Yr-3SE" eventType="touchUpInside" id="i8X-e4-tha"/>
+                                                </connections>
                                             </button>
                                             <connections>
-                                                <segue destination="tBt-hl-bcR" kind="showDetail" id="K2e-Hc-N8P"/>
+                                                <segue destination="tBt-hl-bcR" kind="showDetail" identifier="StagesVC" id="K2e-Hc-N8P"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -4056,14 +4072,51 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="chat1600"/>
                                 <connections>
-                                    <segue destination="pzk-4Z-MdP" kind="show" id="GyX-a8-jgV"/>
+                                    <action selector="NewCommentPressed:" destination="31O-Yr-3SE" eventType="touchUpInside" id="0B4-fQ-146"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-ud-aCz" customClass="SnapTimerView" customModule="SnapTimer">
+                                <rect key="frame" x="10" y="65" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nk8-Ob-XyW"/>
+                                    <constraint firstAttribute="width" constant="30" id="hdd-UC-c0b"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="centerBackgroundColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderBackgroundColor">
+                                        <color key="value" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mainBackgroundColor">
+                                        <color key="value" red="0.76782598350253806" green="0.76782598350253806" blue="0.76782598350253806" alpha="0.23303724315068494" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red" translatesAutoresizingMaskIntoConstraints="NO" id="QyQ-Zz-Rbc">
+                                <rect key="frame" x="10" y="105" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="iuv-QG-Lqh"/>
+                                    <constraint firstAttribute="height" constant="30" id="z0L-4x-Ssb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-3a-Fc0">
+                                <rect key="frame" x="15" y="110" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="4FZ-m9-efC"/>
+                                    <constraint firstAttribute="height" constant="20" id="pHB-Ox-WH3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Li-Hm-pSN" firstAttribute="top" secondItem="6uo-eM-TpE" secondAttribute="top" id="10I-4D-5pO"/>
                             <constraint firstItem="hvN-xv-050" firstAttribute="top" secondItem="6uo-eM-TpE" secondAttribute="top" id="2Kd-6s-PZy"/>
+                            <constraint firstItem="43J-3a-Fc0" firstAttribute="centerX" secondItem="QyQ-Zz-Rbc" secondAttribute="centerX" id="8Ci-7n-73f"/>
+                            <constraint firstItem="QyQ-Zz-Rbc" firstAttribute="leading" secondItem="6uo-eM-TpE" secondAttribute="leading" constant="10" id="9uG-rE-hAt"/>
                             <constraint firstItem="IY4-Fh-bO8" firstAttribute="top" secondItem="pTe-uq-bdf" secondAttribute="bottom" constant="10" id="DCX-ei-srn"/>
                             <constraint firstAttribute="trailing" secondItem="4Li-Hm-pSN" secondAttribute="trailing" id="Mp6-Zg-o7g"/>
                             <constraint firstItem="klD-r2-kYV" firstAttribute="top" secondItem="IY4-Fh-bO8" secondAttribute="bottom" id="Ov4-bD-gDR"/>
@@ -4071,9 +4124,13 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                             <constraint firstAttribute="trailing" secondItem="IY4-Fh-bO8" secondAttribute="trailing" id="RDM-7k-7oG"/>
                             <constraint firstAttribute="trailing" secondItem="hvN-xv-050" secondAttribute="trailing" id="RTr-Jw-7Y3"/>
                             <constraint firstItem="IY4-Fh-bO8" firstAttribute="leading" secondItem="6uo-eM-TpE" secondAttribute="leading" id="SJc-qS-rPz"/>
+                            <constraint firstItem="gSI-ud-aCz" firstAttribute="top" secondItem="4Li-Hm-pSN" secondAttribute="bottom" constant="10" id="Ylf-Gc-6LS"/>
+                            <constraint firstItem="QyQ-Zz-Rbc" firstAttribute="top" secondItem="gSI-ud-aCz" secondAttribute="bottom" constant="10" id="iBK-JS-2oH"/>
+                            <constraint firstItem="gSI-ud-aCz" firstAttribute="leading" secondItem="6uo-eM-TpE" secondAttribute="leading" constant="10" id="kCH-C2-Ra2"/>
                             <constraint firstAttribute="trailing" secondItem="UiT-8r-uwc" secondAttribute="trailing" constant="10" id="kvU-aJ-6yS"/>
                             <constraint firstItem="IY4-Fh-bO8" firstAttribute="top" secondItem="UiT-8r-uwc" secondAttribute="bottom" constant="10" id="ljp-Ck-oQg"/>
                             <constraint firstItem="IY4-Fh-bO8" firstAttribute="top" secondItem="hvN-xv-050" secondAttribute="bottom" id="qSm-y9-IM3"/>
+                            <constraint firstItem="43J-3a-Fc0" firstAttribute="centerY" secondItem="QyQ-Zz-Rbc" secondAttribute="centerY" id="u1A-W6-8qT"/>
                             <constraint firstItem="4Li-Hm-pSN" firstAttribute="leading" secondItem="6uo-eM-TpE" secondAttribute="leading" id="vID-HF-Zn4"/>
                             <constraint firstItem="hvN-xv-050" firstAttribute="leading" secondItem="6uo-eM-TpE" secondAttribute="leading" id="wbd-OJ-QOM"/>
                         </constraints>
@@ -4085,12 +4142,13 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                         <outlet property="lblDate" destination="LlC-NF-3j0" id="x6o-zC-xPW"/>
                         <outlet property="lblEtapa" destination="PG9-sR-OnW" id="eGE-PA-1TZ"/>
                         <outlet property="navBar" destination="4Li-Hm-pSN" id="KOE-vV-a3U"/>
+                        <outlet property="sTimer" destination="gSI-ud-aCz" id="t4H-yA-cpY"/>
                         <outlet property="tableView" destination="IY4-Fh-bO8" id="KDj-Gu-pLk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87y-kD-x2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2460.9375" y="959.76562499999989"/>
+            <point key="canvasLocation" x="2460.8695652173915" y="959.51086956521749"/>
         </scene>
         <!--New CommentVC-->
         <scene sceneID="C0C-pp-CfK">
@@ -4422,6 +4480,9 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                                         </constraints>
                                         <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="Close"/>
+                                        <connections>
+                                            <action selector="BtnClose:" destination="THN-4C-EZr" eventType="touchUpInside" id="Ian-zE-A3Z"/>
+                                        </connections>
                                     </button>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Red" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-CX-czq">
                                         <rect key="frame" x="10" y="666" width="60" height="60"/>
@@ -4452,7 +4513,7 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Este debate aun no se encuentra activo" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu9-pU-gSF">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Espere su turno para hablar!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu9-pU-gSF">
                                         <rect key="frame" x="20" y="150" width="374" height="90"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -4461,7 +4522,7 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timer" translatesAutoresizingMaskIntoConstraints="NO" id="Nkc-Up-FPP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Nkc-Up-FPP">
                                         <rect key="frame" x="106.66666666666669" y="386" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="6Ug-3S-jbi">
@@ -4529,7 +4590,8 @@ ARTÍCULO 23: Antes de que los estudiantes participantes del debate se retiren, 
         </scene>
     </scenes>
     <resources>
-        <image name="4E924756-BCDB-477E-9DD1-54ED86D324D7" width="512" height="512">
+        <image name="AboutUs " width="682" height="910"/>
+        <image name="B9F1041F-64ED-4110-9093-96AE19C528DA" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -22078,7 +22140,6 @@ iAAQDo8AEA6XABAOpAAQDqkAEA6rABAOrQAQDrIAEA66ABAOvQAQDsIAEA7KABAOzQAQDt8AEA7iABAO
 5wAAAAAAAAQBAAAAAAAAAD4AAAAAAAAAAAAAAAAAEA7pA
 </mutableData>
         </image>
-        <image name="AboutUs " width="682" height="910"/>
         <image name="Blur 2" width="1241" height="679"/>
         <image name="Close" width="16" height="16"/>
         <image name="DebatesVer " width="682" height="910"/>
@@ -22097,7 +22158,6 @@ iAAQDo8AEA6XABAOpAAQDqkAEA6rABAOrQAQDrIAEA66ABAOvQAQDsIAEA7KABAOzQAQDt8AEA7iABAO
         <image name="Profile " width="681" height="269"/>
         <image name="Red" width="1024" height="1024"/>
         <image name="TEST 4" width="1024" height="744"/>
-        <image name="Timer" width="674" height="678"/>
         <image name="Title" width="940" height="401"/>
         <image name="User" width="512" height="512"/>
         <image name="back_btn" width="13" height="21"/>
@@ -22106,6 +22166,6 @@ iAAQDo8AEA6XABAOpAAQDqkAEA6rABAOrQAQDrIAEA66ABAOvQAQDsIAEA7KABAOzQAQDt8AEA7iABAO
         <image name="iCon" width="231" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QW2-df-Z32"/>
+        <segue reference="K2e-Hc-N8P"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -20,6 +20,7 @@ class StagesVC: UIViewController {
     @IBOutlet weak var lblNuevasArgumentaciones: UILabel!
     @IBOutlet weak var Conclusiones: UILabel!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getDebateSection{}

@@ -26,12 +26,32 @@ class ChronometerVC: UIViewController {
     var accessToDebate = [ActiveUser]()
     @IBOutlet weak var lblWarning: UILabel!
     @IBOutlet weak var lblREDCircle: UIImageView!
-
+    var minutesOfUser2: Int = 0
+    @IBOutlet weak var lblChronometer: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDebateSection{}
+
+        UIApplication.shared.isIdleTimerDisabled = true
+
+        getDebateSection {
+
+            self.timer.animateOuterToValue(100, duration: Double(self.minutesOfUser)) {
+
+                self.stopTimerTest()
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                self.performSegue(withIdentifier: "WaiTurnVC", sender: self.debate.idDebates )
+
+            }
+
+            self.minutesOfUser2 = self.minutesOfUser
+            var _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
+
+        }
+
         getWarnings()
+        startTimer ()
+
     }
 
 
@@ -60,11 +80,13 @@ class ChronometerVC: UIViewController {
 
                     print("CONTANDO - \(self.sections.count)")
 
-                    self.UpdateLbls ()
-
                 }
+
+                self.UpdateLbls ()
                 self.sections.removeAll()
+
             }
+
             completed()
         }
     }
@@ -74,16 +96,10 @@ class ChronometerVC: UIViewController {
 
         if let i = self.sections.index(where: {$0.ActiveSection == true}) {
 
-            //ACA JALO EL NOMBRE DE LA ETAPA! Aun no esta
             lblDebPart.text = self.sections[i].name
 
             self.minutesOfUser = (self.sections[i].MinutesPerUser)*60
 
-            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-
-            self.timer.animateOuterToValue(100, duration: Double(self.minutesOfUser), completion: nil)
-
-            startTimer (refresh: minutesOfUser)
 
         }
     }
@@ -92,13 +108,24 @@ class ChronometerVC: UIViewController {
 
         print("Hola")
         getDebateSection{}
+
+        //        if (EL MAE NO ESTA HABLANDO){
+        //
+        //          stopTimerTest()
+        //          self.performSegue(withIdentifier: "WaiTurnVC", sender: self.actualDebate)
+        //
+        //        }else{
+        //
+        //
+        //        }
     }
 
-    func startTimer (refresh: Int) {
+    func startTimer () {
+
 
         if timerS == nil {
             timerS =  Timer.scheduledTimer(
-                timeInterval: TimeInterval(refresh),
+                timeInterval: TimeInterval(30),
                 target      : self,
                 selector    : #selector(self.update),
                 userInfo    : nil,
@@ -130,4 +157,24 @@ class ChronometerVC: UIViewController {
 
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? WaiTurnVC {
+            
+            if let idDebate = sender as? Int{
+                destination.id = idDebate
+            }
+        }
+        
+    }
+    
+    func updateCounter() {
+        //you code, this is an example
+        if self.minutesOfUser2 > 0 {
+            lblChronometer.text = "\(self.minutesOfUser2)"
+            self.minutesOfUser2 -= 1
+        }
+        
+    }
+    
 }

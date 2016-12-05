@@ -56,12 +56,12 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
         tableView.addPullToRefresh(PullToMakeFlight(at: .top)) {
 
-            self.refreshActiveDebates {
+            self.debates.removeAll()
 
-                if self.debates.count != self.debatesVerify.count{
-                    self.tableView.reloadData()
+            self.getActiveDebates {
 
-                }
+                self.tableView.reloadData()
+
             }
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SCLAlertView
 
 class PublicVC: UIViewController {
 
@@ -16,10 +17,12 @@ class PublicVC: UIViewController {
     @IBOutlet weak var lblEtapa: LabelsUI!
     var sections = [Section]()
     var activeSection: Section!
+    var timerS : Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getDebateSection {}
+        //startTimer()
         // Do any additional setup after loading the view.
     }
 
@@ -81,12 +84,70 @@ class PublicVC: UIViewController {
     @IBAction func InfoPressed(_ sender: Any) {
 
         self.performSegue(withIdentifier: "Stages", sender: debate.idDebates)
+
+    }
+
+    @IBAction func NewQuestionPressed(_ sender: Any) {
+
+     SelectStage ()
+
+    }
+
+    func update () {
+
+        getDebateSection{}
+
+    }
+
+
+    func startTimer () {
+
+        if timerS == nil {
+            timerS =  Timer.scheduledTimer(
+                timeInterval: TimeInterval(30),
+                target      : self,
+                selector    : #selector(self.update),
+                userInfo    : nil,
+                repeats     : true)
+        }
+    }
+
+    func stopTimerTest() {
+
+        if timerS != nil {
+            timerS?.invalidate()
+            timerS = nil
+        }
+    }
+
+    func SelectStage () {
+
+        let i = self.sections.index(where: {$0.ActiveSection == true})
+
+        let stageName = sections[i!].name
+
+        if stageName.lowercased() == "presentacion inicial" {
+
+            self.performSegue(withIdentifier: "Pregunta", sender: debate.idDebates)
+
+        }else if stageName.lowercased() == "primeras argumentaciones" {
+
+            self.performSegue(withIdentifier: "Pregunta", sender: debate.idDebates)
+
+        }else if stageName.lowercased() == "preguntas" {
+
+            self.performSegue(withIdentifier: "Pregunta", sender: debate.idDebates)
+            
+        }else if stageName.lowercased() == "nuevas argumentaciones" {
+            
+            SCLAlertView().showSuccess("Lo Sentimos", subTitle: "Ya paso las preguntas XD")
+            
+        }else if stageName.lowercased() == "conclusiones" {
+            
+            SCLAlertView().showSuccess("Lo Sentimos", subTitle: "Ya paso las preguntas XD")
+            
+        }
         
     }
     
-    @IBAction func NewQuestionPressed(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "Pregunta", sender: nil)
-        
-    }
 }

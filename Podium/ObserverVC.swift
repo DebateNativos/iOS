@@ -8,24 +8,33 @@
 
 import UIKit
 import Alamofire
+import SCLAlertView
+import SnapTimer
+import AudioToolbox
 
 class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var sTimer: SnapTimerView!
+    var timerS : Timer?
     @IBOutlet weak var tableView: UITableView!
     var comment: Comment!
     var comments = [Comment]()
     var debate: Debate!
     var sections = [Section]()
     var activeSection: Section!
+    var indexS: Int!
     @IBOutlet weak var lblEtapa: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
+    var minutesPerUser: Int!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getDebateSection{}
         tableView.delegate = self
         tableView.dataSource = self
+        startTimer ()
         // Do any additional setup after loading the view.
     }
 
@@ -37,7 +46,7 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func BackPressed(_ sender: AnyObject) {
 
         dismiss(animated: true, completion: nil)
-
+        stopTimerTest()
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,6 +82,8 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
             if let dict = result.value as? [Dictionary<String, AnyObject>]{
 
+                self.sections.removeAll()
+
                 for obj in dict{
 
                     self.activeSection = Section(Section: obj)
@@ -80,29 +91,119 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
                     print("CONTANDO - \(self.sections.count)")
 
-                    self.updateLbl ()
-
                 }
-                self.sections.removeAll()
+
+                self.updateLbl ()
+                // self.sections.removeAll()
             }
             completed()
         }
     }
 
+    @IBAction func InfoPressed(_ sender: Any) {
+
+        self.performSegue(withIdentifier: "StagesVC", sender: debate.idDebates)
+
+    }
+
+
     func updateLbl (){
 
-        let i = self.sections.index(where: {$0.ActiveSection == true})
+        indexS = self.sections.index(where: {$0.ActiveSection == true})
+
+        minutesPerUser = (self.sections[indexS].MinutesPerUser)*60
+
+        self.sTimer.animateOuterToValue(100, duration: Double(minutesPerUser)) {
+
+            self.stopTimerTest()
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+            
+        }
+
+        let etapa = self.sections[indexS!].name
 
         self.navBar.topItem?.title = debate.name
-        lblEtapa.text = self.sections[i!].name
+        lblEtapa.text = etapa.capitalized
         lblDate.text = "\(debate.startingDate)"
-        
+
         lblEtapa.layer.masksToBounds = true
         lblEtapa.layer.cornerRadius = 5
         lblDate.layer.masksToBounds = true
         lblDate.layer.cornerRadius = 5
-        
+
+    }
+
+
+    func SelectStage () {
+
+        let stageName = sections[indexS!].name
+
+        if stageName.lowercased() == "presentacion inicial" {
+
+            self.performSegue(withIdentifier: "NewComment", sender: nil)
+
+        }else if stageName.lowercased() == "primeras argumentaciones" {
+
+            self.performSegue(withIdentifier: "StagesVC", sender: nil)
+
+        }else if stageName.lowercased() == "NewComment" {
+
+            self.performSegue(withIdentifier: "NewComment", sender: nil)
+
+        }else if stageName.lowercased() == "nuevas argumentaciones" {
+
+            SCLAlertView().showNotice("Lo Sentimos", subTitle: "")
+
+        }else if stageName.lowercased() == "conclusiones" {
+
+            SCLAlertView().showNotice("Lo Sentimos", subTitle: "")
+
+        }
+
+    }
+
+    @IBAction func NewCommentPressed(_ sender: Any) {
+
+        SelectStage ()
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let destination = segue.destination as? StagesVC {
+
+            if let idDebate = sender as? Int{
+                destination.id = idDebate
+            }
+        }
+
+    }
+
+    func update() {
+
+        getDebateSection{}
+
     }
     
+    func startTimer () {
+        
+        
+        if timerS == nil {
+            timerS =  Timer.scheduledTimer(
+                timeInterval: TimeInterval(60),
+                target      : self,
+                selector    : #selector(self.update),
+                userInfo    : nil,
+                repeats     : true)
+        }
+    }
+    
+    func stopTimerTest() {
+        
+        if timerS != nil {
+            timerS?.invalidate()
+            timerS = nil
+        }
+    }
     
 }
