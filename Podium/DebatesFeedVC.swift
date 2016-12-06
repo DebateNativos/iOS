@@ -138,6 +138,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }else if let destination = segue.destination as? ChronometerVC{
 
             destination.accessToDebate = accessToDebate
+            destination.email = email
 
             if let debate = sender as? Debate{
                 destination.debate = debate
@@ -313,7 +314,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
 
                         } else {
-
+                            
                             print("Error")
                             
                         }

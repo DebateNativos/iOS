@@ -27,6 +27,9 @@ class ChronometerVC: UIViewController {
     @IBOutlet weak var lblWarning: UILabel!
     @IBOutlet weak var lblREDCircle: UIImageView!
     var minutesOfUser2: Int = 0
+    var email: String!
+    var warn: Int!
+    var id: Int = 0
     @IBOutlet weak var lblChronometer: UILabel!
 
     override func viewDidLoad() {
@@ -83,6 +86,7 @@ class ChronometerVC: UIViewController {
                 }
 
                 self.UpdateLbls ()
+                self.getWarnings()
                 self.sections.removeAll()
 
             }
@@ -104,20 +108,37 @@ class ChronometerVC: UIViewController {
         }
     }
 
+    func VerifyUser (_ completed: @escaping DownloadComplete) {
+
+        let USER_VER_URL = "\(BASE_URL)\(USER_VERIFICATION)\(EMAIL_URL)\(email!)"
+
+        Alamofire.request(USER_VER_URL).responseJSON {response in
+            let result = response.result
+
+            print(response, result, " -> URL: \(USER_VER_URL)")
+
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
+
+                self.accessToDebate.removeAll()
+
+                for obj in dict{
+
+                    let activeUser = ActiveUser (ActiveUser: obj)
+                    self.accessToDebate.append(activeUser)
+
+                }
+
+            }
+        }
+        completed()
+    }
+
     func update () {
 
         print("Hola")
+        VerifyUser{}
         getDebateSection{}
 
-        //        if (EL MAE NO ESTA HABLANDO){
-        //
-        //          stopTimerTest()
-        //          self.performSegue(withIdentifier: "WaiTurnVC", sender: self.actualDebate)
-        //
-        //        }else{
-        //
-        //
-        //        }
     }
 
     func startTimer () {
@@ -125,7 +146,7 @@ class ChronometerVC: UIViewController {
 
         if timerS == nil {
             timerS =  Timer.scheduledTimer(
-                timeInterval: TimeInterval(30),
+                timeInterval: TimeInterval(10),
                 target      : self,
                 selector    : #selector(self.update),
                 userInfo    : nil,
@@ -153,10 +174,16 @@ class ChronometerVC: UIViewController {
             lblREDCircle.isHidden = false
             lblWarning.text = ("\(warn)")
 
+            if warn == 3{
+
+                self.performSegue(withIdentifier: "WaiTurnVC", sender: debate.idDebates )
+                
+            }
+            
         }
-
+        
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? WaiTurnVC {
