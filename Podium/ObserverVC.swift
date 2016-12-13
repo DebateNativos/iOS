@@ -14,8 +14,8 @@ import AudioToolbox
 
 class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var sTimer: SnapTimerView!
     var timerS : Timer?
+    @IBOutlet weak var lblTimer: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var comment: Comment!
     var comments = [Comment]()
@@ -27,13 +27,23 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
     var minutesPerUser: Int!
+    var minutesOfUser2: Int = 0
+    @IBOutlet weak var lblWarnings: UILabel!
+    var email: String!
+    var accessToDebate = [ActiveUser]()
+    var course: String!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDebateSection{}
+        getDebateSection{
+
+            self.minutesOfUser2 = self.minutesPerUser
+            var _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimerLbl), userInfo: nil, repeats: true)
+
+        }
         tableView.delegate = self
         tableView.dataSource = self
+        update()
         startTimer ()
         // Do any additional setup after loading the view.
     }
@@ -102,6 +112,7 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func InfoPressed(_ sender: Any) {
 
+      
         self.performSegue(withIdentifier: "StagesVC", sender: debate.idDebates)
 
     }
@@ -112,13 +123,6 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         indexS = self.sections.index(where: {$0.ActiveSection == true})
 
         minutesPerUser = (self.sections[indexS].MinutesPerUser)*60
-
-        self.sTimer.animateOuterToValue(100, duration: Double(minutesPerUser)) {
-
-            self.stopTimerTest()
-            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-            
-        }
 
         let etapa = self.sections[indexS!].name
 
@@ -140,15 +144,17 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         if stageName.lowercased() == "presentacion inicial" {
 
-            self.performSegue(withIdentifier: "NewComment", sender: nil)
+            self.performSegue(withIdentifier: "NewComment", sender: self)
 
         }else if stageName.lowercased() == "primeras argumentaciones" {
 
-            self.performSegue(withIdentifier: "StagesVC", sender: nil)
+
+            self.performSegue(withIdentifier: "StagesVC", sender: self)
 
         }else if stageName.lowercased() == "NewComment" {
 
-            self.performSegue(withIdentifier: "NewComment", sender: nil)
+
+            self.performSegue(withIdentifier: "NewComment", sender: self)
 
         }else if stageName.lowercased() == "nuevas argumentaciones" {
 
@@ -175,6 +181,73 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if let idDebate = sender as? Int{
                 destination.id = idDebate
             }
+
+        } else if let destination = segue.destination as? NewCommentVC{
+
+
+            destination.course = course
+            destination.email = email
+            destination.debate = debate
+
+            if let debate = sender as? Debate{
+                destination.debate = debate
+            }
+
+        }
+
+    }
+
+    func UserWarn (_ completed: @escaping DownloadComplete) {
+
+        let USER_VER_URL = "\(BASE_URL)\(USER_VERIFICATION)\(EMAIL_URL)\(email!)"
+
+        Alamofire.request(USER_VER_URL).responseJSON {response in
+            let result = response.result
+
+            print(response, result, " -> URL: \(USER_VER_URL)")
+
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
+
+                self.accessToDebate.removeAll()
+
+                for obj in dict{
+
+                    let activeUser = ActiveUser (ActiveUser: obj)
+                    self.accessToDebate.append(activeUser)
+
+                }
+            }
+        }
+
+        completed()
+
+    }
+
+    func getComments(_ completed: @escaping DownloadComplete){
+
+        let ACTIVEDEBATES_URL = "\(BASE_URL)\(GET_COMMENTS)\(COURSE)\(course!)\(DEBATE)\(debate.idDebates)"
+        Alamofire.request(ACTIVEDEBATES_URL).responseJSON {response in
+            let result = response.result
+
+            print(response, result, "--------URL: \(ACTIVEDEBATES_URL)")
+
+            if let dict = result.value as? [Dictionary<String, AnyObject>]{
+
+                self.comments.removeAll()
+
+                for obj in dict {
+
+                    let comment = Comment(comment: obj)
+                    self.comments.append(comment)
+                    self.tableView.reloadData()
+                    print(obj)
+
+                }
+
+                self.comments.reverse()
+
+            }
+            completed()
         }
 
     }
@@ -183,14 +256,37 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         getDebateSection{}
 
+        UserWarn{
+
+            let i = self.accessToDebate.index(where: {$0.Debate == self.debate.idDebates })
+
+            let warn = self.accessToDebate[i!].Warning
+            self.course = self.accessToDebate[i!].Course
+
+            if warn>0 {
+
+                self.lblWarnings.text = ("\(warn)")
+
+                if warn == 3{
+
+                    //EXPULSADO
+                }
+
+            }
+
+
+        }
+
+        getComments{}
+
     }
-    
+
     func startTimer () {
-        
-        
+
+
         if timerS == nil {
             timerS =  Timer.scheduledTimer(
-                timeInterval: TimeInterval(60),
+                timeInterval: TimeInterval(10),
                 target      : self,
                 selector    : #selector(self.update),
                 userInfo    : nil,
@@ -204,6 +300,17 @@ class ObserverVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             timerS?.invalidate()
             timerS = nil
         }
+    }
+    
+    func updateTimerLbl() {
+        
+        if self.minutesOfUser2 > 0 {
+            let minutes = String(minutesOfUser2 / 60)
+            let seconds = String(minutesOfUser2 % 60)
+            lblTimer.text = minutes + ":" + seconds
+            self.minutesOfUser2 -= 1
+        }
+        
     }
     
 }

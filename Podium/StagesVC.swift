@@ -69,7 +69,7 @@ class StagesVC: UIViewController {
 
         let stageName = sections[i!].name
 
-        if stageName.lowercased() == "presentacion inicial" {
+        if stageName.lowercased() == "presentación inicial" {
 
             lblPresentacionInicial.font = UIFont.boldSystemFont(ofSize: 20)
 

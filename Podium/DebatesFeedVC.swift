@@ -5,7 +5,6 @@
 //  Created by Carlos M Solis on 10/10/16.
 //  Copyright © 2016 Carlos Solis Corporate. All rights reserved.
 //
-
 import UIKit
 import Alamofire
 import SideMenu
@@ -21,10 +20,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var email: String!
     var activeDebate: Debate!
     let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var actUsr: ActiveUser!
-    var id: Int!
     var actualDebate: Debate!
-    let refresher = PullToMakeFlight()
     var accessToDebate = [ActiveUser]()
 
     override func viewDidLoad() {
@@ -55,8 +51,6 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
 
         tableView.addPullToRefresh(PullToMakeFlight(at: .top)) {
-
-            self.debates.removeAll()
 
             self.getActiveDebates {
 
@@ -146,6 +140,10 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
         }else if let destination = segue.destination as? ObserverVC{
 
+
+            destination.accessToDebate = accessToDebate
+            destination.email = email
+
             if let debate = sender as? Debate{
                 destination.debate = debate
             }
@@ -195,6 +193,8 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             print(response, result, "--------URL: \(ACTIVEDEBATES_URL)")
 
             if let dict = result.value as? [Dictionary<String, AnyObject>]{
+
+                self.debates.removeAll()
 
                 for obj in dict{
 
@@ -292,7 +292,6 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     if let i = self.accessToDebate.index(where: {$0.Debate == id }) {
 
                         // if activeUser.Debate == self.actualDebate.idDebates {
-
                         if self.accessToDebate[i].Role == 1 {
 
                             print("Debatiente")
@@ -314,7 +313,7 @@ class DebatesFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             self.performSegue(withIdentifier: "Public", sender: self.actualDebate)
 
                         } else {
-                            
+
                             print("Error")
                             
                         }

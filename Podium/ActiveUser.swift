@@ -10,9 +10,10 @@ import Foundation
 
 public class ActiveUser {
 
-    var _debate: Int!
-    var _role: Int!
-    var _warning: Int!
+    fileprivate var _debate: Int!
+    fileprivate var _role: Int!
+    fileprivate var _warning: Int!
+    fileprivate var _course: String!
 
 
     init(ActiveUser: Dictionary<String, AnyObject>) {
@@ -32,6 +33,11 @@ public class ActiveUser {
             self._warning = warning
         }
 
+        if let course = ActiveUser["team"] as? String{
+            print("Course \(course)")
+            self._course = course
+        }
+
     }
 
     public var Debate: Int {
@@ -47,6 +53,11 @@ public class ActiveUser {
     public var Warning: Int {
         set { _warning = Warning }
         get { return _warning }
+    }
+
+    public var Course: String {
+        set { _course = Course }
+        get { return _course }
     }
     
 }

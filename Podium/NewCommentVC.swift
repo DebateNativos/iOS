@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import Alamofire
+import SCLAlertView
 
 class NewCommentVC: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var textViewComment: UITextView!
     var placeholderLabel : UILabel!
+    var id: Int!
+    var course: String!
+    var debate: Debate!
+    var email: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewDidBeginEditing()
         textViewDidChange(textViewComment)
         textViewComment.becomeFirstResponder()
-        // Do any additional setup after loading the view.
+        id = debate.idDebates
     }
 
 
@@ -37,9 +43,11 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
         keyboardToolbar.isTranslucent = true
         keyboardToolbar.barTintColor = UIColor.white
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(btnDone))           
-        addButton.tintColor = UIColor.lightGray
-        keyboardToolbar.items = [addButton]
+        let addButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(btnDone))
+        addButton.tintColor = UIColor.black
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let spaceButtonTwo = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        keyboardToolbar.items = [spaceButton, spaceButtonTwo, addButton]
         textViewComment.inputAccessoryView = keyboardToolbar
 
     }
@@ -53,10 +61,38 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
         dismiss(animated: true, completion: nil)
 
     }
+
     func btnDone(){
 
-        //Code
-        
+        SendnComments{}
+
+    }
+
+    func SendnComments (_ completed: @escaping DownloadComplete){
+
+        let url = "\(BASE_URL)\(PUSH_COMMETNS)\(COURSE)\(course!)\(DEBATE)\(id!)\(EMAILN_RL)\(email!)\(TEXT_COMMENT)\(textViewComment.text!)"
+
+        let COMMENTS_URL = url.addingPercentEncoding( withAllowedCharacters: .urlQueryAllowed)
+
+        Alamofire.request(COMMENTS_URL!).responseString {response in
+            let result = response.result
+
+            //DEBUG
+
+            print(response, result, " -> URL: \(COMMENTS_URL)")
+
+            if (result.value) == "@notSent" {
+
+                SCLAlertView().showError("Ops!", subTitle: "Intentelo mas tarde!")
+
+            }else{
+
+                self.dismiss(animated: true, completion: nil)
+                
+            }
+            
+        }
+        completed()
     }
     
 }

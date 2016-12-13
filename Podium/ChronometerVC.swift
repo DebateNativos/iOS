@@ -43,7 +43,7 @@ class ChronometerVC: UIViewController {
 
                 self.stopTimerTest()
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                self.performSegue(withIdentifier: "WaiTurnVC", sender: self.debate.idDebates )
+                //  self.performSegue(withIdentifier: "WaiTurnVC", sender: self.debate.idDebates )
 
             }
 
@@ -176,30 +176,42 @@ class ChronometerVC: UIViewController {
 
             if warn == 3{
 
-                self.performSegue(withIdentifier: "WaiTurnVC", sender: debate.idDebates )
-                
+                stopTimerTest()
+                self.performSegue(withIdentifier: "expelled", sender: debate.idDebates )
+
             }
-            
+
         }
-        
+
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         if let destination = segue.destination as? WaiTurnVC {
-            
+
             if let idDebate = sender as? Int{
                 destination.id = idDebate
             }
         }
-        
+
     }
-    
+
     func updateCounter() {
-        //you code, this is an example
+        
         if self.minutesOfUser2 > 0 {
-            lblChronometer.text = "\(self.minutesOfUser2)"
+            let minutes = String(minutesOfUser2 / 60)
+            let seconds = String(minutesOfUser2 % 60)
+            lblChronometer.text = minutes + ":" + seconds
             self.minutesOfUser2 -= 1
+            if minutesOfUser2 == 29 {
+                
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                lblChronometer.textColor  = UIColor.orange
+                
+            }else if minutesOfUser2 == 9 {
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                lblChronometer.textColor  = UIColor.red
+            }
         }
         
     }

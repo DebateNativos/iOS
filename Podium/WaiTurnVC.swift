@@ -21,6 +21,13 @@ class WaiTurnVC: UIViewController {
         update()
         startTimer ()
 
+//        let tempVCA = self.navigationController!.viewControllers
+//        for tempVC: UIViewController in tempVCA {
+//            if (tempVC is ChronometerVC) {
+//                tempVC.removeFromParentViewController()
+//            }
+//        }
+
     }
 
     @IBAction func BtnClose(_ sender: Any) {

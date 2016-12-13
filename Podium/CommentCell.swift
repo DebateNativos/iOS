@@ -10,14 +10,19 @@ import UIKit
 
 class CommentCell: UITableViewCell {
 
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblText : UITextView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     func configureCell(comment: Comment) {
-        
-        
+
+        lblName.text = "\(comment.name) \(comment.lastName)"
+        lblText.text = "\(comment.text)"
+
     }
 
 }

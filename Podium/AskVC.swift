@@ -38,20 +38,24 @@ class AskVC: UIViewController, UITextViewDelegate {
         keyboardToolbar.barTintColor = UIColor.white
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(btnDone))
-        addButton.tintColor = UIColor.green
-        keyboardToolbar.items = [addButton]
+        addButton.tintColor = UIColor.black
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let spaceButtonTwo = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        keyboardToolbar.items = [spaceButton, spaceButtonTwo, addButton]
         textViewComment.inputAccessoryView = keyboardToolbar
 
     }
 
     func textViewDidChange(_ textView: UITextView) {
+
         placeholderLabel.isHidden = !textView.text.isEmpty
+
     }
 
     @IBAction func closePressed(_ sender: AnyObject) {
 
         dismiss(animated: true, completion: nil)
-
+        
     }
     func btnDone(){
         

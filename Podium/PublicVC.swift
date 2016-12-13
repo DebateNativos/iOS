@@ -21,10 +21,17 @@ class PublicVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         getDebateSection {}
-        //startTimer()
-        // Do any additional setup after loading the view.
+        startTimer()
+
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
+    }
+
 
     func UpdateLabels () {
 
@@ -48,6 +55,8 @@ class PublicVC: UIViewController {
 
             if let dict = result.value as? [Dictionary<String, AnyObject>]{
 
+                self.sections.removeAll()
+
                 for obj in dict{
 
                     self.activeSection = Section(Section: obj)
@@ -58,7 +67,6 @@ class PublicVC: UIViewController {
                 }
 
                 self.UpdateLabels ()
-                self.sections.removeAll()
             }
             completed()
         }
@@ -89,7 +97,7 @@ class PublicVC: UIViewController {
 
     @IBAction func NewQuestionPressed(_ sender: Any) {
 
-     SelectStage ()
+        SelectStage ()
 
     }
 
@@ -126,23 +134,27 @@ class PublicVC: UIViewController {
 
         let stageName = sections[i!].name
 
-        if stageName.lowercased() == "presentacion inicial" {
+        if stageName.lowercased() == "presentación inicial" {
 
-            self.performSegue(withIdentifier: "Pregunta", sender: debate.idDebates)
+            self.performSegue(withIdentifier: "AskVC", sender: nil)
 
         }else if stageName.lowercased() == "primeras argumentaciones" {
 
-            self.performSegue(withIdentifier: "Pregunta", sender: debate.idDebates)
+            self.performSegue(withIdentifier: "AskVC", sender: nil)
 
         }else if stageName.lowercased() == "preguntas" {
 
-            self.performSegue(withIdentifier: "Pregunta", sender: debate.idDebates)
-            
+            self.performSegue(withIdentifier: "AskVC", sender: nil)
+
         }else if stageName.lowercased() == "nuevas argumentaciones" {
             
             SCLAlertView().showSuccess("Lo Sentimos", subTitle: "Ya paso las preguntas XD")
             
         }else if stageName.lowercased() == "conclusiones" {
+            
+            SCLAlertView().showSuccess("Lo Sentimos", subTitle: "Ya paso las preguntas XD")
+            
+        } else {
             
             SCLAlertView().showSuccess("Lo Sentimos", subTitle: "Ya paso las preguntas XD")
             

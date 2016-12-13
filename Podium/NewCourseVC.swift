@@ -11,6 +11,7 @@ import Alamofire
 import CoreData
 import SCLAlertView
 import AudioToolbox.AudioServices
+import AASquaresLoading
 
 class NewCourseVC: UIViewController {
 
@@ -24,6 +25,7 @@ class NewCourseVC: UIViewController {
         super.viewDidLoad()
         self.tfCode.becomeFirstResponder()
         viewUser()
+        self.view.squareLoading.color = UIColor.red
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +35,8 @@ class NewCourseVC: UIViewController {
 
     }
     @IBAction func ReturnKey(_ sender: Any) {
+
+        self.view.squareLoading.start(1.0)
 
         if (tfCode.text?.isEmpty)! {
 
@@ -45,6 +49,9 @@ class NewCourseVC: UIViewController {
 
             }
         }
+
+        self.view.squareLoading.stop(0.0)
+
     }
 
     func viewUser() {
@@ -113,12 +120,12 @@ class NewCourseVC: UIViewController {
                         print("S NOT Happens NOP")
 
                     }
-                }
-            }else{
+                }else{
 
-                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                SCLAlertView().showError("Error", subTitle: "Ha ocurrido un error, por favor intente de nuevo más tarde.")
-                print("S NOT Happens (IMPORTANT)")
+                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                    SCLAlertView().showError("Error", subTitle: "Ha ocurrido un error, por favor intente de nuevo más tarde.")
+                    print("S NOT Happens (IMPORTANT)")
+                }
                 
             }
         }

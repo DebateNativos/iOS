@@ -31,6 +31,12 @@ let ADD_COURSE = "/course/registerusercourse?"
 let COURSE_CODE = "&coursecode="
 let COURSES_BY_USER = "/course/getusercourses?"
 let COURSE_BY_CODE = "/course/getcoursebycode?"
+let GET_COMMENTS = "/comment/getcomments?"
+let PUSH_COMMETNS = "/comment/pushcomment?"
+let COURSE = "course="
+let DEBATE = "&debate="
+let TEXT_COMMENT = "&text="
+let USER = "&user="
 
 typealias DownloadComplete = () -> ()
 

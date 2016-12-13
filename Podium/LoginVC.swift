@@ -14,7 +14,6 @@ import AudioToolbox
 
 class LoginVC: UIViewController {
 
-    @IBOutlet weak var AutoLogin: UISwitch!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnEnter: UIButton!
@@ -68,6 +67,11 @@ class LoginVC: UIViewController {
 
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
                 SCLAlertView().showError("Contraseña Invalida!", subTitle: "Trate de nuevo.")
+            }else{
+
+                AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                SCLAlertView().showError("Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde")
+
             }
 
         }

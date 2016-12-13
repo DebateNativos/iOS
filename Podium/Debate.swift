@@ -17,7 +17,8 @@ public class Debate {
     fileprivate var _startingDate: String!
     fileprivate var _timeStatus: String!
     fileprivate var _status: Bool!
-
+    fileprivate var _course1: String!
+    fileprivate var _course2: String!
 
     var idDebates : Int{
         if _idDebates == nil{
@@ -71,6 +72,20 @@ public class Debate {
         return _status
     }
 
+    var Course1: String{
+        if _course1 == nil{
+            _course1 = ""
+        }
+        return _course1
+    }
+
+    var Course2: String{
+        if _course2 == nil{
+            _course2 = ""
+        }
+        return _course2
+    }
+
     init(){
 
         _idDebates = 0
@@ -80,6 +95,8 @@ public class Debate {
         //_startingDate = Date()
         _timeStatus=""
         _status=false
+        _course1 = ""
+        _course2 = ""
 
     }
 
@@ -92,6 +109,16 @@ public class Debate {
         if let name = debate["name"] as? String{
             print("Nombre:  \(name)")
             self._name = name
+        }
+
+        if let course1 = debate["course1"] as? String{
+            print("Course1:  \(course1)")
+            self._course1 = course1
+        }
+
+        if let course2 = debate["course2"] as? String{
+            print("Course2:  \(course2)")
+            self._course2 = course2
         }
 
         if let startingDebateDate = debate["startingDate"] as? CLong{
