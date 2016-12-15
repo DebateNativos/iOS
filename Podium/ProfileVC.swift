@@ -51,10 +51,6 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
 
     }
 
-    @IBAction func CoursesPressed(_ sender: Any) {
-
-    }
-
     func viewUser() {
 
         let entityDescription =

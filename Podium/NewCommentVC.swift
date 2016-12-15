@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SCLAlertView
+import AASquaresLoading
 
 class NewCommentVC: UIViewController, UITextViewDelegate {
 
@@ -21,6 +22,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.squareLoading.color = UIColor.red
         textViewDidBeginEditing()
         textViewDidChange(textViewComment)
         textViewComment.becomeFirstResponder()
@@ -64,11 +66,24 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
 
     func btnDone(){
 
-        SendnComments{}
+        self.view.squareLoading.start(0.1)
+        
+        
+        if textViewComment.text.characters.count >= 250 {
+            
+            SCLAlertView().showError("Ops!", subTitle: "Maximo es de 250 caracteres")
+            
+        }else{
+            
+            SendComments{}
+            
+        }
+        
+        self.view.squareLoading.stop(0.1)
 
     }
 
-    func SendnComments (_ completed: @escaping DownloadComplete){
+    func SendComments (_ completed: @escaping DownloadComplete){
 
         let url = "\(BASE_URL)\(PUSH_COMMETNS)\(COURSE)\(course!)\(DEBATE)\(id!)\(EMAILN_RL)\(email!)\(TEXT_COMMENT)\(textViewComment.text!)"
 
