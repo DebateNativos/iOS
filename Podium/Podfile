@@ -28,6 +28,8 @@ target 'Podium' do
   
   pod 'AASquaresLoading'
   
+  pod 'DGElasticPullToRefresh'
+  
   #Cellviews con botones
   # pod 'EVSlidingTableViewCell', '~> 2.0'
   

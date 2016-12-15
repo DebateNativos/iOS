@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AASquaresLoading/AASquaresLoading.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DGElasticPullToRefresh/DGElasticPullToRefresh.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DoneHUD/DoneHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PullToMakeFlight/PullToMakeFlight.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PullToRefresher/PullToRefresh.framework"
@@ -96,6 +97,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AASquaresLoading/AASquaresLoading.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DGElasticPullToRefresh/DGElasticPullToRefresh.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DoneHUD/DoneHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PullToMakeFlight/PullToMakeFlight.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PullToRefresher/PullToRefresh.framework"
