@@ -105,10 +105,7 @@ class ChronometerVC: UIViewController {
         if let i = self.sections.index(where: {$0.ActiveSection == true}) {
             
             lblDebPart.text = self.sections[i].name
-            
-            self.minutesOfUser = (self.sections[i].MinutesPerUser)*60
-            
-            
+
         }
     }
     
@@ -116,6 +113,8 @@ class ChronometerVC: UIViewController {
         
         let USER_VER_URL = "\(BASE_URL)\(USER_VERIFICATION)\(EMAIL_URL)\(email!)"
 
+        print(USER_VER_URL)
+        
         Alamofire.request(USER_VER_URL).responseJSON {response in
             let result = response.result
             
@@ -170,6 +169,9 @@ class ChronometerVC: UIViewController {
         let i = self.accessToDebate.index(where: {$0.Debate == debate.idDebates })
         
         let warn = accessToDebate[i!].Warning
+        
+        let time = accessToDebate[i!].MinutesToTalk
+         self.minutesOfUser = (time)*60
         
         if warn>0 {
             

@@ -307,6 +307,7 @@ class AdviserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             if isTalking == true{
             
+                self.stopTimerTest()
             self.performSegue(withIdentifier: "chronometer", sender: self )
             
             }
@@ -322,7 +323,7 @@ class AdviserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if timerS == nil {
             timerS =  Timer.scheduledTimer(
-                timeInterval: TimeInterval(5),
+                timeInterval: TimeInterval(2),
                 target      : self,
                 selector    : #selector(self.update),
                 userInfo    : nil,
