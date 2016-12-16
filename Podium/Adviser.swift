@@ -211,8 +211,14 @@ class AdviserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             destination.id = debate.idDebates
         
             
-        }
-        
+        }else if let destination = segue.destination as? ChronometerVC{
+            
+            destination.accessToDebate = accessToDebate
+            destination.email = email
+            destination.debate = debate
+            
+    }
+    
     }
     
     
@@ -284,6 +290,7 @@ class AdviserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             let warn = self.accessToDebate[i!].Warning
             self.course = self.accessToDebate[i!].Course
+            let isTalking = self.accessToDebate[i!].IsTalking
             
             if warn>0 {
                 
@@ -298,6 +305,12 @@ class AdviserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
             }
             
+            if isTalking == true{
+            
+            self.performSegue(withIdentifier: "chronometer", sender: self )
+            
+            }
+            
         }
         
         getComments{}
@@ -309,7 +322,7 @@ class AdviserVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if timerS == nil {
             timerS =  Timer.scheduledTimer(
-                timeInterval: TimeInterval(30),
+                timeInterval: TimeInterval(5),
                 target      : self,
                 selector    : #selector(self.update),
                 userInfo    : nil,

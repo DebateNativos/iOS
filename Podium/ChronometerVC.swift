@@ -47,7 +47,7 @@ class ChronometerVC: UIViewController {
                 // self.dismiss(animated: false, completion: nil)
                 self.stopTimerTest()
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                self.performSegue(withIdentifier: "adviser", sender: self )
+                self.dismiss(animated: true, completion: nil)
                 
             }
             

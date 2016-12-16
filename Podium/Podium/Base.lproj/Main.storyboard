@@ -677,12 +677,11 @@
                         <outlet property="uiView" destination="swt-xQ-z4U" id="UZp-Ot-8pu"/>
                         <outlet property="warning" destination="PyN-HF-tUH" id="gJr-rC-d4t"/>
                         <segue destination="THN-4C-EZr" kind="showDetail" identifier="expelled" id="xYq-ll-6v3"/>
-                        <segue destination="31O-Yr-3SE" kind="showDetail" identifier="adviser" id="cOH-GF-jaR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="try-sF-cfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="1906"/>
+            <point key="canvasLocation" x="330" y="1958"/>
         </scene>
         <!--DebatesFeedVC-->
         <scene sceneID="PkH-Lc-hJx">
@@ -696,7 +695,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blur 2" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-aI-BEj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome " translatesAutoresizingMaskIntoConstraints="NO" id="6q4-aI-BEj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="nSA-pk-NFB">
@@ -714,7 +713,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ied-Z8-fTx" id="rQ3-oW-cbL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPz-cC-WZx">
@@ -1031,7 +1030,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7lS-gB-jxj" id="bea-iq-EdH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="To4-fb-brM">
@@ -1068,7 +1067,7 @@
                                         <rect key="frame" x="0.0" y="80" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qA-GP-Jxt" id="fpI-Ea-6AR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QlX-jt-Cwz">
@@ -1105,7 +1104,7 @@
                                         <rect key="frame" x="0.0" y="160" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMe-wd-IQU" id="Rqg-fP-ixp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lAj-pu-UZY">
@@ -1142,7 +1141,7 @@
                                         <rect key="frame" x="0.0" y="240" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hgb-YS-Uc7" id="eDE-4l-RpR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ORM-Ib-HtD">
@@ -1186,7 +1185,7 @@
                                         <rect key="frame" x="0.0" y="320" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YY2-8D-gbN" id="hPo-0w-Xi5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ttQ-nE-xSn">
@@ -1244,9 +1243,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pBm-Yt-BUo">
-                                <rect key="frame" x="8" y="8" width="398" height="63"/>
+                                <rect key="frame" x="8" y="8" width="398" height="62"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0E7E9DE0-52D5-44A1-96E4-583DD5B25F5C" translatesAutoresizingMaskIntoConstraints="NO" id="doO-wS-Io7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A017B8F3-2160-4311-8C7C-87B138BE9B9B" translatesAutoresizingMaskIntoConstraints="NO" id="doO-wS-Io7">
                                         <rect key="frame" x="0.0" y="19" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="dsJ-i2-lgg"/>
@@ -1254,7 +1253,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVo-FT-8x3">
-                                        <rect key="frame" x="36" y="0.0" width="362" height="63"/>
+                                        <rect key="frame" x="36" y="0.0" width="362" height="62"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Cerrar Sesion">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -3801,7 +3800,7 @@ Proporcionar soluciones tecnológicas innovadoras; diseñadas y caracterizadas, 
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="debateCell" tableViewCell="4L6-G4-M1y" id="bCd-Z0-p1L">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvE-ko-GCX">
@@ -3967,6 +3966,8 @@ Proporcionar soluciones tecnológicas innovadoras; diseñadas y caracterizadas, 
                         <outlet property="navBar" destination="4Li-Hm-pSN" id="KOE-vV-a3U"/>
                         <outlet property="tableView" destination="IY4-Fh-bO8" id="KDj-Gu-pLk"/>
                         <segue destination="pzk-4Z-MdP" kind="showDetail" identifier="comment" id="Xlr-lD-y7b"/>
+                        <segue destination="THN-4C-EZr" kind="showDetail" identifier="expelled" id="naM-nJ-hwy"/>
+                        <segue destination="SUh-0z-fwM" kind="showDetail" identifier="chronometer" id="MS5-sS-oaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87y-kD-x2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4551,7 +4552,7 @@ Proporcionar soluciones tecnológicas innovadoras; diseñadas y caracterizadas, 
         </scene>
     </scenes>
     <resources>
-        <image name="0E7E9DE0-52D5-44A1-96E4-583DD5B25F5C" width="512" height="512">
+        <image name="A017B8F3-2160-4311-8C7C-87B138BE9B9B" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -22101,7 +22102,6 @@ iAAQDo8AEA6XABAOpAAQDqkAEA6rABAOrQAQDrIAEA66ABAOvQAQDsIAEA7KABAOzQAQDt8AEA7iABAO
 </mutableData>
         </image>
         <image name="AboutUs " width="682" height="910"/>
-        <image name="Blur 2" width="1241" height="679"/>
         <image name="Chat" width="170" height="170"/>
         <image name="Close" width="16" height="16"/>
         <image name="DebatesVer " width="682" height="910"/>
@@ -22123,15 +22123,16 @@ iAAQDo8AEA6XABAOpAAQDqkAEA6rABAOrQAQDrIAEA66ABAOvQAQDsIAEA7KABAOzQAQDt8AEA7iABAO
         <image name="TEST 4" width="1024" height="744"/>
         <image name="Title" width="940" height="401"/>
         <image name="User" width="512" height="512"/>
+        <image name="Welcome " width="468" height="263"/>
         <image name="back_btn" width="13" height="21"/>
         <image name="back_btn_light" width="14" height="25"/>
         <image name="chat1600" width="1600" height="1600"/>
         <image name="iCon" width="231" height="231"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pn4-yi-iM5"/>
-        <segue reference="FSp-A4-yBK"/>
-        <segue reference="dXQ-cp-9Ig"/>
-        <segue reference="VDI-eB-TxS"/>
+        <segue reference="8IO-y7-FPM"/>
+        <segue reference="K2e-Hc-N8P"/>
+        <segue reference="MS5-sS-oaL"/>
+        <segue reference="naM-nJ-hwy"/>
     </inferredMetricsTieBreakers>
 </document>

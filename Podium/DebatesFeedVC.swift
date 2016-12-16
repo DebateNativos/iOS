@@ -304,12 +304,12 @@ func VerifyUser (_ completed: @escaping DownloadComplete) {
                     if self.accessToDebate[i].Role == 1 {
                         
                         print("Debatiente")
-                        self.performSegue(withIdentifier: "Debating", sender: self.actualDebate )
+                        self.performSegue(withIdentifier: "Adviser", sender: self )
                         
                     } else if self.accessToDebate[i].Role == 2 {
                         
                         print("Asesor")
-                        self.performSegue(withIdentifier: "Adviser", sender: self.actualDebate)
+                        self.performSegue(withIdentifier: "Adviser", sender: self)
                         
                     } else if self.accessToDebate[i].Role == 3 {
                         
