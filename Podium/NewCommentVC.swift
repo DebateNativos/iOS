@@ -26,7 +26,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
         textViewDidBeginEditing()
         textViewDidChange(textViewComment)
         textViewComment.becomeFirstResponder()
-        id = debate.idDebates
+        //id = debate.idDebates
     }
 
 
@@ -71,7 +71,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
         
         if textViewComment.text.characters.count >= 250 {
             
-            SCLAlertView().showError("Ops!", subTitle: "Maximo es de 250 caracteres")
+            SCLAlertView().showError("¡Atención!", subTitle: "El máximo es de 250 caracteres")
             
         }else{
             
@@ -98,7 +98,7 @@ class NewCommentVC: UIViewController, UITextViewDelegate {
 
             if (result.value) == "@notSent" {
 
-                SCLAlertView().showError("Ops!", subTitle: "Intentelo mas tarde!")
+                SCLAlertView().showError("¡Error!", subTitle: "¡Inténtelo más tarde!")
 
             }else{
 

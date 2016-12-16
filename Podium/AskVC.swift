@@ -34,7 +34,7 @@ class AskVC: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(){
         textViewComment.delegate = self
         placeholderLabel = UILabel()
-        placeholderLabel.text = "Escribe tu pregunta ..."
+        placeholderLabel.text = "Escribe tu pregunta..."
         placeholderLabel.sizeToFit()
         textViewComment.addSubview(placeholderLabel)
         placeholderLabel.frame.origin = CGPoint(x: 5, y: (textViewComment.font?.pointSize)! / 2)
@@ -73,7 +73,7 @@ class AskVC: UIViewController, UITextViewDelegate {
         
         if textViewComment.text.characters.count >= 250 {
          
-            SCLAlertView().showError("Ops!", subTitle: "Maximo es de 250 caracteres")
+            SCLAlertView().showError("¡Atención!", subTitle: "El máximo es de 250 caracteres")
         
         }else{
         
@@ -98,7 +98,7 @@ class AskVC: UIViewController, UITextViewDelegate {
             
             if (result.value) == "question@notSent" {
                 
-                SCLAlertView().showError("Ops!", subTitle: "Intentelo mas tarde!")
+                SCLAlertView().showError("¡Error!", subTitle: "¡Inténtelo más tarde!")
                 
             }else{
                 
@@ -115,7 +115,7 @@ class AskVC: UIViewController, UITextViewDelegate {
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
         
-        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest() as! NSFetchRequest<UserCoreData>
         request.entity = entityDescription
         
         let pred = NSPredicate(format: "(id = %@)", 0)

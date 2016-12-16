@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class User {
+open class User {
 
     var _idUsers: Int!
     var _name: String!
@@ -66,56 +66,56 @@ public class User {
     }
     
     
-    public var id: Int {
+    open var id: Int {
         set { _idUsers = id }
         get { return _idUsers }
     }
     
-    public var name: String {
+    open var name: String {
         set { _name = name }
         get { return _name }
     }
-    public var lastName: String {
+    open var lastName: String {
         set { _lastName = lastName }
         get { return _lastName }
     }
     
-    public var lastName2: String {
+    open var lastName2: String {
         set { _lastName2 = lastName2 }
         get { return _lastName2 }
     }
     
-    public var email: String {
+    open var email: String {
         set { _email = email }
         get { return _email }
     }
     
-    public var address: String {
+    open var address: String {
         set { _address = address }
         get { return _address }
     }
     
-    public var birthday: Date {
+    open var birthday: Date {
         set { _birthday = birthday }
         get { return _birthday }
     }
     
-    public var idUniversity: Int {
+    open var idUniversity: Int {
         set { _idUniversity = idUniversity }
         get { return _idUniversity }
     }
     
-    public var password: String {
+    open var password: String {
         set { _password = password }
         get { return _password }
     }
     
-    public var phone: String {
+    open var phone: String {
         set { _phone = phone }
         get { return _phone }
     }
     
-    public var idToken: String {
+    open var idToken: String {
         set { _idToken = idToken }
         get { return _idToken }
     }

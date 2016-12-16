@@ -9,9 +9,9 @@
 import Foundation
 import CoreData
 
-public class UserCoreData: NSManagedObject {
+open class UserCoreData: NSManagedObject {
 
-    public override func awakeFromInsert() {
+    open override func awakeFromInsert() {
 
         super.awakeFromInsert()
 

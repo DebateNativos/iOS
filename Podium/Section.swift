@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Section {
+open class Section {
 
     var _sectionNUmber: Int!
     var _minutesPerUser: Int!
@@ -34,21 +34,21 @@ public class Section {
     }
 
 
-    public var SectionNumber: Int {
+    open var SectionNumber: Int {
         set { _sectionNUmber = SectionNumber }
         get { return _sectionNUmber }
     }
 
-    public var MinutesPerUser: Int {
+    open var MinutesPerUser: Int {
         set { _minutesPerUser = MinutesPerUser }
         get { return _minutesPerUser }
     }
-    public var ActiveSection: Bool {
+    open var ActiveSection: Bool {
         set { _activeSection = ActiveSection }
         get { return _activeSection }
     }
 
-    public var name: String {
+    open var name: String {
         set { _name = name }
         get { return _name }
     }

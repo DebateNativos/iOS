@@ -74,12 +74,12 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
             if (result.description) == "@invalidRegistration" {
 
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                SCLAlertView().showError("Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde")
+                SCLAlertView().showError("¡Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde")
 
             }else{
 
                 self.view.squareLoading.stop(0.0)
-                SCLAlertView().showSuccess("Exito!", subTitle: "Se creo su perfil de manera correcta")
+                SCLAlertView().showSuccess("¡Felicidades!", subTitle: "Se creo tu perfil de manera exitosa")
                 self.dismiss(animated: true, completion: nil)
 
             }
@@ -96,7 +96,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
         if (tfName.text!.isEmpty || tfLastName.text!.isEmpty || tfLastName2.text!.isEmpty || tfEmail.text!.isEmpty || tfPassword.text!.isEmpty || tfVPassword.text!.isEmpty || tfAddress.text!.isEmpty || tfPhone.text!.isEmpty || tfidUniversity.text!.isEmpty) {
 
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-            SCLAlertView().showError("Campos Requeridos", subTitle: "Todos los campos son requeridos")
+            SCLAlertView().showError("Espacios obligatorios", subTitle: "Todos los espacios en rojo deben ser completados.")
 
             tfName.layer.backgroundColor = UIColor.red.cgColor
             tfLastName.layer.backgroundColor = UIColor.red.cgColor
@@ -122,7 +122,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
                     self.view.squareLoading.stop(0.0)
                     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                    SCLAlertView().showError("Alerta", subTitle: "Las contraseñas deben coincidir")
+                    SCLAlertView().showError("¡Atención!", subTitle: "Ambas contraseñas deben coincidir.")
 
                 }
 
@@ -131,7 +131,7 @@ class NewUserVC: UIViewController, UITextFieldDelegate {
 
                 self.view.squareLoading.stop(0.0)
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                SCLAlertView().showError("Alerta", subTitle: "No es un email valido")
+                SCLAlertView().showError("¡Atención!", subTitle: "La dirección de correo electrónico no es válida")
             }
 
         }

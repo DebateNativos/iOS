@@ -56,7 +56,7 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
 
-        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest() as! NSFetchRequest<UserCoreData>
         request.entity = entityDescription
 
         let pred = NSPredicate(format: "(id = %@)", 0)

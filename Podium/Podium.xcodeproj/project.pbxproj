@@ -336,12 +336,12 @@
 					ECD969C31DB433A100325C4D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = DH94CQ5UR4;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					ECD969DA1DB433A100325C4D = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = ECD969C31DB433A100325C4D;
 					};

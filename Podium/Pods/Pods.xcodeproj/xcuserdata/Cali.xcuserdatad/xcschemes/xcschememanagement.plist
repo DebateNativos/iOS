@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>DoneHUD.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -72,6 +77,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>10958A02BE06763E4101605DF1B0F734</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>115824B7CB2E76E5ACB836A251E79404</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>241300041B8256517E7183EE597204E3</key>
 		<dict>
 			<key>primary</key>
@@ -83,6 +98,11 @@
 			<true/>
 		</dict>
 		<key>2B96AF23B0F49A2AF01E057EB0C54368</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>313F8EAE478970E378DAB539778BFEA4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,6 +152,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8436F86873C267615D9817F649E01144</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88C64CE2C5D4C848CC29D62FB8AC7E9D</key>
 		<dict>
 			<key>primary</key>
@@ -162,12 +187,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>CF9188109E1A063841DA73EBD22F4AF7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D0EE907A1A871C4C0A9C96ABFDA49698</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>DC7D94B1953E0267620A5024A7EF5616</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E8C8D5A7C47962DEDD70F5CD02E09F81</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7CD7D43F0FEE036601195AF9DC88D20</key>
 		<dict>
 			<key>primary</key>
 			<true/>

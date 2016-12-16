@@ -36,7 +36,7 @@ class ChronometerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         self.view.squareLoading.stop(0.0)
+        self.view.squareLoading.stop(0.0)
         
         UIApplication.shared.isIdleTimerDisabled = true
         
@@ -47,7 +47,7 @@ class ChronometerVC: UIViewController {
                 // self.dismiss(animated: false, completion: nil)
                 self.stopTimerTest()
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                //self.performSegue(withIdentifier: "Observer", sender: self )
+                self.performSegue(withIdentifier: "adviser", sender: self )
                 
             }
             
@@ -115,7 +115,7 @@ class ChronometerVC: UIViewController {
     func VerifyUser (_ completed: @escaping DownloadComplete) {
         
         let USER_VER_URL = "\(BASE_URL)\(USER_VERIFICATION)\(EMAIL_URL)\(email!)"
-        
+
         Alamofire.request(USER_VER_URL).responseJSON {response in
             let result = response.result
             
@@ -181,7 +181,7 @@ class ChronometerVC: UIViewController {
                 
                 //dismiss(animated: false, completion: nil)
                 stopTimerTest()
-               // self.performSegue(withIdentifier: "expelled", sender: self )
+                self.performSegue(withIdentifier: "expelled", sender: self )
                 
             }
             
@@ -191,11 +191,8 @@ class ChronometerVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let destination = segue.destination as? ObserverVC {
+        if let destination = segue.destination as? AdviserVC {
             
-            let usr = true
-            
-            destination.debUser = usr
             destination.accessToDebate = accessToDebate
             destination.email = email
             destination.debate = debate
@@ -219,6 +216,11 @@ class ChronometerVC: UIViewController {
             }else if minutesOfUser2 == 9 {
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                 lblChronometer.textColor  = UIColor.red
+            }else if minutesOfUser2 == 0 {
+                
+              self.update()
+                print("Recargando")
+                
             }
         }
         

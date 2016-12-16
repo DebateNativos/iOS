@@ -19,7 +19,7 @@ class CourseCell: UITableViewCell {
         // Initialization code
     }
 
-    func configureCell(course: Course) {
+    func configureCell(_ course: Course) {
         
         lblName.text = "\(course.Name)"
         lblTeacher.text = "\(course.Teacher)"

@@ -37,7 +37,7 @@ class CourseVC: UIViewController {
 
     }
 
-    func UpdateLabels (course: Course){
+    func UpdateLabels (_ course: Course){
 
         lblName.text = course.Name
         lblClass.text = course.Class
@@ -64,7 +64,7 @@ class CourseVC: UIViewController {
                             let courseFound = Course(course: course)
                             self.actualCourse = courseFound
                             print("DICT -> \(dict)")
-                            self.UpdateLabels(course: self.actualCourse)
+                            self.UpdateLabels(self.actualCourse)
                         }
 
                     }else {

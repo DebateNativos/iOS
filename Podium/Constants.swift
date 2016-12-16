@@ -42,7 +42,7 @@ let USER = "&user="
 
 typealias DownloadComplete = () -> ()
 
-public class Reachability {
+open class Reachability {
     func isInternetAvailable() -> Bool
     {
         var zeroAddress = sockaddr_in()

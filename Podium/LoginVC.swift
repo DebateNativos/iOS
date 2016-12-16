@@ -55,22 +55,22 @@ class LoginVC: UIViewController {
 
         self.getLogin{
             if self.loginStatus == "@validLogin"{
-                SCLAlertView().showSuccess("Bienvenido", subTitle: "Hola \(self.loginUser._name!)")
+                SCLAlertView().showSuccess("¡Bienvenido!", subTitle: "Hola, \(self.loginUser._name!)")
                 self.performSegue(withIdentifier: "DebatesFeedVC", sender: self)
 
             }else if self.loginStatus == "@invalidEmail"{
 
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-                SCLAlertView().showError("Correo electronico Invalido!", subTitle: "Debe de estar registrado para ingresar a Podium.")
+                SCLAlertView().showError("¡Correo electrónico inválido!", subTitle: "Debe de estar registrado para ingresar a Podium.")
                 
             }else if self.loginStatus == "@invalidPassword"{
 
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-                SCLAlertView().showError("Contraseña Invalida!", subTitle: "Trate de nuevo.")
+                SCLAlertView().showError("¡Contraseña invalida!", subTitle: "Intente de nuevo.")
             }else{
 
                 AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-                SCLAlertView().showError("Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde")
+                SCLAlertView().showError("¡Ops!", subTitle: "Ocurrió un error, inténtalo de nuevo más tarde.")
 
             }
 
@@ -96,7 +96,7 @@ class LoginVC: UIViewController {
                         if let user = dict["user"] as? Dictionary<String, AnyObject>{
                             let userFound = User(user: user)
                             self.loginUser = userFound
-                            self.SaveUser(user: self.loginUser)
+                            self.SaveUser(self.loginUser)
                             self.tfPassword.text = ""
                         }
                         self.loginStatus = status
@@ -110,12 +110,12 @@ class LoginVC: UIViewController {
 
     }
 
-    func SaveUser(user: User) {
+    func SaveUser(_ user: User) {
 
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
 
-        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest() as! NSFetchRequest<UserCoreData>
         request.entity = entityDescription
 
         let pred = NSPredicate(format: "(id = %@)", 0)
@@ -165,7 +165,7 @@ class LoginVC: UIViewController {
         let entityDescription =
             NSEntityDescription.entity(forEntityName: "UserData", in: managedObjectContext)
 
-        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest()
+        let request: NSFetchRequest<UserCoreData> = UserCoreData.fetchRequest() as! NSFetchRequest<UserCoreData>
         request.entity = entityDescription
 
         let pred = NSPredicate(format: "(id = %@)", 0)

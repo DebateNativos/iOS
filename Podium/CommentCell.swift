@@ -18,7 +18,7 @@ class CommentCell: UITableViewCell {
         // Initialization code
     }
 
-    func configureCell(comment: Comment) {
+    func configureCell(_ comment: Comment) {
 
         lblName.text = "\(comment.name) \(comment.lastName)"
         lblText.text = "\(comment.text)"

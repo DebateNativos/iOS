@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ActiveUser {
+open class ActiveUser {
 
     fileprivate var _debate: Int!
     fileprivate var _role: Int!
@@ -40,22 +40,22 @@ public class ActiveUser {
 
     }
 
-    public var Debate: Int {
+    open var Debate: Int {
         set { _debate = Debate }
         get { return _debate }
     }
 
-    public var Role: Int {
+    open var Role: Int {
         set { _role = Role }
         get { return _role }
     }
 
-    public var Warning: Int {
+    open var Warning: Int {
         set { _warning = Warning }
         get { return _warning }
     }
 
-    public var Course: String {
+    open var Course: String {
         set { _course = Course }
         get { return _course }
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Debate {
+open class Debate {
 
     fileprivate var _idDebates: Int!
     fileprivate var _name: String!
@@ -126,11 +126,11 @@ public class Debate {
 
             let date = Date()
 
-            let dateTimeStamp = NSDate(timeIntervalSince1970:Double(startingDebateDate)/1000)  //UTC time
+            let dateTimeStamp = Date(timeIntervalSince1970:Double(startingDebateDate)/1000)  //UTC time
 
             let dateFormatter = DateFormatter()
 
-            dateFormatter.timeZone = NSTimeZone.local //Edit
+            //dateFormatter.timeZone = TimeZone.localizedName() //Edit
             dateFormatter.dateFormat = "yyyy-MM-dd"
             dateFormatter.dateStyle = DateFormatter.Style.medium
             //dateFormatter.timeStyle = DateFormatter.Style.short
@@ -147,7 +147,7 @@ public class Debate {
 
             print("Fecha: \(myDate)")
 
-            let today = NSDate().addingTimeInterval(0)
+            let today = Date().addingTimeInterval(0)
 
             dateFormatter.dateStyle = .medium
 

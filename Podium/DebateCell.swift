@@ -15,7 +15,7 @@ class DebateCell: UITableViewCell {
     @IBOutlet weak var lblSubject: UILabel!
     @IBOutlet weak var debateImage: UIImageView!
 
-    func configureCell(debate: Debate) {
+    func configureCell(_ debate: Debate) {
 
 
         lblSubject.text = "\(debate.name)"

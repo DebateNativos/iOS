@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Course {
+open class Course {
 
     fileprivate var _Name: String!
     fileprivate var _Schedule: String!
